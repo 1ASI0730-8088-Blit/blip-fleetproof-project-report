@@ -36,11 +36,13 @@ La startup apuesta por modelos digitales escalables, en los que sus productos pu
 
 Este enfoque permite que BLIP desarrolle productos propios con capacidad de crecimiento progresivo y que cada solución pueda evolucionar a partir de las necesidades y comportamiento de sus usuarios.
 
-**Identidad visual de BLIP:**
+La identidad visual de BLIP se representa mediante el logotipo oficial de la startup.
 
-La identidad visual de BLIP se representa mediante el logotipo oficial de la startup, el cual se incorpora como parte de la presentación de la organización.
+**Figura 1. Logotipo oficial de BLIP.**
 
 ![Logotipo oficial de BLIP](assets/chapter-1/logo-blip.png)
+
+*Fuente: Elaboración propia.*
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
@@ -143,77 +145,33 @@ El Problem Statement se formula como una iniciativa nueva (Brand New Initiative)
 
 #### 1.2.2.4. Lean UX Canvas
 
-El Lean UX Canvas sintetiza los principales elementos definidos durante la
-formulación inicial de FleetProof, relacionando el problema de negocio, los
-resultados esperados, los usuarios objetivo, los beneficios esperados, las
-soluciones propuestas y las hipótesis que deberán ser contrastadas durante el
-proceso de investigación y validación. En esta etapa, el Canvas representa las
-hipótesis iniciales del equipo y podrá ser actualizado conforme se obtenga
-evidencia mediante las entrevistas de Needfinding y las posteriores
-validaciones.
+El Lean UX Canvas sintetiza los principales elementos definidos durante la formulación inicial de FleetProof, relacionando el problema de negocio, los resultados esperados, los usuarios objetivo, los beneficios esperados, las soluciones propuestas y las hipótesis que deberán ser contrastadas durante el proceso de investigación y validación. En esta etapa, el Canvas representa las hipótesis iniciales del equipo y podrá ser actualizado conforme se obtenga evidencia mediante las entrevistas de Needfinding y las posteriores validaciones.
 
-**Figura [N]. Lean UX Canvas de FleetProof.**
+**Figura 2. Lean UX Canvas de FleetProof.**
 
 ![Lean UX Canvas de FleetProof](assets/chapter-1/LeanUX-canvas-FleetProof.png)
 
-**Fuente y enlace al artefacto:** Elaboración propia a partir del Lean UX
-Canvas V2 de Jeff Gothelf. Disponible en
-[Lean UX Canvas V2](https://jeffgothelf.com/blog/leanuxcanvas-v2/).
+**Fuente y enlace al artefacto:** Elaboración propia a partir del Lean UX Canvas V2 de Jeff Gothelf. Disponible en: [Lean UX Canvas V2](https://jeffgothelf.com/blog/leanuxcanvas-v2/).
 
 **Explicación, decisiones y relación con otros artefactos:**
 
-El Lean UX Canvas consolida los resultados obtenidos en los artefactos
-anteriores del Lean UX Process. El Business Problem sintetiza la problemática
-identificada en el Problem Statement, centrada en la fragmentación de las
-consultas vehiculares y las limitaciones de las soluciones existentes para el
-monitoreo recurrente, la comparación histórica y el seguimiento de
-observaciones.
+El Lean UX Canvas consolida los resultados obtenidos en los artefactos anteriores del Lean UX Process. El Business Problem sintetiza la problemática identificada en el Problem Statement, centrada en la fragmentación de las consultas vehiculares y las limitaciones de las soluciones existentes para el monitoreo recurrente, la comparación histórica y el seguimiento de observaciones.
 
-Los Business Outcomes se derivan de los Business Outcome Assumptions y
-representan los cambios que permitirán evaluar si la propuesta genera valor
-para el negocio. Los Users incorporan los segmentos y roles identificados como
-prioritarios, mientras que los User Outcomes & Benefits recogen los beneficios
-esperados por estos usuarios, como identificar unidades críticas, evitar
-consultas repetidas, conservar evidencias y comprender cambios en la
-información vehicular.
+Los Business Outcomes se derivan de los Business Outcome Assumptions y representan los cambios que permitirán evaluar si la propuesta genera valor para el negocio. Los Users incorporan los segmentos y roles identificados como prioritarios, mientras que los User Outcomes & Benefits recogen los beneficios esperados por estos usuarios, como identificar unidades críticas, evitar consultas repetidas, conservar evidencias y comprender cambios en la información vehicular.
 
-La sección Solutions sintetiza las principales capacidades planteadas para
-FleetProof, incluyendo la importación de vehículos, el checklist por fuente,
-los reportes trazables, la comparación de estados, el dashboard de riesgo y
-el seguimiento de observaciones mediante responsables y evidencias.
+La sección Solutions sintetiza las principales capacidades planteadas para FleetProof, incluyendo la importación de vehículos, el checklist por fuente, los reportes trazables, la comparación de estados, el dashboard de riesgo y el seguimiento de observaciones mediante responsables y evidencias.
 
-Finalmente, las Hypotheses mantienen la trazabilidad con los Feature
-Assumptions definidos previamente, estableciendo una hipótesis por cada
-funcionalidad propuesta. La sección de aprendizaje prioriza inicialmente la
-validación del valor del monitoreo y consolidación recurrente de múltiples
-vehículos, mientras que el experimento inicial se plantea mediante entrevistas
-de Needfinding con usuarios del segmento prioritario. De esta manera, el
-Canvas funciona como una síntesis del Problem Statement, Assumptions e
-Hypothesis Statements y como punto de partida para la investigación posterior.
+Finalmente, las Hypotheses mantienen la trazabilidad con los Feature Assumptions definidos previamente, estableciendo una hipótesis por cada funcionalidad propuesta. La sección de aprendizaje prioriza inicialmente la validación del valor del monitoreo y consolidación recurrente de múltiples vehículos, mientras que el experimento inicial se plantea mediante entrevistas de Needfinding con usuarios del segmento prioritario. De esta manera, el Canvas funciona como una síntesis del Problem Statement, Assumptions e Hypothesis Statements y como punto de partida para la investigación posterior.
 
 ## 1.3. Segmentos objetivo
 
-FleetProof se orienta inicialmente a dos segmentos diferenciados según el
-contexto de uso y la cantidad de vehículos gestionados: empresas con flotas
-pequeñas y medianas, como segmento prioritario, y propietarios o compradores
-particulares, como segmento complementario. Esta delimitación inicial se basa
-en el problema identificado, el modelo de negocio propuesto y las necesidades
-previstas para cada contexto. Los criterios serán refinados posteriormente a
-partir de las entrevistas de Needfinding.
+FleetProof se orienta inicialmente a dos segmentos diferenciados según el contexto de uso y la cantidad de vehículos gestionados: empresas con flotas pequeñas y medianas, como segmento prioritario, y propietarios o compradores particulares, como segmento complementario. Esta delimitación inicial se basa en el problema identificado, el modelo de negocio propuesto y las necesidades previstas para cada contexto. Los criterios serán refinados posteriormente a partir de las entrevistas de Needfinding.
 
 | ID | Segmento inicial propuesto | Delimitación y sustento |
 |---|---|---|
 | SEG-01 | Responsables de flotas pequeñas y medianas | Empresas de taxi, buses, turismo, reparto, logística, alquiler y servicios que gestionan aproximadamente entre 5 y 100 vehículos. El comprador puede ser el propietario, gerente o jefe de operaciones, mientras que los usuarios frecuentes incluyen administradores de flota y analistas documentarios. Su necesidad inicial es conocer el estado de la flota, priorizar unidades observadas y mantener evidencia organizada. En 2024, el INEI registró que el 5,8 % de las empresas del país pertenecían a la actividad de transporte y almacenamiento, mientras que las microempresas representaban el 96,4 % del total empresarial y las pequeñas empresas el 3,0 %, evidenciando un tejido empresarial predominantemente compuesto por organizaciones de menor escala. |
 | SEG-02 | Propietarios o compradores particulares de vehículos | Personas que compran, venden o administran uno o pocos vehículos, incluyendo conductores independientes y propietarios que utilizan su vehículo para actividades como taxi. Su necesidad inicial es comprender antecedentes y riesgos del vehículo y mantener seguimiento posterior mediante alertas. El mercado de vehículos livianos seminuevos constituye un contexto relevante para este segmento: entre enero y junio de 2026 se registraron 314 296 transferencias de vehículos livianos seminuevos en Perú, 14,4 % más que en el mismo periodo de 2025. |
 
-La priorización de SEG-01 responde al núcleo de la propuesta de FleetProof:
-reducir el trabajo repetitivo y facilitar la consolidación, priorización y
-trazabilidad de información para múltiples vehículos. Por ello, las empresas
-con flotas pequeñas y medianas constituyen el segmento inicial prioritario.
+La priorización de SEG-01 responde al núcleo de la propuesta de FleetProof: reducir el trabajo repetitivo y facilitar la consolidación, priorización y trazabilidad de información para múltiples vehículos. Por ello, las empresas con flotas pequeñas y medianas constituyen el segmento inicial prioritario.
 
-SEG-02 se mantiene como segmento complementario debido a que comparte el
-problema de investigación vehicular, pero presenta un contexto de uso
-diferente: la consulta se concentra en uno o pocos vehículos y está asociada
-principalmente a decisiones de compra, administración o seguimiento de una
-unidad. Esta distinción permitirá posteriormente diseñar experiencias,
-entrevistas y artefactos UX diferenciados para cada segmento.
+SEG-02 se mantiene como segmento complementario debido a que comparte el problema de investigación vehicular, pero presenta un contexto de uso diferente: la consulta se concentra en uno o pocos vehículos y está asociada principalmente a decisiones de compra, administración o seguimiento de una unidad. Esta distinción permitirá posteriormente diseñar experiencias, entrevistas y artefactos UX diferenciados para cada segmento.
