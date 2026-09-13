@@ -1,12 +1,46 @@
 # Capítulo I: Introducción
 
-## 1.1 Startup Profile
+## 1.1. Startup Profile
 
-### 1.1.1 Descripción de la Startup
+BLIP es una startup tecnológica orientada al desarrollo de productos digitales que buscan simplificar procesos complejos y facilitar la gestión de información relevante para personas y organizaciones. La startup identifica necesidades presentes en procesos que requieren consultar, organizar y dar seguimiento a información proveniente de diferentes fuentes, y las transforma en soluciones digitales centradas en el usuario.
 
-BLIP es una startup académica orientada al desarrollo de soluciones web para reducir incertidumbre operativa mediante productos digitales trazables, inclusivos y sostenibles.
+Dentro de este enfoque, BLIP desarrolla FleetProof, un producto digital orientado al seguimiento del estado documentario y administrativo de vehículos y flotas. La propuesta busca facilitar la transformación de consultas puntuales e información dispersa en una experiencia organizada que permita conocer, comparar y dar seguimiento al estado de las unidades.
 
-TODO: Completar propósito, visión, valores, segmento de mercado y enfoque innovador.
+### 1.1.1. Descripción de la Startup
+
+**Propósito:**
+
+El propósito de BLIP es desarrollar soluciones tecnológicas que simplifiquen procesos complejos y reduzcan el tiempo, esfuerzo e incertidumbre que enfrentan las personas y organizaciones en sus actividades cotidianas. Para ello, la startup busca identificar problemas concretos y transformarlos en experiencias digitales que faciliten la gestión de información y la toma de decisiones.
+
+**Misión:**
+
+La misión de BLIP es crear productos digitales innovadores, accesibles y confiables que permitan a personas y organizaciones gestionar información y procesos de manera más eficiente, contribuyendo a una toma de decisiones más informada y orientada a sus necesidades.
+
+**Visión:**
+
+La visión de BLIP es consolidarse como una startup tecnológica reconocida por desarrollar soluciones digitales innovadoras que transformen procesos tradicionales mediante experiencias centradas en las necesidades de sus usuarios y que generen valor sostenible.
+
+**Propuesta de valor:**
+
+La propuesta de valor de BLIP se basa en identificar necesidades reales y convertir procesos que actualmente pueden involucrar tareas manuales, información dispersa o consultas aisladas en experiencias digitales simples, organizadas y orientadas al usuario.
+
+La startup busca generar valor mediante productos tecnológicos que reduzcan tareas innecesarias, centralicen información relevante y faciliten el seguimiento de procesos y situaciones que requieren atención. Su propuesta combina tecnología, innovación y comprensión de las necesidades de los usuarios para desarrollar productos útiles, escalables y capaces de evolucionar de acuerdo con las necesidades identificadas.
+
+En este marco, FleetProof representa la aplicación de esta propuesta al ámbito de la gestión vehicular, buscando facilitar el seguimiento del estado documentario y administrativo de vehículos y flotas mediante información organizada, trazable y orientada a la toma de decisiones.
+
+**Modelo de Negocio:**
+
+BLIP plantea un modelo de negocio basado en el desarrollo y comercialización de productos digitales propios, buscando generar ingresos de manera independiente y sostenible sin depender exclusivamente de proyectos personalizados o de terceros.
+
+La startup apuesta por modelos digitales escalables, en los que sus productos puedan atender progresivamente a un mayor número de usuarios sin que los costos de operación aumenten proporcionalmente. Asimismo, busca establecer fuentes de ingresos recurrentes, como suscripciones y otros servicios digitales, que permitan financiar el mantenimiento, evolución y expansión de sus productos.
+
+Este enfoque permite que BLIP desarrolle productos propios con capacidad de crecimiento progresivo y que cada solución pueda evolucionar a partir de las necesidades y comportamiento de sus usuarios.
+
+**Identidad visual de BLIP:**
+
+La identidad visual de BLIP se representa mediante el logotipo oficial de la startup, el cual se incorpora como parte de la presentación de la organización.
+
+![Logotipo oficial de BLIP](assets/chapter-1/logo-blip.png)
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
