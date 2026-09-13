@@ -52,13 +52,44 @@ La identidad visual de BLIP se representa mediante el logotipo oficial de la sta
 | Gómez De La Torre Huertas Rodrigo Fernando | TODO | Ingeniería de Software | TODO | Requirements Owner |
 | Payesa Torres Harrison Hubert | TODO | Ingeniería de Software | TODO | Product Design and Landing Page Owner |
 
-## 1.2 Solution Profile
+## 1.2. Solution Profile
 
-### 1.2.1 Antecedentes y problemática
+FleetProof es una plataforma web orientada al monitoreo documentario y administrativo de vehículos, diseñada para facilitar la consulta, consolidación, comparación y seguimiento de información proveniente de diferentes fuentes relacionadas con el estado de vehículos y flotas.
 
-FleetProof es una plataforma web propuesta por BLIP para gestiónar reportes vehiculares trazables y monitoreo documentario continuo para flotas y propietarios en Perú.
+La solución está dirigida principalmente a empresas que administran flotas pequeñas y medianas, cuyos responsables necesitan conocer el estado de sus unidades, identificar observaciones y priorizar acciones de seguimiento. Como segmento complementario, FleetProof considera a propietarios, compradores y conductores independientes que requieren consultar y continuar monitoreando la información asociada a uno o pocos vehículos.
 
-TODO: Aplicar 5W+2H con datos verificables y entrevistas.
+A diferencia de una consulta puntual orientada únicamente a obtener un reporte, FleetProof propone extender el proceso hacia un esquema de monitoreo recurrente. Para ello, la solución contempla el registro de resultados y evidencias por fuente, la comparación de diferentes estados de un vehículo, la generación de alertas y el seguimiento de observaciones mediante responsables y evidencias de resolución.
+
+El alcance inicial se concentra en la gestión de información documentaria y administrativa relacionada con los vehículos. FleetProof no contempla convertirse en una plataforma de GPS o telemetría, ni administrar combustible, mantenimiento mecánico o sensores del vehículo. Asimismo, el MVP no busca automatizar todas las fuentes existentes, sino trabajar inicialmente con un número limitado de conectores o proveedores de prueba y mantener una arquitectura que permita incorporar nuevas fuentes posteriormente.
+
+### 1.2.1. Antecedentes y problemática
+
+| Técnica | Pregunta aplicada al problema | Sustento |
+|---|---|---|
+| Who | ¿Quién experimenta el problema? | Empresas que administran flotas de vehículos, en las que las actividades de consulta y seguimiento pueden involucrar a responsables de gestión de flota, control documentario o control operativo, dependiendo del tipo de servicio y de la organización interna. Asimismo, el problema puede involucrar a propietarios y conductores independientes que administran uno o pocos vehículos y necesitan verificar información relacionada con su documentación, habilitación, infracciones u otras condiciones asociadas al vehículo. |
+| What | ¿Qué problema ocurre? | Los usuarios necesitan verificar diferentes tipos de información según las características y el servicio del vehículo. Entre los principales elementos se encuentran la vigencia del Seguro Obligatorio de Accidentes de Tránsito (SOAT), el Certificado de Inspección Técnica Vehicular (CITV), habilitaciones y autorizaciones correspondientes al servicio, así como infracciones y órdenes de captura. El MTC establece, por ejemplo, la necesidad de verificar el CITV y, según el procedimiento, documentación como SOAT y autorizaciones o permisos especiales; asimismo, existen procedimientos específicos de habilitación vehicular para servicios de transporte. (Ministerio de Transportes y Comunicaciones [MTC], 2024, 2022). |
+| Where | ¿Dónde ocurre? | El problema se plantea inicialmente en el contexto peruano, particularmente en actividades relacionadas con el transporte terrestre de personas, mercancías y otros servicios sujetos a requisitos de habilitación, documentación y fiscalización. La información que debe verificarse se encuentra distribuida entre diferentes servicios digitales. Por ejemplo, el MTC dispone de un sistema de consulta del CITV, SUTRAN ofrece una plataforma para consultar el récord de infracciones y el SAT dispone de servicios para consultar papeletas y órdenes de captura vehicular. (MTC, 2026; Superintendencia de Transporte Terrestre de Personas, Carga y Mercancías [SUTRAN], 2026; Servicio de Administración Tributaria de Lima [SAT], s. f.). |
+| When | ¿Cuándo y con qué frecuencia ocurre? | La necesidad de revisión se presenta en diferentes momentos según el tipo de vehículo, servicio y condición que se desea verificar. Puede producirse antes de iniciar determinadas operaciones o viajes y de manera periódica para comprobar la vigencia de documentos y autorizaciones. La periodicidad no es uniforme: por ejemplo, SUTRAN señala que los vehículos particulares deben realizar la inspección técnica una vez al año, mientras que los destinados al transporte de personas y materiales o residuos peligrosos deben hacerlo cada seis meses. (SUTRAN, 2026). |
+| Why | ¿Por qué es relevante resolverlo? | La revisión permite identificar condiciones que pueden afectar la posibilidad de utilizar un vehículo para determinados servicios, así como detectar infracciones, documentos vencidos u otras observaciones que requieren atención. La relevancia de estas condiciones se evidencia en las actividades de fiscalización: durante el primer semestre de 2026, la ATU reportó 3003 vehículos enviados al depósito, incluyendo unidades sin SOAT y sin revisión técnica vigente. (Autoridad de Transporte Urbano para Lima y Callao [ATU], 2026). |
+| How | ¿Cómo se resuelve actualmente? | De manera preliminar, la revisión se realiza mediante consultas en los diferentes portales y servicios digitales disponibles para cada fuente. Estos servicios pueden requerir consultas independientes utilizando datos como la placa del vehículo. Actualmente existen, por ejemplo, sistemas separados para consultar el CITV, el récord de infracciones y las órdenes de captura vehicular. La forma en que los usuarios consolidan, registran y realizan seguimiento de los resultados obtenidos será validada mediante la investigación con usuarios. |
+| How Much | ¿Cuánto tiempo, costo o impacto implica? | El esfuerzo asociado a este proceso aún requiere ser cuantificado. De manera preliminar, la necesidad de consultar diferentes fuentes podría generar trabajo repetitivo, especialmente cuando se administran múltiples vehículos. Sin embargo, el tiempo empleado por consulta, la frecuencia de revisión, el número de fuentes consultadas y el impacto económico u operativo serán variables a medir durante la investigación con usuarios. |
+
+**Objetivos y límites del proyecto**
+
+El objetivo de FleetProof es facilitar la investigación y el monitoreo del estado documentario y administrativo de vehículos, mediante mecanismos que permitan consolidar resultados provenientes de diferentes fuentes, comparar cambios y realizar seguimiento de observaciones.
+
+Como objetivos específicos, la solución busca:
+
+- centralizar los resultados obtenidos a partir de diferentes fuentes de consulta;
+- registrar la fuente, fecha y evidencia asociada a cada resultado;
+- permitir la comparación entre diferentes estados registrados de un vehículo;
+- facilitar la identificación y priorización de observaciones;
+- proporcionar mecanismos para asignar responsables y registrar evidencias de resolución;
+- ofrecer una visualización consolidada para la gestión de vehículos individuales y flotas.
+
+El alcance inicial se limita a la gestión de información documentaria y administrativa relacionada con los vehículos. El MVP no contempla funcionalidades de GPS, telemetría, sensores, combustible o mantenimiento mecánico, ni el desarrollo de una aplicación móvil nativa. Tampoco se plantea automatizar todas las fuentes disponibles; inicialmente se trabajará con un número limitado de conectores o proveedores de prueba, manteniendo una arquitectura que permita incorporar nuevas fuentes posteriormente.
+
+Asimismo, FleetProof no se presentará como una fuente oficial ni reemplazará los certificados o consultas de las entidades públicas correspondientes.
 
 ### 1.2.2 Lean UX Process
 
