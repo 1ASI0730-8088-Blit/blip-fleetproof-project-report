@@ -2,37 +2,138 @@
 
 ## 2.1 Competidores
 
-TODO: Identificar mínimo 3 competidores directos. Candidatos iniciales:
+Para el análisis competitivo se identificaron soluciones que atienden total o parcialmente la consulta de información vehicular en Perú. El criterio de selección considera servicios que permiten revisar datos por placa, obtener reportes, consultar fuentes oficiales o apoyar decisiones de compraventa de vehículos usados.
 
-- Autofact Pro Perú.
-- HistorialVehicular.pe.
-- Mi Torito.
-- InfoVehicular.
+Los competidores directos priorizados son:
+
+- **Autofact Perú** (<https://www.autofact.pe/>), por su posicionamiento como servicio de reporte vehicular para compra de autos usados.
+- **HistorialVehicular.pe** (<https://historialvehicular.pe/>), por ofrecer consulta inicial por placa, informe completo, veredicto de riesgo y PDF descargable.
+- **Mi Torito** (<https://mitorito.pe/>), por presentar consulta de historial vehicular, múltiples fuentes, reportes y alertas asociadas al estado del vehículo.
+
+También se consideran como referencias parciales los portales públicos consultados por usuarios, como servicios de SUNARP, MTC, SAT, SBS y otros organismos. Estas fuentes no compiten como producto integral, pero sí forman parte del comportamiento actual de consulta manual.
 
 ### 2.1.1 Análisis competitivo
 
-TODO: Completar Competitive Analysis Landscape con perfil, marketing, producto, precios, canales y SWOT.
+| Competidor | Perfil | Marketing y posicionamiento | Producto | Precios | Canales | Fortalezas | Debilidades |
+|---|---|---|---|---|---|---|---|
+| Autofact Perú | Servicio orientado a obtener información vehicular antes de comprar un auto usado. | Comunica seguridad en la compra, prevención de problemas y acceso a información por placa. | Reporte vehicular con antecedentes, historial y datos relevantes para decisión de compra. | Modelo de pago por reporte o paquetes, según disponibilidad comercial vigente. | Sitio web, contenido educativo y búsquedas orgánicas. | Marca reconocible, enfoque claro en compraventa y experiencia previa en reportes. | Se concentra principalmente en consulta puntual; no prioriza gestión recurrente de flotas ni seguimiento colaborativo. |
+| HistorialVehicular.pe | Servicio digital peruano para consultar historial de vehículos por placa. | Resalta rapidez, veredicto de riesgo, PDF descargable y ahorro de tiempo frente a consulta manual. | Consulta gratuita inicial e informe completo con fuentes oficiales, deudas, papeletas, siniestros, SOAT y revisión técnica. | Publica precios por informe y paquetes; también comunica planes para consultas frecuentes. | Sitio web, contenido informativo y flujo directo de consulta por placa. | Transparencia en precios, foco local, veredicto de riesgo y PDF. | El enfoque principal sigue siendo el reporte individual; la gestión de múltiples vehículos queda como oportunidad. |
+| Mi Torito | Servicio de consulta vehicular para compradores, vendedores y usuarios móviles. | Promete revisión rápida, múltiples fuentes verificadas, reporte de riesgo y experiencia simple. | Reportes por placa con propietarios, multas, SOAT, revisiones técnicas, marketplace y alertas. | Publica precio de reporte completo desde S/ 15.90, según información visible en su sitio. | Sitio web, aplicaciones móviles y presencia comercial digital. | Cobertura amplia de fuentes, propuesta simple, soporte móvil y alertas. | Puede percibirse como producto generalista; no presenta una propuesta especializada para flotas pequeñas y medianas. |
 
-### 2.1.2 Estrategias y tacticas frente a competidores
+#### Competitive Analysis Landscape
 
-TODO: Redactar estrategia BLIP frente a reporte puntual, monitoreo recurrente, trazabilidad y gestión colaborativa.
+| Criterio | Autofact Perú | HistorialVehicular.pe | Mi Torito | Oportunidad para FleetProof |
+|---|---|---|---|---|
+| Consulta por placa | Alta | Alta | Alta | Mantener consulta por placa como punto de entrada simple. |
+| Reporte descargable | Alta | Alta | Alta | Diferenciar el reporte con evidencia, fecha, fuente y explicación del riesgo. |
+| Gestión de flotas | Baja | Media | Media | Crear tablero de múltiples vehículos, responsables y estados de revisión. |
+| Monitoreo recurrente | Baja | Media | Media | Incorporar seguimiento de cambios relevantes y alertas. |
+| Trazabilidad de fuente | Media | Alta | Media | Mostrar origen, fecha y estado de cada fuente consultada. |
+| Colaboración interna | Baja | Baja | Baja | Permitir asignación de responsables, observaciones y casos de resolución. |
+| Claridad para usuarios no técnicos | Media | Alta | Alta | Usar lenguaje simple, explicación de hallazgos y recomendaciones accionables. |
+
+#### SWOT de BLIP FleetProof frente a competidores
+
+| Tipo | Análisis |
+|---|---|
+| Fortalezas | Enfoque en monitoreo continuo, trazabilidad de evidencias, gestión de múltiples vehículos y colaboración entre responsables. |
+| Oportunidades | Empresas pequeñas y medianas con flotas necesitan pasar de consultas aisladas a control recurrente. Compradores particulares también requieren reportes comprensibles antes de decidir. |
+| Debilidades | Producto nuevo, sin reconocimiento de marca ni histórico público de consultas procesadas. |
+| Amenazas | Competidores existentes pueden ampliar sus reportes hacia planes recurrentes, alertas o funciones para empresas. |
+
+### 2.1.2 Estrategias y tácticas frente a competidores
+
+La estrategia de BLIP con FleetProof consiste en diferenciarse de los servicios centrados en reportes puntuales mediante una propuesta de control vehicular continuo. El producto no se limitará a entregar un documento final, sino que buscará organizar el ciclo completo de revisión: registro del vehículo, consulta de fuentes, identificación de hallazgos, evaluación de riesgo, generación de evidencia y seguimiento posterior.
+
+Las tácticas principales son:
+
+- **Trazabilidad visible:** cada hallazgo debe mostrar fuente, fecha de consulta y estado de disponibilidad. Esto responde a la incertidumbre identificada en los mapas de empatía y en los recorridos de usuario.
+- **Gestión por vehículo y por flota:** el usuario debe poder revisar un vehículo individual o agrupar varios vehículos en una flota, asignando responsables y estados de revisión.
+- **Riesgo explicable:** el sistema debe comunicar por qué un vehículo presenta riesgo, evitando depender solo de un color o indicador visual.
+- **Reporte compartible:** FleetProof debe generar un resumen que pueda enviarse a clientes, compradores, vendedores o responsables internos.
+- **Monitoreo recurrente:** a diferencia del reporte único, el producto debe permitir alertas ante cambios relevantes, vencimientos o inconsistencias posteriores.
+- **Lenguaje comprensible:** los textos del producto deben evitar tecnicismos innecesarios y explicar consecuencias prácticas para la toma de decisiones.
+
+Con estas tácticas, BLIP compite no solo por entregar información, sino por reducir incertidumbre operativa durante todo el proceso de validación vehicular.
 
 ## 2.2 Entrevistas
 
 ### 2.2.1 Diseño de entrevistas
 
-TODO: Preparar preguntas conductuales por segmento. Evitar preguntas de aprobacion como "usarias esta aplicacion".
+Las entrevistas se diseñaron como conversaciones breves de máximo cinco minutos. El objetivo es obtener evidencia sobre comportamientos actuales, dolores y criterios de decisión sin inducir respuestas positivas hacia FleetProof. Por ello, se evitan preguntas de aprobación como “¿usarías esta aplicación?” y se priorizan preguntas conductuales sobre experiencias reales.
+
+#### Guía de entrevista para Cristhian Amaya
+
+Perfil: consultor automotor y creador de contenido digital.
+
+Duración objetivo: 5 minutos.
+
+| Tiempo estimado | Pregunta | Objetivo |
+|---|---|---|
+| 0:00 - 0:30 | ¿Cuál fue la última consulta vehicular que recibiste de una persona interesada en comprar o vender un vehículo? | Identificar situación real reciente. |
+| 0:30 - 1:15 | ¿Qué datos pediste primero y por qué? | Reconocer datos mínimos para iniciar una revisión. |
+| 1:15 - 2:00 | ¿Qué fuentes revisaste para responder esa consulta? | Identificar fuentes usadas y nivel de dispersión. |
+| 2:00 - 2:45 | ¿Qué parte te tomó más tiempo o generó más duda? | Detectar puntos de dolor. |
+| 2:45 - 3:30 | ¿Cómo explicaste el resultado a la persona que te consultó? | Evaluar necesidad de lenguaje claro. |
+| 3:30 - 4:15 | ¿Qué evidencia guardaste o compartiste para respaldar tu recomendación? | Identificar trazabilidad y prueba documental. |
+| 4:15 - 5:00 | Si volvieras a atender una consulta similar, ¿qué información quisieras tener ordenada desde el inicio? | Obtener oportunidades sin inducir solución. |
+
+#### Guía de entrevista para Roxana Limo
+
+Perfil: responsable comercial de empresa automotriz.
+
+Duración objetivo: 5 minutos.
+
+| Tiempo estimado | Pregunta | Objetivo |
+|---|---|---|
+| 0:00 - 0:30 | ¿Cuál fue la última vez que tu equipo tuvo que validar información de un vehículo antes de ofrecerlo o venderlo? | Identificar experiencia comercial real. |
+| 0:30 - 1:15 | ¿Qué información necesitaban confirmar antes de continuar con el proceso? | Reconocer datos críticos para decisión comercial. |
+| 1:15 - 2:00 | ¿En qué lugares o áreas estaba distribuida esa información? | Identificar dispersión entre sedes, registros y responsables. |
+| 2:00 - 2:45 | ¿Qué problemas aparecieron cuando faltó un dato o hubo inconsistencia? | Detectar impacto operativo. |
+| 2:45 - 3:30 | ¿Cómo se comunicó la información final al cliente o al equipo interno? | Evaluar forma actual de comunicación. |
+| 3:30 - 4:15 | ¿Qué registro queda después de la revisión del vehículo? | Identificar necesidad de historial y seguimiento. |
+| 4:15 - 5:00 | ¿Qué señales te hacen decidir que un vehículo está listo para ser ofrecido con confianza? | Obtener criterios de validación y riesgo. |
 
 ### 2.2.2 Registro de entrevistas
 
 | Segmento | Entrevistado | Edad | Distrito | Fecha | Screenshot | URL Microsoft Stream | Timing | Duracion |
 |---|---|---:|---|---|---|---|---|---|
-| Empresas con flotas | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO |
-| Propietarios y compradores | TODO | TODO | TODO | TODO | TODO | TODO | TODO | TODO |
+| Consultores y asesores automotores | Cristhian Amaya | 39 | Chiclayo | Pendiente | Pendiente | Pendiente | 0:00 - 5:00 | 5 minutos |
+| Responsables comerciales y operativos | Roxana Limo | 42 | Chiclayo | Pendiente | Pendiente | Pendiente | 0:00 - 5:00 | 5 minutos |
 
 ### 2.2.3 Análisis de entrevistas
 
-TODO: Analizar cada segmento con porcentajes derivados de entrevistas.
+Debido a que las entrevistas reales aún se encuentran pendientes de registro, esta sección presenta un análisis preliminar basado en los User Personas, Empathy Maps, User Journey Maps y As-is Scenario Maps ya elaborados por el equipo. Los porcentajes no deben presentarse como resultado final de campo; deben reemplazarse por métricas reales cuando se completen y graben las entrevistas.
+
+#### Segmento: consultores y asesores automotores
+
+Base preliminar: perfil de Cristhian Amaya, mapa de empatía, recorrido de usuario y As-is Scenario Map del asesor o generador de contenido automotor.
+
+| Hallazgo preliminar | Evidencia de soporte | Porcentaje estimado para validar |
+|---|---|---:|
+| Requieren información vehicular organizada antes de emitir una recomendación. | User Persona y Empathy Map de Cristhian. | 80% |
+| Dedican tiempo elevado a buscar datos en diferentes fuentes. | Journey Map y As-is Scenario Map del asesor. | 75% |
+| Necesitan explicar datos técnicos en lenguaje simple. | Empathy Map de Cristhian y etapa de comunicación de resultados. | 70% |
+| Valoran contar con evidencia para respaldar recomendaciones. | User Persona y fase de análisis del recorrido. | 70% |
+
+Interpretación: este segmento necesita que FleetProof reduzca el esfuerzo de búsqueda y convierta los hallazgos en explicaciones comprensibles. La trazabilidad de fuentes es crítica, porque el asesor debe sostener la confianza de su comunidad o de sus clientes.
+
+#### Segmento: responsables comerciales y operativos
+
+Base preliminar: perfil de Roxana Limo, mapa de empatía, recorrido de usuario y As-is Scenario Map del vendedor o equipo comercial.
+
+| Hallazgo preliminar | Evidencia de soporte | Porcentaje estimado para validar |
+|---|---|---:|
+| Necesitan validar información antes de ofrecer un vehículo al cliente. | User Persona y Journey Map de Roxana. | 85% |
+| Tienen información distribuida entre sedes, documentos y responsables. | Empathy Map de Roxana y As-is Scenario Map comercial. | 80% |
+| Requieren reducir riesgo de entregar información incompleta. | Frustraciones y objetivos de Roxana. | 75% |
+| Necesitan conservar historial de consultas, observaciones y cambios. | Journey Map de Roxana y oportunidades detectadas. | 70% |
+
+Interpretación: este segmento requiere una herramienta de control que permita revisar vehículos con evidencia, asignar responsables y mantener historial. Para este usuario, FleetProof debe enfocarse en coordinación, confiabilidad comercial y reducción de errores antes de presentar información al cliente.
+
+#### Conclusión preliminar
+
+Los hallazgos iniciales muestran que FleetProof debe priorizar tres capacidades: centralización de información vehicular, trazabilidad de evidencias y comunicación clara del riesgo. Esta conclusión deberá contrastarse con entrevistas reales de tres a cinco participantes por segmento, según el alcance definido por el equipo y la rúbrica del curso.
 
 ## 2.3 Needfinding
 
@@ -189,15 +290,81 @@ Este mapa representa a un actor que recibe consultas de usuarios, investiga info
 
 ## 2.4 Big Picture Event Storming
 
-TODO: Incluir captura y explicación de eventos principales del dominio.
+El Big Picture Event Storming fue elaborado en Miro para analizar el dominio de FleetProof desde una perspectiva de eventos, decisiones, actores, fuentes externas y preguntas abiertas. El tablero se encuentra disponible en el siguiente enlace: <https://miro.com/app/board/uXjVHntEsLk=/>.
+
+La dinámica se organizó en tres fases:
+
+- **Open:** identificación amplia de eventos del dominio, sin ordenar todavía el flujo.
+- **Explore:** organización de eventos en flujos principales y detección de decisiones, actores y sistemas externos.
+- **Close:** agrupación de preguntas abiertas que deben resolverse antes del diseño detallado.
+
+![Big Picture Event Storming - Overview](assets/chapter-2/event-storming/big-picture-event-storming-overview.png)
+
+Figura 2.X. Vista general del Big Picture Event Storming de FleetProof.
+
+Fuente y enlace al artefacto: tablero elaborado por el equipo en Miro. URL: <https://miro.com/app/board/uXjVHntEsLk=/>.
+
+### 2.4.1 Fase Open
+
+![Big Picture Event Storming - Open](assets/chapter-2/event-storming/open-phase-domain-events.png)
+
+Figura 2.X. Fase Open del Big Picture Event Storming.
+
+En la fase Open se identificaron eventos del dominio relacionados con registro de vehículo, consulta por placa, solicitud de información, revisión de documentos, obtención de datos, generación de reportes, identificación de riesgos, activación de monitoreo, detección de cambios y envío de alertas. Esta fase permitió reconocer que FleetProof no se limita a una consulta aislada, sino que incluye procesos posteriores de seguimiento, revisión y gestión de evidencias.
+
+### 2.4.2 Fase Explore
+
+![Big Picture Event Storming - Explore](assets/chapter-2/event-storming/explore-phase-process-flows.png)
+
+Figura 2.X. Fase Explore del Big Picture Event Storming.
+
+En la fase Explore se ordenaron los eventos en tres flujos principales:
+
+- **Vehicle Report Flow:** cubre registro de usuario, consulta vehicular, pago, consulta de fuentes oficiales, consolidación de información, generación de reporte y revisión final por el usuario.
+- **Monitoring Flow:** cubre selección del servicio de monitoreo, activación de suscripción, registro de placa monitoreada, revisión periódica, detección de cambios y notificación.
+- **Fleet Flow:** cubre selección de servicio para gestión de flotas, registro de flota, asignación de vehículos, revisión de estado, identificación de riesgo y notificación a responsables.
+
+La fase Explore también permitió identificar decisiones relevantes, como disponibilidad de fuentes externas, detección tardía de riesgos y comparación manual de información por parte del usuario.
+
+### 2.4.3 Fase Close
+
+![Big Picture Event Storming - Close](assets/chapter-2/event-storming/close-phase-question-clusters.png)
+
+Figura 2.X. Fase Close del Big Picture Event Storming.
+
+En la fase Close se agruparon preguntas abiertas por tema. Las principales categorías fueron Vehicle Information, Vehicle Report, Fleet Management, External Systems, Subscription / Payment y Vehicle Monitoring. Estas preguntas ayudan a definir límites del producto y reducir incertidumbre técnica antes de construir historias de usuario.
+
+| Categoría | Preguntas abiertas | Decisión pendiente |
+|---|---|---|
+| Vehicle Information | ¿Qué fuentes oficiales brindan información?, ¿qué ocurre si una fuente no está disponible?, ¿cada cuánto se actualiza la información? | Definir fuentes iniciales y política de actualización. |
+| Vehicle Report | ¿Cómo se valida la precisión del reporte?, ¿cuánto tiempo estará disponible?, ¿qué ocurre si falla la generación? | Definir vigencia del reporte, manejo de fallos y evidencia visible. |
+| Fleet Management | ¿Qué define un riesgo de flota?, ¿quién es responsable por cada vehículo?, ¿cómo se calcula el riesgo? | Definir reglas de riesgo y responsables internos. |
+| External Systems | ¿Cómo impacta CAPTCHA en tiempo de consulta?, ¿qué ocurre si falla un servicio externo? | Definir estrategia de manejo de indisponibilidad. |
+| Subscription / Payment | ¿Qué ocurre si falla un pago?, ¿cuándo se activa la suscripción?, ¿qué servicios requieren suscripción activa? | Definir reglas de activación y restricciones por plan. |
+| Vehicle Monitoring | ¿Qué cambios generan alertas?, ¿con qué frecuencia se revisan los vehículos?, ¿quién recibe la alerta? | Definir frecuencia de monitoreo y destinatarios. |
 
 ## 2.5 Ubiquitous Language
 
 | Term | Definition |
 |---|---|
-| Report Request | Solicitud para investigar un vehículo. |
-| Source Check | Resultado de revisar una fuente concreta. |
-| Finding | Dato que requiere atencion o interpretacion. |
-| Snapshot | Estado consolidado del vehículo en una fecha. |
-| Risk Assessment | Evaluación explicable basada en reglas. |
-| Resolution Case | Trabajo asignado para resolver una observacion. |
+| User Account | Cuenta creada por una persona para acceder a FleetProof y consultar información vehicular. |
+| License Plate | Identificador de placa usado como dato inicial para buscar información de un vehículo. |
+| Vehicle | Unidad vehicular registrada o consultada dentro de FleetProof. |
+| Vehicle Report | Reporte consolidado que resume información vehicular obtenida desde fuentes disponibles. |
+| Report Request | Solicitud realizada por el usuario para investigar un vehículo. |
+| Source Check | Revisión individual de una fuente específica relacionada con el vehículo. |
+| Official Source | Fuente pública u oficial usada para obtener o contrastar información vehicular. |
+| External Source | Fuente externa complementaria que aporta información para la evaluación vehicular. |
+| Source Unavailable | Estado generado cuando una fuente no responde o no permite completar la consulta. |
+| Finding | Dato relevante que requiere atención, explicación o seguimiento. |
+| Evidence | Registro que respalda un dato encontrado, incluyendo fuente, fecha y estado de consulta. |
+| Snapshot | Estado consolidado del vehículo en una fecha determinada. |
+| Risk Assessment | Evaluación explicable basada en hallazgos, reglas de negocio y estado de fuentes consultadas. |
+| Fleet | Conjunto de vehículos agrupados para seguimiento operativo o comercial. |
+| Fleet Risk | Riesgo calculado sobre uno o varios vehículos asociados a una flota. |
+| Monitoring Service | Servicio que revisa cambios relevantes después de registrar un vehículo para seguimiento. |
+| Alert | Notificación generada cuando se detecta un cambio, vencimiento o riesgo relevante. |
+| Responsible Person | Usuario asignado para revisar una observación o dar seguimiento a un vehículo. |
+| Resolution Case | Trabajo asignado para resolver una observación detectada durante la revisión. |
+| Subscription | Acceso activo que habilita servicios recurrentes como monitoreo o gestión de flotas. |
+| Payment | Operación económica asociada a un reporte, plan o servicio dentro de FleetProof. |
