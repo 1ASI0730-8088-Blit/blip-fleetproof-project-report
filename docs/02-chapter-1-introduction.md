@@ -93,45 +93,6 @@ Asimismo, FleetProof no se presentará como una fuente oficial ni reemplazará l
 
 ### 1.2.2 Lean UX Process
 
-#### 1.2.2.1 Lean UX Problem Statement
-
-El estado actual de la verificación documentaria vehicular en Perú se concentra en consultas aisladas realizadas sobre múltiples portales y reportes individuales orientados principalmente a compraventa. Los productos existentes no cubren suficientemente el monitoreo continuo, la comparación histórica, la gestión colaborativa de observaciones y la consolidación del riesgo de una flota. FleetProof cubrirá esta brecha mediante una plataforma que registra vehículos, organiza consultas por fuente, genera reportes trazables y alerta cambios que puedan afectar la operación. El foco inicial serán empresas con flotas pequeñas y medianas; el segundo segmento serán propietarios y compradores particulares. El éxito se evidenciará mediante menor tiempo de preparación, detección temprana y uso recurrente.
-
-#### 1.2.2.2 Lean UX Assumptions
-
-##### Business Assumptions
-
-- Las empresas pagarán por reducir trabajo manual y riesgo operativo.
-- El monitoreo recurrente generará mayor retención que el reporte unitario.
-- Los planes por volumen de vehículos y reportes permitirán escalar el modelo de negocio.
-
-##### Business Outcome Assumptions
-
-- Aumentará el porcentaje de clientes que genera un segundo reporte.
-- Disminuirá el tiempo promedio de preparación y revisión.
-- Aumentará el porcentaje de observaciones con responsable y evidencia.
-
-##### User Assumptions
-
-- Los administradores de flota combinan portales, hojas de cálculo y mensajería.
-- Los supervisores necesitan resumen de riesgo y trazabilidad.
-- Los particulares tienen dificultad para interpretar resultados registrales.
-
-##### User Outcome and Benefit Assumptions
-
-- Los usuarios identificarán unidades críticas rápidamente.
-- Los usuarios evitaran repetir consultas y perder evidencias.
-- Los usuarios comprenderán cambios y regularizaran observaciones.
-
-##### Feature Assumptions
-
-- La carga CSV reducirá esfuerzo de adopción empresarial.
-- El checklist por fuente reducirá omisiones.
-- La comparación de snapshots hará visible información nueva.
-- El semáforo con explicación facilitará la priorización.
-- Los casos con responsable y evidencia mejorarán seguimiento.
-- Los planes con límites reales sostendrán monetización.
-
 #### 1.2.2.1. Lean UX Problem Statements
 
 El Problem Statement se formula como una iniciativa nueva (Brand New Initiative) y considera de manera conjunta los segmentos objetivo del proyecto.
@@ -146,9 +107,89 @@ El Problem Statement se formula como una iniciativa nueva (Brand New Initiative)
 
 **We’ll know we are successful when we see** recurring use of the monitoring functionality, shorter times required to prepare and review vehicle information, earlier identification of relevant changes and a greater proportion of observations receiving documented follow-up.
 
-#### 1.2.2.4 Lean UX Canvas
+#### 1.2.2.2. Lean UX Assumptions
 
-TODO: Insertar captura del Lean UX Canvas y explicar aprendizajes.
+| Tipo | ID | Creencia por contrastar | Evidencia necesaria |
+|---|---|---|---|
+| Business Assumptions | BA-01 | Las empresas que administran flotas pequeñas y medianas estarán dispuestas a pagar por una solución que facilite el monitoreo documentario y administrativo de sus vehículos. | Entrevistas con responsables de gestión de flota, control documentario u operaciones sobre necesidades actuales, soluciones utilizadas y disposición de pago. |
+| Business Assumptions | BA-02 | Un modelo de suscripción recurrente será adecuado para usuarios que necesiten consultar y monitorear el estado de sus vehículos de manera periódica. | Entrevistas sobre frecuencia de consulta, necesidades recurrentes y preferencias respecto a servicios de pago. |
+| Business Assumptions | BA-03 | Una solución orientada a la gestión de múltiples vehículos tendrá una oportunidad de negocio diferenciada frente a servicios centrados principalmente en consultas o reportes individuales. | Análisis competitivo y entrevistas con empresas que administren flotas para identificar necesidades no cubiertas por las soluciones actuales. |
+| Business Outcome Assumptions | BOA-01 | Los usuarios que encuentren valor en el monitoreo de FleetProof realizarán consultas y revisiones de manera recurrente. | Evidencia de recurrencia de uso durante pruebas y validaciones con usuarios. |
+| Business Outcome Assumptions | BOA-02 | FleetProof permitirá reducir el tiempo promedio necesario para preparar y revisar información relacionada con los vehículos. | Medición del tiempo empleado para realizar una tarea equivalente con el proceso actual y con FleetProof. |
+| Business Outcome Assumptions | BOA-03 | El uso de mecanismos de seguimiento permitirá incrementar la proporción de observaciones que cuentan con un responsable y evidencia de resolución. | Registro y comparación de observaciones gestionadas durante las pruebas de la solución. |
+| User Assumptions | UA-01 | Los responsables de gestión de flota, control documentario u operaciones necesitan consultar información vehicular proveniente de diferentes fuentes. | Entrevistas sobre la última ocasión en que realizaron una verificación y las fuentes que utilizaron. |
+| User Assumptions | UA-02 | Los responsables de flotas necesitan una visión consolidada del estado de múltiples vehículos para identificar aquellos que requieren atención. | Entrevistas y observación de tareas relacionadas con la revisión y priorización de vehículos. |
+| User Assumptions | UA-03 | Los propietarios, compradores y conductores independientes necesitan consultar información documentaria y administrativa para tomar decisiones relacionadas con sus vehículos. | Entrevistas sobre situaciones reales de consulta, adquisición, uso o administración de vehículos. |
+| User Outcome and Benefit Assumptions | UOA-01 | Los responsables de flota podrán identificar con mayor rapidez los vehículos que requieren atención. | Pruebas de tareas de identificación y priorización de vehículos, comparando resultados con el proceso utilizado actualmente. |
+| User Outcome and Benefit Assumptions | UOA-02 | Los usuarios podrán evitar la repetición innecesaria de consultas al conservar los resultados obtenidos junto con su fuente, fecha y evidencia. | Observación de tareas de consulta y revisión de información previamente registrada durante las pruebas. |
+| User Outcome and Benefit Assumptions | UOA-03 | Los usuarios podrán comprender con mayor facilidad los cambios ocurridos entre diferentes estados registrados de un vehículo. | Pruebas de comparación de estados y observación de la capacidad de los usuarios para identificar cambios relevantes. |
+| Feature Assumptions | FA-01 | La importación de vehículos mediante archivos CSV reducirá el esfuerzo necesario para registrar una flota. | Comparación del tiempo y esfuerzo requerido para registrar varios vehículos manualmente y mediante importación. |
+| Feature Assumptions | FA-02 | La organización de las consultas mediante un checklist por fuente ayudará a reducir omisiones durante la recopilación de información. | Pruebas de tareas de consulta y comparación de omisiones con y sin el uso del checklist. |
+| Feature Assumptions | FA-03 | La comparación entre diferentes estados registrados permitirá identificar cambios relevantes en la información de un vehículo. | Pruebas de la funcionalidad de comparación utilizando diferentes estados registrados de un vehículo. |
+| Feature Assumptions | FA-04 | Una visualización consolidada de observaciones mediante indicadores de riesgo facilitará la priorización de vehículos que requieren atención. | Pruebas con usuarios en las que deban identificar y priorizar vehículos a partir del dashboard. |
+| Feature Assumptions | FA-05 | El registro de responsables y evidencias de resolución facilitará el seguimiento de observaciones hasta su cierre. | Pruebas de gestión de casos y observación de si los usuarios pueden asignar, actualizar y cerrar observaciones correctamente. |
+| Feature Assumptions | FA-06 | Las alertas asociadas a cambios o condiciones relevantes facilitarán la detección oportuna de situaciones que requieren atención. | Pruebas con escenarios de cambio y observación de si los usuarios identifican oportunamente las alertas generadas. |
+
+#### 1.2.2.3. Lean UX Hypothesis Statements
+
+| ID       | Feature Assumption                                                                                                                                       | Hypothesis Statement                                                                                                                                                                                                                                                  | Métrica y criterio de contraste                                                                                                                                                                                                                                                                  |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **H-01** | **FA-01:** La importación de vehículos mediante archivos CSV reducirá el esfuerzo necesario para registrar una flota.                                    | *We believe we will reduce the time required to prepare and review vehicle information if fleet management staff attain a faster and less laborious fleet registration process with CSV vehicle import.*                                                           | **Métrica:** tiempo promedio requerido para registrar una flota. **Criterio:** se considera validada si los usuarios completan el registro de una flota mediante CSV en menos tiempo que mediante el registro manual.                                                                            |
+| **H-02** | **FA-02:** La organización de las consultas mediante un checklist por fuente ayudará a reducir omisiones durante la recopilación de información.         | *We believe we will reduce the time required to prepare and review vehicle information if fleet management and document control staff attain a more complete information-gathering process with a source-based checklist.*                                          | **Métrica:** porcentaje de fuentes o verificaciones omitidas durante una consulta. **Criterio:** se considera validada si disminuye la cantidad de omisiones respecto al proceso utilizado actualmente.                                                                                          |
+| **H-03** | **FA-03:** La comparación entre diferentes estados registrados permitirá identificar cambios relevantes en la información de un vehículo.                | *We believe we will increase the recurrent use of FleetProof for vehicle monitoring if fleet management staff attain a faster way to identify relevant changes in vehicle information with status comparison.*                                                      | **Métrica:** porcentaje de usuarios que identifican correctamente los cambios relevantes y tiempo empleado en la comparación. **Criterio:** se considera validada si los usuarios identifican correctamente los cambios y requieren menos tiempo que con la revisión independiente de registros. |
+| **H-04** | **FA-04:** Una visualización consolidada de observaciones mediante indicadores de riesgo facilitará la priorización de vehículos que requieren atención. | *We believe we will reduce the time required to prepare and review vehicle information if fleet management staff attain a clearer way to prioritize vehicles requiring attention with a consolidated risk dashboard.*                                               | **Métrica:** tiempo necesario para identificar y priorizar los vehículos que requieren atención. **Criterio:** se considera validada si los usuarios identifican correctamente los vehículos prioritarios y reducen el tiempo empleado en la tarea.                                              |
+| **H-05** | **FA-05:** El registro de responsables y evidencias de resolución facilitará el seguimiento de observaciones hasta su cierre.                            | *We believe we will increase the proportion of observations that have a responsible person and evidence of resolution if fleet management and operations staff attain a more traceable observation-management process with responsibility and resolution tracking.* | **Métrica:** porcentaje de observaciones con responsable asignado y evidencia de resolución. **Criterio:** se considera validada si aumenta la proporción de observaciones que cuentan con responsable y evidencia de cierre frente al proceso actual.                                           |
+| **H-06** | **FA-06:** Las alertas asociadas a cambios o condiciones relevantes facilitarán la detección oportuna de situaciones que requieren atención.             | *We believe we will increase the recurrent use of FleetProof for vehicle monitoring if fleet management staff attain earlier awareness of relevant vehicle conditions with timely alerts.*                                                                          | **Métrica:** porcentaje de situaciones relevantes detectadas mediante alertas y tiempo transcurrido hasta su identificación. **Criterio:** se considera validada si los usuarios detectan oportunamente las situaciones relevantes y reducen el tiempo necesario para identificarlas.            |
+
+#### 1.2.2.4. Lean UX Canvas
+
+El Lean UX Canvas sintetiza los principales elementos definidos durante la
+formulación inicial de FleetProof, relacionando el problema de negocio, los
+resultados esperados, los usuarios objetivo, los beneficios esperados, las
+soluciones propuestas y las hipótesis que deberán ser contrastadas durante el
+proceso de investigación y validación. En esta etapa, el Canvas representa las
+hipótesis iniciales del equipo y podrá ser actualizado conforme se obtenga
+evidencia mediante las entrevistas de Needfinding y las posteriores
+validaciones.
+
+**Figura [N]. Lean UX Canvas de FleetProof.**
+
+![Lean UX Canvas de FleetProof](assets/chapter-1/LeanUX-canvas-FleetProof.png)
+
+**Fuente y enlace al artefacto:** Elaboración propia a partir del Lean UX
+Canvas V2 de Jeff Gothelf. Disponible en
+[Lean UX Canvas V2](https://jeffgothelf.com/blog/leanuxcanvas-v2/).
+
+**Explicación, decisiones y relación con otros artefactos:**
+
+El Lean UX Canvas consolida los resultados obtenidos en los artefactos
+anteriores del Lean UX Process. El Business Problem sintetiza la problemática
+identificada en el Problem Statement, centrada en la fragmentación de las
+consultas vehiculares y las limitaciones de las soluciones existentes para el
+monitoreo recurrente, la comparación histórica y el seguimiento de
+observaciones.
+
+Los Business Outcomes se derivan de los Business Outcome Assumptions y
+representan los cambios que permitirán evaluar si la propuesta genera valor
+para el negocio. Los Users incorporan los segmentos y roles identificados como
+prioritarios, mientras que los User Outcomes & Benefits recogen los beneficios
+esperados por estos usuarios, como identificar unidades críticas, evitar
+consultas repetidas, conservar evidencias y comprender cambios en la
+información vehicular.
+
+La sección Solutions sintetiza las principales capacidades planteadas para
+FleetProof, incluyendo la importación de vehículos, el checklist por fuente,
+los reportes trazables, la comparación de estados, el dashboard de riesgo y
+el seguimiento de observaciones mediante responsables y evidencias.
+
+Finalmente, las Hypotheses mantienen la trazabilidad con los Feature
+Assumptions definidos previamente, estableciendo una hipótesis por cada
+funcionalidad propuesta. La sección de aprendizaje prioriza inicialmente la
+validación del valor del monitoreo y consolidación recurrente de múltiples
+vehículos, mientras que el experimento inicial se plantea mediante entrevistas
+de Needfinding con usuarios del segmento prioritario. De esta manera, el
+Canvas funciona como una síntesis del Problem Statement, Assumptions e
+Hypothesis Statements y como punto de partida para la investigación posterior.
 
 ## 1.3 Segmentos objetivo
 
