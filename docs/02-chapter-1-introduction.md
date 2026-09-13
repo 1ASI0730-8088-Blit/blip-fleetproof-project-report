@@ -132,16 +132,19 @@ El estado actual de la verificación documentaria vehicular en Perú se concentr
 - Los casos con responsable y evidencia mejorarán seguimiento.
 - Los planes con límites reales sostendrán monetización.
 
-#### 1.2.2.3 Lean UX Hypothesis Statements
+#### 1.2.2.1. Lean UX Problem Statements
 
-TODO: Redactar un hypothesis statement por cada Feature Assumption usando:
+El Problem Statement se formula como una iniciativa nueva (Brand New Initiative) y considera de manera conjunta los segmentos objetivo del proyecto.
 
-```text
-We believe we will achieve [this business outcome]
-If [these personas]
-Attain [this benefit/user outcome]
-With [this feature or solution]
-```
+**The current state of vehicle documentary and administrative verification in Peru** has focused mainly on individual consultations of information related to vehicles, involving fleet operators, vehicle owners, buyers and independent drivers who need to verify documentation, authorizations, infractions and other conditions according to the vehicle and its intended use.
+
+**What existing products/services fail to address is** the need to extend the verification process beyond an individual consultation by providing mechanisms for recurrent monitoring, historical comparison, traceability of results and follow-up of observations, particularly when multiple vehicles are managed.
+
+**Our product/service will address this gap by** providing a web platform that consolidates information obtained from different sources, records the source, date and supporting evidence of each result, enables comparison between registered vehicle states, generates alerts and facilitates the follow-up of observations.
+
+**Our initial focus will be** small and medium-sized fleet operators and the personnel responsible for their fleet, documentary or operational management.
+
+**We’ll know we are successful when we see** recurring use of the monitoring functionality, shorter times required to prepare and review vehicle information, earlier identification of relevant changes and a greater proportion of observations receiving documented follow-up.
 
 #### 1.2.2.4 Lean UX Canvas
 
