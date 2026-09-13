@@ -1,23 +1,71 @@
-# UPC - 1ASI0730 Aplicaciones Web
+<div align="center">
 
-## Informe de Trabajo Final
+<br>
+<br>
 
-**Startup:** BLIP  
-**Producto:** FleetProof  
-**NRC:** 8088  
-**Profesor:** Efraín Ricardo Bautista Ubillús  
-**Ciclo académico:** 2026-20  
-**Mes y año:** TODO  
+## Universidad Peruana de Ciencias Aplicadas
+
+## Carrera de Ingeniería de Software
+
+<br>
+
+# 1ASI0730
+
+# Aplicaciones Web
+
+## NRC
+
+# 8088
+
+# Informe del Trabajo Final
+
+## Docente
+
+# Bautista Ubillús, Efraín Ricardo
+
+<br>
+
+## Equipo
+
+# BLIP
+
+## Proyecto
+
+# FleetProof
+
+<br>
 
 ## Integrantes
 
+| Código | Apellidos y nombres |
+|---|---|
+| u2022311656 | Reyes Limo, Sebastian Eduardo |
+| U20201B253 | Palomino Murga, Daniel Stalin |
+| Pendiente | Becerra Durand, Sebastian Uriel |
+| Pendiente | Gómez De La Torre Huertas, Rodrigo Fernando |
+| Pendiente | Payesa Torres, Harrison Hubert |
+
+<br>
+
+# Período 202620
+
+<br>
+
+# Septiembre 2026
+
+</div>
+
+---
+
+## Datos de colaboración
+
 | Código | Apellidos y nombres | Carrera | GitHub username | Rol AV1 |
 |---|---|---|---|---|
-| u2022311656 | Reyes Limo Sebastian | Ingeniería de Software | llegastian11 | Technical Lead, SCM and Rubric Owner |
-| U20201B253 | Palomino Murga Daniel Stalin | Ingeniería de Software | DanielPM23 | Lean UX Owner |
-| TODO | Becerra Durand Sebastian Uriel | Ingeniería de Software | TODO | UX Research Owner |
-| TODO | Gómez De La Torre Huertas Rodrigo Fernando | Ingeniería de Software | TODO | Requirements Owner |
-| TODO | Payesa Torres Harrison Hubert | Ingeniería de Software | TODO | Product Design and Landing Page Owner |
+| u2022311656 | Reyes Limo, Sebastian Eduardo | Ingeniería de Software | llegastian11 | Technical Lead, SCM and Rubric Owner |
+| U20201B253 | Palomino Murga, Daniel Stalin | Ingeniería de Software | DanielPM23 | Lean UX Owner |
+| Pendiente | Becerra Durand, Sebastian Uriel | Ingeniería de Software | Pendiente | UX Research Owner |
+| Pendiente | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | Pendiente | Requirements Owner |
+| Pendiente | Payesa Torres, Harrison Hubert | Ingeniería de Software | Pendiente | Product Design and Landing Page Owner |
 
 ## Tabla de Contenidos
 
@@ -53,4 +101,3 @@
 | Landing Page | TODO | v1.0.0, v2.0.0, v3.0.0, v4.0.0 |
 | Frontend Web Application | TODO | v1.0.0, v2.0.0, v3.0.0 |
 | Web Services | TODO | v1.0.0, v2.0.0 |
-
