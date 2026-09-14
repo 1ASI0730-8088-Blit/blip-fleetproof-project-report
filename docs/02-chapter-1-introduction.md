@@ -46,13 +46,13 @@ La identidad visual de BLIP se representa mediante el logotipo oficial de la sta
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-| Integrante | Código | Carrera | Perfil técnico | Aporte al equipo |
-|---|---|---|---|---|
-| Reyes Limo Sebastian | u2022311656 | Ingeniería de Software | TODO | Technical Lead, SCM and Rubric Owner |
-| Palomino Murga Daniel Stalin | U20201B253 | Ingeniería de Software | TODO | Lean UX Owner |
-| Becerra Durand Sebastian Uriel | TODO | Ingeniería de Software | TODO | UX Research Owner |
-| Gómez De La Torre Huertas Rodrigo Fernando | TODO | Ingeniería de Software | TODO | Requirements Owner |
-| Payesa Torres Harrison Hubert | TODO | Ingeniería de Software | TODO | Product Design and Landing Page Owner |
+| Foto | Integrante | Código | Carrera | Perfil técnico | Aporte al equipo |
+|---|---|---|---|---|--|
+| <img src="assets/chapter-1/team-menbers/team-menber-u2022311656.png" width="400"><br>  | Reyes Limo Sebastian | U2022311656 | Ingeniería de Software | TODO | Technical Lead, SCM and Rubric Owner |
+| <img src="assets/chapter-1/team-menbers/team-menber-u20201b253.jpeg" width="400"><br> | Palomino Murga Daniel Stalin | U20201B253 | Ingeniería de Software | Estudiante de Ingeniería de Software apasionado por la tecnología y el desarrollo de soluciones digitales. Cuento con conocimientos en programación, bases de datos, algoritmos y desarrollo de aplicaciones, además de habilidades en trabajo en equipo, resolución de problemas, pensamiento lógico y aprendizaje continuo. | Lean UX Owner |
+|  | Becerra Durand Sebastian Uriel | TODO | Ingeniería de Software | TODO | UX Research Owner |
+| <img src="assets/chapter-1/team-menbers/team-menber-u202311464.png" width="400"><br> | Gómez De La Torre Huertas Rodrigo Fernando | TODO | Ingeniería de Software | TODO | Requirements Owner |
+| <img src="assets/chapter-1/team-menbers/team-menber-u202221024.png" width="400"><br> | Payesa Torres Harrison Hubert | U202221024 | Ingeniería de Software | Estudiante de Ingeniería de Software inclinado hacia el desarrollo de soluciones digitales. Cuento con conocimientos en programación utilizando Python, C++, C y JavaScript, así como en bases de datos y consultas SQL. Me caracterizo por mi pensamiento lógico, capacidad de resolución de problemas, trabajo en equipo, aprendizaje continuo y disposición para adquirir nuevos conocimientos. | Product Design and Landing Page Owner |
 
 ## 1.2. Solution Profile
 
