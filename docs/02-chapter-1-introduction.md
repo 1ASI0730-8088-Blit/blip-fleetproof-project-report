@@ -12,7 +12,7 @@ TODO: Completar propósito, visión, valores, segmento de mercado y enfoque inno
 
 | Integrante | Código | Carrera | Perfil técnico | Aporte al equipo |
 |---|---|---|---|---|
-| Reyes Limo Sebastian | u2022311656 | Ingeniería de Software | Estudiante de la carrera de Ingeniería de Software, cursando el quinto ciclo. Le gusta trabajar en equipo, es puntual, responsable, empático y busca aprender tecnologías nuevas. Orgulloso VibeCoder. | Technical Lead, SCM and Rubric Owner |
+| <img src="assets/members/sebastian-reyes.png" alt="Sebastian Reyes Limo" width="180"><br>Reyes Limo, Sebastian | u202311656 | Ingeniería de Software | Estudiante de la carrera de Ingeniería de Software, cursando el quinto ciclo. Me gusta trabajar en equipo; soy puntual, responsable, empático y me gusta aprender tecnologías nuevas. Orgulloso VibeCoder. | Capítulo II / Requirements Elicitation & Analysis; entrevistas, análisis por segmentos, Big Picture Event Storming, Ubiquitous Language, trazabilidad y revisión de rúbrica. |
 | Palomino Murga Daniel Stalin | U20201B253 | Ingeniería de Software | TODO | Lean UX Owner |
 | Becerra Durand Sebastian Uriel | TODO | Ingeniería de Software | TODO | UX Research Owner |
 | Gómez De La Torre Huertas Rodrigo Fernando | TODO | Ingeniería de Software | TODO | Requirements Owner |

@@ -39,7 +39,7 @@
 
 | Código | Apellidos y nombres |
 |---|---|
-| u2022311656 | Reyes Limo, Sebastian Eduardo |
+| u202311656 | Reyes Limo, Sebastian Eduardo |
 | U20201B253 | Palomino Murga, Daniel Stalin |
 | Pendiente | Becerra Durand, Sebastian Uriel |
 | Pendiente | Gómez De La Torre Huertas, Rodrigo Fernando |
@@ -61,7 +61,7 @@
 
 | Foto | Código | Apellidos y nombres | Carrera | GitHub username | Rol AV1 |
 |---|---|---|---|---|---|
-| <img src="docs/assets/team/sebastian-reyes-limo.png" width="90" alt="Sebastian Eduardo Reyes Limo"> | u2022311656 | Reyes Limo, Sebastian Eduardo | Ingeniería de Software | llegastian11 | Technical Lead, SCM and Rubric Owner |
+| <img src="docs/assets/team/sebastian-reyes-limo.png" width="90" alt="Sebastian Eduardo Reyes Limo"> | u202311656 | Reyes Limo, Sebastian Eduardo | Ingeniería de Software | llegastian11 | Technical Lead, SCM and Rubric Owner |
 | Pendiente | U20201B253 | Palomino Murga, Daniel Stalin | Ingeniería de Software | DanielPM23 | Lean UX Owner |
 | Pendiente | Pendiente | Becerra Durand, Sebastian Uriel | Ingeniería de Software | Pendiente | UX Research Owner |
 | Pendiente | Pendiente | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | Pendiente | Requirements Owner |

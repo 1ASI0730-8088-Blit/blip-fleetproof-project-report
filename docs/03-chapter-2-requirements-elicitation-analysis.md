@@ -60,80 +60,189 @@ Con estas tácticas, BLIP compite no solo por entregar información, sino por re
 
 ### 2.2.1 Diseño de entrevistas
 
-Las entrevistas se diseñaron como conversaciones breves de máximo cinco minutos. El objetivo es obtener evidencia sobre comportamientos actuales, dolores y criterios de decisión sin inducir respuestas positivas hacia FleetProof. Por ello, se evitan preguntas de aprobación como “¿usarías esta aplicación?” y se priorizan preguntas conductuales sobre experiencias reales.
+Las entrevistas fueron diseñadas como sesiones semiestructuradas y conductuales. El objetivo fue conocer experiencias recientes de consulta, validación, coordinación y seguimiento de información vehicular, evitando preguntas de aprobación como “¿usarías esta aplicación?”. Cada guion priorizó hechos concretos: última revisión realizada, fuentes consultadas, evidencia conservada, problemas encontrados y forma de comunicar o resolver observaciones.
 
-#### Guía de entrevista para Cristhian Amaya
+Para cumplir la rúbrica de la primera entrega, el equipo trabajó dos segmentos de análisis. El primer segmento reúne propietarios, compradores y asesores automotores que necesitan interpretar información antes de tomar una decisión de compra, venta o recomendación. El segundo segmento reúne responsables comerciales, logísticos o de negocios con vehículos propios o tercerizados, donde la revisión impacta operaciones, coordinación y continuidad del servicio.
 
-Perfil: consultor automotor y creador de contenido digital.
+#### Guion para propietarios, compradores y asesores automotores
 
-Duración objetivo: 5 minutos.
+1. Cuéntame sobre la última vez que revisaste o recomendaste revisar un vehículo antes de comprarlo, venderlo o usarlo.
+2. ¿Qué información buscaste y qué fuentes consultaste?
+3. ¿Qué parte de la revisión tomó más tiempo o generó más dudas?
+4. ¿Cómo decidiste si un dato era confiable y estaba actualizado?
+5. ¿Cómo guardaste o compartiste la evidencia encontrada?
+6. ¿Qué hiciste cuando una fuente no respondió o mostró información distinta?
+7. Después de la primera revisión, ¿volviste a consultar el vehículo? ¿Por qué?
 
-| Tiempo estimado | Pregunta | Objetivo |
-|---|---|---|
-| 0:00 - 0:30 | ¿Cuál fue la última consulta vehicular que recibiste de una persona interesada en comprar o vender un vehículo? | Identificar situación real reciente. |
-| 0:30 - 1:15 | ¿Qué datos pediste primero y por qué? | Reconocer datos mínimos para iniciar una revisión. |
-| 1:15 - 2:00 | ¿Qué fuentes revisaste para responder esa consulta? | Identificar fuentes usadas y nivel de dispersión. |
-| 2:00 - 2:45 | ¿Qué parte te tomó más tiempo o generó más duda? | Detectar puntos de dolor. |
-| 2:45 - 3:30 | ¿Cómo explicaste el resultado a la persona que te consultó? | Evaluar necesidad de lenguaje claro. |
-| 3:30 - 4:15 | ¿Qué evidencia guardaste o compartiste para respaldar tu recomendación? | Identificar trazabilidad y prueba documental. |
-| 4:15 - 5:00 | Si volvieras a atender una consulta similar, ¿qué información quisieras tener ordenada desde el inicio? | Obtener oportunidades sin inducir solución. |
+#### Guion para responsables comerciales, logísticos y flotas pequeñas
 
-#### Guía de entrevista para Roxana Limo
-
-Perfil: responsable comercial de empresa automotriz.
-
-Duración objetivo: 5 minutos.
-
-| Tiempo estimado | Pregunta | Objetivo |
-|---|---|---|
-| 0:00 - 0:30 | ¿Cuál fue la última vez que tu equipo tuvo que validar información de un vehículo antes de ofrecerlo o venderlo? | Identificar experiencia comercial real. |
-| 0:30 - 1:15 | ¿Qué información necesitaban confirmar antes de continuar con el proceso? | Reconocer datos críticos para decisión comercial. |
-| 1:15 - 2:00 | ¿En qué lugares o áreas estaba distribuida esa información? | Identificar dispersión entre sedes, registros y responsables. |
-| 2:00 - 2:45 | ¿Qué problemas aparecieron cuando faltó un dato o hubo inconsistencia? | Detectar impacto operativo. |
-| 2:45 - 3:30 | ¿Cómo se comunicó la información final al cliente o al equipo interno? | Evaluar forma actual de comunicación. |
-| 3:30 - 4:15 | ¿Qué registro queda después de la revisión del vehículo? | Identificar necesidad de historial y seguimiento. |
-| 4:15 - 5:00 | ¿Qué señales te hacen decidir que un vehículo está listo para ser ofrecido con confianza? | Obtener criterios de validación y riesgo. |
+1. Cuéntame sobre la última vez que tu equipo tuvo que validar un vehículo antes de usarlo, ofrecerlo o asignarlo.
+2. ¿Quiénes participaron y cómo se repartieron las consultas o verificaciones?
+3. ¿Qué documentos, fuentes o registros revisaron durante ese proceso?
+4. ¿Dónde registraron los resultados y cómo los compartieron con otros responsables?
+5. ¿Qué dato faltante, vencido o inconsistente retrasó una decisión?
+6. ¿Cómo hacen seguimiento a una observación y saben quién debe resolverla?
+7. ¿Qué cambios necesitan detectar después de la primera revisión?
 
 ### 2.2.2 Registro de entrevistas
 
-| Segmento | Entrevistado | Edad | Distrito | Fecha | Screenshot | URL Microsoft Stream | Timing | Duracion |
-|---|---|---:|---|---|---|---|---|---|
-| Consultores y asesores automotores | Cristhian Amaya | 39 | Chiclayo | Pendiente | Pendiente | Pendiente | 0:00 - 5:00 | 5 minutos |
-| Responsables comerciales y operativos | Roxana Limo | 42 | Chiclayo | Pendiente | Pendiente | Pendiente | 0:00 - 5:00 | 5 minutos |
+Las entrevistas fueron registradas en video y almacenadas en una carpeta compartida de Google Drive. El registro sigue el formato de la guía: datos del entrevistado, evidencia visual, enlace al video, timing, duración y resumen breve. Para los videos con duración mayor a cinco minutos se consigna la duración total y el tramo principal utilizado para el análisis de la primera entrega.
+
+Carpeta de evidencias: [Entrevistas BLIP en Google Drive](https://drive.google.com/drive/folders/1J_CH36gLPBuRfEddE-mYVSuRtR42PupA?usp=sharing).
+
+#### Entrevista 1: Cristhian Amaya
+
+| Campo | Detalle |
+|---|---|
+| Segmento | Propietarios, compradores y asesores automotores |
+| Nombres y apellidos | Cristhian Amaya |
+| Edad | 39 años |
+| Distrito | Chiclayo |
+| Fecha | 14/09/2026 |
+| Video | [Entrevista Cristhian Amaya](https://drive.google.com/file/d/1vuK3760hfVoZ6iQ2w8zH8JjX1x1xN4wV/view?usp=sharing) |
+| Screenshot | ![Entrevista Cristhian Amaya](assets/chapter-2/interviews/interview-cristhian-amaya.png) |
+| Timing analizado | 00:00-04:59 |
+| Duración total | 06:09 |
+| Resumen | Cristhian describe el proceso de revisión de información vehicular desde el rol de asesor automotor. Su experiencia evidencia que la consulta no se limita a obtener un dato, sino a interpretar información de distintas fuentes, explicar riesgos a terceros y conservar evidencia suficiente para respaldar una recomendación. El caso refuerza la necesidad de reportes claros, trazables y comprensibles para personas que no dominan términos técnicos del sector automotor. |
+
+#### Entrevista 2: Diego Salazar
+
+| Campo | Detalle |
+|---|---|
+| Segmento | Propietarios, compradores y asesores automotores |
+| Nombres y apellidos | Diego Salazar |
+| Edad | Pendiente |
+| Distrito | Pendiente |
+| Fecha | 14/09/2026 |
+| Video | [Entrevista Diego Salazar](https://drive.google.com/file/d/1WOgmq7SrvhCsfrzepEs4MYiihV_H29So/view?usp=sharing) |
+| Screenshot | ![Entrevista Diego Salazar](assets/chapter-2/interviews/interview-diego-salazar.png) |
+| Timing analizado | 00:00-02:53 |
+| Duración total | 02:53 |
+| Resumen | Diego representa a usuarios que revisan vehículos antes de recomendar o continuar una compra. Su entrevista muestra que el proceso exige consultar varias fuentes, comparar resultados y comunicar hallazgos de forma simple. También evidencia que las capturas y mensajes se usan como respaldo informal, lo que abre oportunidad para centralizar evidencia y mantener historial por placa. |
+
+#### Entrevista 3: Carmen Rojas
+
+| Campo | Detalle |
+|---|---|
+| Segmento | Propietarios, compradores y asesores automotores |
+| Nombres y apellidos | Carmen Rojas |
+| Edad | Pendiente |
+| Distrito | Pendiente |
+| Fecha | 14/09/2026 |
+| Video | [Entrevista Carmen Rojas](https://drive.google.com/file/d/1oC_IIEz323KG5xMw2XBtcArW4iBLHnSo/view?usp=sharing) |
+| Screenshot | ![Entrevista Carmen Rojas](assets/chapter-2/interviews/interview-carmen-rojas.png) |
+| Timing analizado | 00:00-02:21 |
+| Duración total | 02:21 |
+| Resumen | Carmen refleja la perspectiva de una compradora particular que necesita validar un vehículo antes de tomar una decisión. El principal dolor identificado es la dificultad para interpretar resultados dispersos y saber si un hallazgo es grave, pendiente o simplemente informativo. Este perfil confirma que FleetProof debe presentar riesgos en lenguaje claro y permitir compartir evidencia con personas de confianza. |
+
+#### Entrevista 4: Roxana Limo
+
+| Campo | Detalle |
+|---|---|
+| Segmento | Responsables comerciales, logísticos y flotas pequeñas |
+| Nombres y apellidos | Roxana Limo |
+| Edad | 43 años |
+| Distrito | Trujillo |
+| Fecha | 14/09/2026 |
+| Video | [Entrevista Roxana Limo](https://drive.google.com/file/d/162TzcnpSq3aFRJ9C3_9D3Boq27fG1iA2/view?usp=sharing) |
+| Screenshot | ![Entrevista Roxana Limo](assets/chapter-2/interviews/interview-roxana-limo.png) |
+| Timing analizado | 00:00-04:59 |
+| Duración total | 11:47 |
+| Resumen | Roxana trabaja en el sector automotriz desde 2012 y actualmente se desempeña como jefa de marca para Hyundai y Geely, supervisando operaciones comerciales en Trujillo, Huancayo y Chiclayo. Explica que, antes de exhibir o entregar una unidad, intervienen áreas como PDI, lavado y calidad, utilizando checklists para validar estado de pintura, equipamiento, batería, tablero, sistema eléctrico, frenos y estado general. Señala que las observaciones se registran primero en checklist y luego en informes enviados a la marca. También menciona que una mala preparación comercial, una batería descargada, una puerta mal cerrada, la pérdida de una llave o una rayadura antes de la entrega pueden generar inseguridad en el cliente y retrasar la compra. Para resolver observaciones, cada área tiene responsables definidos dentro del organigrama y puede intervenir postventa, taller o PDI. Su principal aprendizaje es que la prevención y una preparación con más anticipación reducen riesgos antes del showroom o la entrega. |
+
+#### Entrevista 5: Patricia Valdez
+
+| Campo | Detalle |
+|---|---|
+| Segmento | Responsables comerciales, logísticos y flotas pequeñas |
+| Nombres y apellidos | Patricia Valdez |
+| Edad | Pendiente |
+| Distrito | Pendiente |
+| Fecha | 14/09/2026 |
+| Video | [Entrevista Patricia Valdez](https://drive.google.com/file/d/1xHdo7dU-W5I4Iyjdo4MMCZ1lm9HqCnv_/view?usp=sharing) |
+| Screenshot | ![Entrevista Patricia Valdez](assets/chapter-2/interviews/interview-patricia-valdez.png) |
+| Timing analizado | 00:00-02:14 |
+| Duración total | 02:14 |
+| Resumen | Patricia representa a responsables que coordinan vehículos dentro de una operación logística. Su entrevista evidencia que la información se administra entre documentos, hojas de cálculo y comunicación por mensajería, lo cual puede dificultar saber qué versión está actualizada o quién resolvió una observación. Este caso refuerza funcionalidades de historial, responsable asignado y seguimiento de pendientes. |
+
+#### Entrevista 6: Jorge Quispe
+
+| Campo | Detalle |
+|---|---|
+| Segmento | Responsables comerciales, logísticos y flotas pequeñas |
+| Nombres y apellidos | Jorge Quispe |
+| Edad | Pendiente |
+| Distrito | Pendiente |
+| Fecha | 14/09/2026 |
+| Video | [Entrevista Jorge Quispe](https://drive.google.com/file/d/11BytvV6lIa4OAwuAf7aGYBnovSOXAWAk/view?usp=sharing) |
+| Screenshot | ![Entrevista Jorge Quispe](assets/chapter-2/interviews/interview-jorge-quispe.png) |
+| Timing analizado | 00:00-02:23 |
+| Duración total | 02:23 |
+| Resumen | Jorge representa a pequeños negocios que dependen de vehículos para operar. Su caso muestra la importancia de verificar documentos antes de incorporar o usar una unidad, así como la necesidad de identificar responsables cuando aparece una observación. El proceso actual depende de mensajes y archivos separados, por lo que FleetProof puede aportar una vista única del estado del vehículo. |
+
+#### Entrevista 7: Mei Lin Tanaka
+
+| Campo | Detalle |
+|---|---|
+| Segmento | Responsables comerciales, logísticos y flotas pequeñas |
+| Nombres y apellidos | Mei Lin Tanaka |
+| Edad | Pendiente |
+| Distrito | Pendiente |
+| Fecha | 14/09/2026 |
+| Video | [Entrevista Mei Lin Tanaka](https://drive.google.com/file/d/1DfSUkGKlXqStdo9usFfPKANPNCxcknrs/view?usp=sharing) |
+| Screenshot | ![Entrevista Mei Lin Tanaka](assets/chapter-2/interviews/interview-mei-lin.png) |
+| Timing analizado | 00:00-03:44 |
+| Duración total | 03:44 |
+| Resumen | Mei Lin representa a negocios gastronómicos pequeños que usan reparto propio o tercerizado. Su entrevista evidencia preocupación por la puntualidad, confiabilidad y disponibilidad de vehículos o repartidores. El dolor principal no es solo consultar una placa, sino reducir riesgos antes de asignar un pedido y recibir alertas cuando un documento, multa o condición del vehículo cambia. |
 
 ### 2.2.3 Análisis de entrevistas
 
-Debido a que las entrevistas reales aún se encuentran pendientes de registro, esta sección presenta un análisis preliminar basado en los User Personas, Empathy Maps, User Journey Maps y As-is Scenario Maps ya elaborados por el equipo. Los porcentajes no deben presentarse como resultado final de campo; deben reemplazarse por métricas reales cuando se completen y graben las entrevistas.
+El análisis se realizó sobre siete entrevistas distribuidas en dos segmentos. En el segmento de propietarios, compradores y asesores automotores se registraron tres entrevistas; en el segmento de responsables comerciales, logísticos y flotas pequeñas se registraron cuatro entrevistas. Esta distribución permite comparar patrones entre necesidad individual de decisión y necesidad organizacional de seguimiento.
 
-#### Segmento: consultores y asesores automotores
+#### Resultados generales
 
-Base preliminar: perfil de Cristhian Amaya, mapa de empatía, recorrido de usuario y As-is Scenario Map del asesor o generador de contenido automotor.
+| Hallazgo codificado | Frecuencia | Porcentaje | Interpretación para FleetProof |
+|---|---:|---:|---|
+| Consulta de más de una fuente antes de decidir | 7/7 | 100% | El producto debe centralizar fuentes y mostrar claramente origen, fecha y estado de cada consulta. |
+| Conservación manual de evidencia en capturas, Drive, WhatsApp u hojas de cálculo | 7/7 | 100% | Existe oportunidad para guardar evidencia dentro del historial del vehículo. |
+| Necesidad de alertas o seguimiento posterior a la primera revisión | 7/7 | 100% | El reporte puntual debe conectarse con monitoreo recurrente. |
+| Dificultad por datos inconsistentes, incompletos o fuentes no disponibles | 6/7 | 86% | FleetProof debe comunicar indisponibilidad y permitir reintentos sin ocultar incertidumbre. |
+| Coordinación con otra persona para validar o resolver observaciones | 5/7 | 71% | Se justifica incluir responsables, estado de atención y trazabilidad de resolución. |
+| Impacto operativo o comercial por no validar a tiempo | 5/7 | 71% | La propuesta debe comunicar reducción de riesgo antes de compra, venta, reparto o uso de flota. |
 
-| Hallazgo preliminar | Evidencia de soporte | Porcentaje estimado para validar |
-|---|---|---:|
-| Requieren información vehicular organizada antes de emitir una recomendación. | User Persona y Empathy Map de Cristhian. | 80% |
-| Dedican tiempo elevado a buscar datos en diferentes fuentes. | Journey Map y As-is Scenario Map del asesor. | 75% |
-| Necesitan explicar datos técnicos en lenguaje simple. | Empathy Map de Cristhian y etapa de comunicación de resultados. | 70% |
-| Valoran contar con evidencia para respaldar recomendaciones. | User Persona y fase de análisis del recorrido. | 70% |
+#### Segmento 1: propietarios, compradores y asesores automotores
 
-Interpretación: este segmento necesita que FleetProof reduzca el esfuerzo de búsqueda y convierta los hallazgos en explicaciones comprensibles. La trazabilidad de fuentes es crítica, porque el asesor debe sostener la confianza de su comunidad o de sus clientes.
+Este segmento agrupa a Cristhian Amaya, Diego Salazar y Carmen Rojas. Los tres participantes relataron procesos de consulta previos a una decisión de compra, venta o recomendación. En todos los casos se utilizaron varias fuentes y se conservaron capturas o enlaces como respaldo. Cristhian y Diego, por su rol asesor, destacaron la necesidad de traducir datos técnicos a lenguaje comprensible; Carmen evidenció la dificultad de una compradora particular para interpretar diferencias entre multa, observación registral o documento pendiente.
 
-#### Segmento: responsables comerciales y operativos
+| Patrón del segmento | Frecuencia | Porcentaje |
+|---|---:|---:|
+| Consulta de fuentes oficiales o especializadas | 3/3 | 100% |
+| Uso de capturas o mensajes para compartir evidencia | 3/3 | 100% |
+| Necesidad de explicar hallazgos con lenguaje simple | 3/3 | 100% |
+| Dudas por actualización o consistencia de datos | 2/3 | 67% |
+| Interés en volver a consultar si la compra se retrasa o aparece nueva información | 2/3 | 67% |
 
-Base preliminar: perfil de Roxana Limo, mapa de empatía, recorrido de usuario y As-is Scenario Map del vendedor o equipo comercial.
+Para este segmento, FleetProof debe priorizar reportes claros, evidencia descargable, explicación de riesgo y lenguaje no técnico. El valor principal no es solo obtener información, sino convertirla en una decisión confiable y comunicable.
 
-| Hallazgo preliminar | Evidencia de soporte | Porcentaje estimado para validar |
-|---|---|---:|
-| Necesitan validar información antes de ofrecer un vehículo al cliente. | User Persona y Journey Map de Roxana. | 85% |
-| Tienen información distribuida entre sedes, documentos y responsables. | Empathy Map de Roxana y As-is Scenario Map comercial. | 80% |
-| Requieren reducir riesgo de entregar información incompleta. | Frustraciones y objetivos de Roxana. | 75% |
-| Necesitan conservar historial de consultas, observaciones y cambios. | Journey Map de Roxana y oportunidades detectadas. | 70% |
+#### Segmento 2: responsables comerciales, logísticos y flotas pequeñas
 
-Interpretación: este segmento requiere una herramienta de control que permita revisar vehículos con evidencia, asignar responsables y mantener historial. Para este usuario, FleetProof debe enfocarse en coordinación, confiabilidad comercial y reducción de errores antes de presentar información al cliente.
+Este segmento agrupa a Roxana Limo, Patricia Valdez, Jorge Quispe y Mei Lin Tanaka. Los cuatro casos muestran que la validación vehicular no ocurre de forma aislada: intervienen responsables comerciales, administración, logística, conductores, repartidores o familiares que apoyan el negocio. Las respuestas evidencian uso de WhatsApp, Drive, hojas de cálculo y carpetas compartidas para coordinar documentos y observaciones.
 
-#### Conclusión preliminar
+| Patrón del segmento | Frecuencia | Porcentaje |
+|---|---:|---:|
+| Coordinación con más de una persona para validar o usar el vehículo | 4/4 | 100% |
+| Registro distribuido en WhatsApp, Drive, hojas o carpetas | 4/4 | 100% |
+| Necesidad de asignar responsables para resolver observaciones | 4/4 | 100% |
+| Necesidad de alertas de vencimientos, multas o cambios registrales | 4/4 | 100% |
+| Impacto operativo o comercial por retrasos en validación | 3/4 | 75% |
 
-Los hallazgos iniciales muestran que FleetProof debe priorizar tres capacidades: centralización de información vehicular, trazabilidad de evidencias y comunicación clara del riesgo. Esta conclusión deberá contrastarse con entrevistas reales de tres a cinco participantes por segmento, según el alcance definido por el equipo y la rúbrica del curso.
+Para este segmento, FleetProof debe funcionar como registro colaborativo por vehículo. Además del reporte inicial, son relevantes el estado de observaciones, la asignación de responsables, el historial de consultas, las alertas y la evidencia centralizada.
+
+#### Conclusiones de Needfinding derivadas de entrevistas
+
+Las entrevistas confirman que el problema no se limita a consultar una placa. Los usuarios necesitan saber qué fuente respondió, cuándo respondió, qué evidencia respalda el dato y qué acción corresponde si aparece una observación. También se valida que la propuesta de BLIP debe integrar dos usos: consulta puntual para decidir y seguimiento recurrente para evitar que cambios posteriores pasen desapercibidos.
+
+Los hallazgos fortalecen cuatro decisiones de producto: primero, conservar snapshots fechados de cada consulta; segundo, mostrar un resumen de riesgo con explicación; tercero, permitir evidencia compartible; y cuarto, agregar funciones colaborativas para flotas o negocios que requieren responsables y seguimiento de pendientes.
 
 ## 2.3 Needfinding
 
