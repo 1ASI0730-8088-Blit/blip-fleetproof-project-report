@@ -4,20 +4,14 @@
 
 ### 5.1.1 Software Development Environment Configuration
 
-| Actividad | Herramienta | Propósito | URL |
-|---|---|---|---|
-| Project Management | JetBrains YouTrack / Jira Software / Trello | Gestionar Product Backlog y Sprint Backlog. | TODO |
-| UX Research | UXPressia | Elaborar User Personas, Empathy Maps, Journey Maps e Impact Maps. | https://uxpressia.com |
-| UX/UI Design | Figma | Elaborar wireframes, mock-ups y prototipos. | https://figma.com |
-| Wireflows and User Flows | FigJam / LucidChart / Overflow | Representar flujos de interacción. | TODO |
-| EventStorming | FigJam / LucidChart / Miro | Representar eventos del dominio. | TODO |
-| Architecture Diagrams | Structurizr / LucidChart / PlantUML / Mermaid | Elaborar diagramas C4, UML y database diagrams. | TODO |
-| Version Control | GitHub | Gestionar repositorios, ramas, commits, Pull Requests, merges, tags y releases. | https://github.com/1ASI0730-8088-Blit |
-| Landing Page Development | HTML5, CSS3, JavaScript | Desarrollar Landing Page. | TODO |
-| Frontend Development | Vue Framework, JavaScript, PrimeVue | Desarrollar Frontend Web Application. | TODO |
-| Backend Development | ASP.NET Core, Entity Framework Core, C# | Desarrollar RESTful Web Services. | TODO |
-| Relational DBMS | MySQL Server / PostgreSQL | Persistir información relacional del producto. | TODO |
-| API Documentation | Swagger / OpenAPI | Documentar Web Services. | TODO |
+En esta sección se detallan las herramientas y plataformas de software adoptadas por el equipo para coordinar, diseñar, implementar y documentar el ciclo de vida del producto digital. Se especifican el propósito de uso de cada herramienta, su tipo de ejecución y la ruta de acceso o descarga oficial correspondiente:
+
+| Herramienta / Software | Tipo / Modelo | Propósito en el Proyecto | Actividad Asociada | Enlace de Referencia / Acceso |
+| :--- | :--- | :--- | :--- | :--- |
+| **Miro** | SaaS (Nube) | Plataforma de pizarra visual colaborativa utilizada para la realización de las dinámicas de *EventStorming* (Big Picture y Design-Level), mapeo de procesos de negocio y exploración visual del dominio. | Requirements Management & Domain Modeling | [https://miro.com/](https://miro.com/) |
+| **Figma** | SaaS (Nube) | Herramienta de diseño de interfaces vectoriales y prototipado empleada para definir la guía de estilos visuales, *wireframes*, *mock-ups* y los flujos de interacción del *Landing Page* y la aplicación web. | Product UX/UI Design | [https://figma.com/](https://figma.com/) |
+| **HackMD (HackMD.io)** | SaaS (Nube) | Entorno de edición colaborativa en tiempo real en formato Markdown, utilizado para redactar, revisar y sincronizar colectivamente el contenido de las secciones del informe de proyecto. | Project Documentation & Reporting | [https://hackmd.io/](https://hackmd.io/) |
+| **GitHub** | SaaS (Nube) | Plataforma de alojamiento de repositorios Git utilizada para la gestión centralizada del código fuente, aplicación del flujo *GitFlow*, seguimiento de *commits*, métricas de contribución y control de versiones del informe del proyecto. | Source Code Management & Collaboration | [https://github.com/](https://github.com/) |
 
 ### 5.1.2 Source Code Management
 
