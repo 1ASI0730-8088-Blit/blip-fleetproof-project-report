@@ -15,22 +15,44 @@ En esta sección se detallan las herramientas y plataformas de software adoptada
 
 ### 5.1.2 Source Code Management
 
-Organización GitHub: https://github.com/1ASI0730-8088-Blit
+Para garantizar la integridad, trazabilidad y el trabajo colaborativo en el desarrollo de la solución, el equipo utiliza **GitHub** como plataforma centralizada de alojamiento y control de versiones bajo Git.
 
-| Producto | Repositorio | Branch principal | Releases requeridos |
-|---|---|---|---|
-| Project Report | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-project-report | `main`, `develop` | AV1, TB1, AV2, TB2 |
-| Landing Page | TODO | `main`, `develop` | `v1.0.0`, `v2.0.0`, `v3.0.0`, `v4.0.0` |
-| Frontend Web Application | TODO | `main`, `develop` | `v1.0.0`, `v2.0.0`, `v3.0.0` |
-| Web Services | TODO | `main`, `develop` | `v1.0.0`, `v2.0.0` |
+##### Repositorios del Proyecto
 
-GitFlow:
+| Producto / Artefacto | Propósito | Enlace al Repositorio en GitHub |
+| :--- | :--- | :--- |
+| **Project Documentation Report** | Repositorio para la elaboración colaborativa del informe técnico del proyecto en formato Markdown. | [blip-fleetproof-project-report](https://github.com/1ASI0730-8088-Blit/blip-fleetproof-project-report) |
+| **Landing Page** | Repositorio del sitio web estático para la presentación comercial y conversión del modelo de negocio. | [fleetproof-landing-page](https://github.com/1ASI0730-8088-Blit/fleetproof-landing-page) |
+##### Flujo de Ramas: GitFlow Workflow
 
-- Cada User Story se implementa en una rama `feature/usXXX-<short-name>`.
-- Cada User Story cerrada debe entrar con Pull Request y merge hacia `develop`.
-- Cada release se estabiliza en `release/vX.Y.Z`.
-- Cada release aprobado se fusiona hacia `main`, se etiqueta con `vX.Y.Z` y se fusiona de regreso hacia `develop`.
-- Cada hotfix nace desde `main`, se corrige, se fusiona hacia `main` y luego hacia `develop`.
+El equipo implementa el modelo de flujo de trabajo **GitFlow**, estructurando el ciclo de desarrollo a través de ramas principales y ramas temporales de soporte:
+
+1. **Ramas Principales:**
+   * `main`: Contiene el código fuente en estado de producción, estable y totalmente desplegable. Todo cambio en esta rama proviene exclusivamente de fusiones validadas de ramas de lanzamiento (*release*) o parches urgentes (*hotfix*).
+   * `develop`: Actúa como la rama de integración continua y base para el desarrollo diario. En ella se consolidan todas las funcionalidades culminadas y revisadas que formarán parte de la siguiente iteración.
+
+2. **Ramas de Soporte:**
+   * `feature/<nombre-de-tarea>`: Se desprenden de `develop` para la construcción aislada de una historia de usuario, componente de interfaz o sección de documentación. Una vez completada y verificada la tarea, se integra nuevamente en `develop` a través de un *Pull Request* con revisión previa de pares.
+     * *Convención para desarrollo de software:* `feature/<US-ID>-<short-description>` (Ejemplo: `feature/US01-landing-hero`, `feature/US02-pricing-cards`).
+     * *Convención para informe de proyecto:* `feature/sprint<n>-capitulo-<id>` (Ejemplo: `feature/sprint1-capitulo-5`).
+   * `release/v<MAJOR.MINOR.PATCH>`: Se crean a partir de `develop` al alcanzar el congelamiento de características planeadas para un hito de entrega (Sprint Review). Sirven para realizar pruebas de aceptación finales, ajustes menores de documentación y preparar el despliegue. Se fusionan hacia `main` (etiquetando el lanzamiento) y de vuelta hacia `develop`.
+   * `hotfix/v<MAJOR.MINOR.PATCH>`: Se desprenden directamente de `main` en caso de requerir la corrección crítica e inmediata de un defecto en el entorno de producción. Se fusionan simultáneamente a `main` y a `develop`.
+
+##### Versionado Semántico (Semantic Versioning 2.0.0)
+
+Para el control de versiones y etiquetado de los lanzamientos oficiales (*releases*), se adopta el estándar **SemVer 2.0.0** bajo la nomenclatura `vMAJOR.MINOR.PATCH`:
+
+* **MAJOR:** Incrementa ante cambios incompatibles con versiones previas (*breaking changes*) o entregas de arquitectura estructurales mayores (Ejemplo: transición de entregas mayores finales).
+* **MINOR:** Incrementa cuando se añaden nuevas funcionalidades, vistas o endpoints que son compatibles con las versiones existentes hacia atrás (Ejemplo: cierre de un nuevo Sprint como `v0.1.0` para Sprint 1, `v0.2.0` para Sprint 2).
+* **PATCH:** Incrementa cuando se introducen correcciones de errores, ajustes de accesibilidad o parches menores que no alteran la compatibilidad previa (Ejemplo: `v0.1.1`).
+
+##### Convención de Mensajes: Conventional Commits
+
+Para mantener un historial de confirmaciones (*commits*) claro, legible y automatizable, los mensajes deben redactarse en idioma inglés siguiendo la especificación de **Conventional Commits**:
+
+* **Estructura obligatoria:**
+  ```text
+  <type>(<scope>): <short description in present tense>
 
 ### 5.1.3 Source Code Style Guide & Coding Conventions
 
