@@ -516,10 +516,15 @@ Este mock-up representa la propuesta de diseño visual de la landing page de Fle
 
 Enlace de figma:
 ## 4.4 Web Applications UX/UI Design
+La propuesta de UX/UI de FleetProof se desarrolla desde un enfoque centrado en la trazabilidad de las decisiones vehiculares. Más allá de presentar información sobre el estado de un vehículo, se busca que los usuarios puedan comprender los resultados de una consulta, identificar cambios documentarios y reconocer las acciones necesarias para atender posibles observaciones.
+
+Para el segmento empresarial, el diseño prioriza la continuidad entre la visualización general de la flota, la consulta del historial vehicular, la comparación de reportes y la asignación de responsabilidades. De esta manera, cada interacción se relaciona con una necesidad concreta de gestión y seguimiento.
+
+En esta sección se presentan los wireframes, wireflows, mock-ups y diagramas de flujo de usuario que representan la estructura, navegación y comportamiento propuesto para la aplicación web. Estos artefactos permiten analizar la coherencia entre las pantallas y las tareas del usuario, estableciendo una base para las posteriores etapas de desarrollo y validación.
 
 ### 4.4.1 Web Applications Wireframes
 
-TODO: Insertar wireframes de Web Application.
+![image](assets/chapter-4/4.4.1.image.png)
 
 ### 4.4.2 Web Applications Wireflow Diagrams
 
