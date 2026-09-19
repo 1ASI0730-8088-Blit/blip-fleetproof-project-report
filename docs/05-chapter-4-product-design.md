@@ -534,9 +534,7 @@ Su incorporación contribuye a establecer una base visual para evaluar la clarid
 *Fuente: Elaboración propia del equipo FleetProof.*
 ### 4.4.2 Web Applications Wireflow Diagrams
 
-Los wireframes de la aplicación web de FleetProof representan la organización inicial de los elementos que conforman la interfaz del sistema. Su propósito es establecer una estructura funcional que permita a los usuarios identificar las principales opciones de navegación, visualizar información vehicular y acceder a las herramientas necesarias para gestionar sus consultas.
-
-Desde el enfoque de trazabilidad de decisiones, esta representación busca establecer una relación clara entre la información presentada y las acciones disponibles. Se prioriza una distribución que facilite la identificación del estado de los vehículos, el acceso a los reportes y el seguimiento de observaciones, manteniendo una organización comprensible antes de incorporar los detalles visuales definitivos.
+El siguiente wireflow presenta la navegación de la aplicación web de FleetProof para la gestión de flotas. Se muestran las conexiones entre el dashboard, el detalle de vehículos, la comparación de reportes y la creación de casos de regularización.
 
 ```mermaid
 flowchart TD
