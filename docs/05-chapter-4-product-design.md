@@ -523,12 +523,87 @@ Para el segmento empresarial, el diseño prioriza la continuidad entre la visual
 En esta sección se presentan los wireframes, wireflows, mock-ups y diagramas de flujo de usuario que representan la estructura, navegación y comportamiento propuesto para la aplicación web. Estos artefactos permiten analizar la coherencia entre las pantallas y las tareas del usuario, estableciendo una base para las posteriores etapas de desarrollo y validación.
 
 ### 4.4.1 Web Applications Wireframes
+ 
+La figura presenta la propuesta estructural de la interfaz de FleetProof, utilizada como referencia para organizar las funcionalidades de consulta y gestión vehicular. Esta representación permite analizar la distribución de los contenidos y la relación entre los elementos de navegación antes de desarrollar los mock-ups de alta fidelidad.
+
+Su incorporación contribuye a establecer una base visual para evaluar la claridad de los recorridos del usuario y la consistencia entre las pantallas que conforman el sistema.
+
 
 ![image](assets/chapter-4/4.4.1.image.png)
 
+*Fuente: Elaboración propia del equipo FleetProof.*
 ### 4.4.2 Web Applications Wireflow Diagrams
 
-TODO: Insertar wireflows por User Goal.
+Los wireframes de la aplicación web de FleetProof representan la organización inicial de los elementos que conforman la interfaz del sistema. Su propósito es establecer una estructura funcional que permita a los usuarios identificar las principales opciones de navegación, visualizar información vehicular y acceder a las herramientas necesarias para gestionar sus consultas.
+
+Desde el enfoque de trazabilidad de decisiones, esta representación busca establecer una relación clara entre la información presentada y las acciones disponibles. Se prioriza una distribución que facilite la identificación del estado de los vehículos, el acceso a los reportes y el seguimiento de observaciones, manteniendo una organización comprensible antes de incorporar los detalles visuales definitivos.
+
+```mermaid
+flowchart TD
+    classDef screen fill:#f8fafc,stroke:#334155,stroke-width:2px,color:#0f172a,stroke-dasharray: 0;
+    classDef modal fill:#ffffff,stroke:#2563eb,stroke-width:2px,stroke-dasharray: 4 4,color:#0f172a;
+    classDef action fill:#e0e7ff,stroke:#4338ca,stroke-width:1px,color:#1e1b4b;
+
+    subgraph SCREEN_1 ["Pantalla 1: Dashboard General de Flota"]
+        direction TB
+        S1_Header["[Header] Logo FleetProof | Nav: Dashboard, Flota, Reportes, Alertas | Perfil"]
+        S1_KPIs["[Cards KPI] Total: 47 | Críticos: 3 | En Observación: 8 | Alertas: 12"]
+        S1_Actions["[Botones de Acción] '+ Solicitar Revisión' | 'Importar CSV'"]
+        S1_Table["[DataTable] Placa | Tipo | Semáforo Riesgo | Analista | Acciones ('Ver Detalle')"]
+        S1_Header --- S1_KPIs --- S1_Actions --- S1_Table
+    end
+    class SCREEN_1 screen;
+
+    subgraph MODAL_1 ["Modal 1.1: Carga Masiva CSV"]
+        direction TB
+        M1_Title["[Título] Importar Unidades Vehiculares"]
+        M1_Dropzone["[Dropzone] Arrastra tu archivo .csv aquí (Max 25/100 unidades)"]
+        M1_Buttons["[Botones] 'Cancelar' | 'Validar y Cargar'"]
+        M1_Title --- M1_Dropzone --- M1_Buttons
+    end
+    class MODAL_1 modal;
+
+    subgraph SCREEN_2 ["Pantalla 2: Vista Detalle del Vehículo / Historial"]
+        direction TB
+        S2_Header["[Header] Placa: ABC-123 | Estado: CRÍTICO | Botón 'Volver a Dashboard'"]
+        S2_Summary["[Resumen] Marca, Modelo, VIN, Propietario, Último Snapshot"]
+        S2_Actions["[Botones] 'Generar Nuevo Reporte' | 'Crear Caso de Regularización'"]
+        S2_History["[Timeline] Historial de Reportes v1.0, v2.0 | Alertas Pendientes"]
+        S2_Header --- S2_Summary --- S2_Actions --- S2_History
+    end
+    class SCREEN_2 screen;
+
+    subgraph SCREEN_3 ["Pantalla 3: Comparación de Snapshots (Side-by-Side Diff)"]
+        direction TB
+        S3_Header["[Header] Comparativo Histórico: Snapshot Ago-2026 vs Sep-2026"]
+        S3_Cols["[Diff View] Columna Base vs Columna Actual (Resalta nuevas papeletas SAT)"]
+        S3_Footer["[Botones] 'Descargar Reporte PDF' | 'Asignar a Analista'"]
+        S3_Header --- S3_Cols --- S3_Footer
+    end
+    class SCREEN_3 screen;
+
+    subgraph MODAL_2 ["Modal 2.1: Crear Caso de Regularización"]
+        direction TB
+        M2_Title["[Título] Apertura de Caso de Subsanación"]
+        M2_Form["[Formulario] Motivo: Papeleta SAT | Asignar a: Operador J. Pérez"]
+        M2_Action["[Botones] 'Cancelar' | 'Asignar y Notificar'"]
+        M2_Title --- M2_Form --- M2_Action
+    end
+    class MODAL_2 modal;
+
+    %% Conexiones y transiciones de interacción (Wireflow)
+    S1_Actions -- "Clic en 'Importar CSV'" --> MODAL_1
+    MODAL_1 -- "Éxito: Archivo persistido" --> S1_Table
+    
+    S1_Table -- "Clic en fila / botón 'Ver Detalle'" --> SCREEN_2
+    
+    S2_Actions -- "Clic en 'Generar Nuevo Reporte'" --> SCREEN_3
+    S2_Actions -- "Clic en 'Crear Caso'" --> MODAL_2
+    
+    MODAL_2 -- "Confirmar asignación" --> S1_KPIs
+    S3_Footer -- "Clic en 'Volver'" --> SCREEN_2
+```
+
 
 ### 4.4.3 Web Applications Mock-ups
 
