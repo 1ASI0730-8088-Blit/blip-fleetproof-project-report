@@ -529,7 +529,7 @@ La figura presenta la propuesta estructural de la interfaz de FleetProof, utiliz
 Su incorporación contribuye a establecer una base visual para evaluar la claridad de los recorridos del usuario y la consistencia entre las pantallas que conforman el sistema.
 
 
-![image](assets/chapter-4/4.4.1.image.png)
+![image](assets/chapter-4/images/4.4.1.image.png)
 
 *Fuente: Elaboración propia del equipo FleetProof.*
 ### 4.4.2 Web Applications Wireflow Diagrams
@@ -605,7 +605,12 @@ flowchart TD
 
 ### 4.4.3 Web Applications Mock-ups
 
-TODO: Insertar mock-ups de Web Application.
+Los siguientes mock-ups presentan el diseño visual de la aplicación web de FleetProof. Se muestran las principales interfaces del sistema, considerando la organización de la información vehicular, la navegación y las funcionalidades disponibles para la gestión y el monitoreo de flotas.
+
+![image](assets/chapter-4/images/4.4.3.image1.png)
+![image](assets/chapter-4/images/4.4.3.image2.png)
+![image](assets/chapter-4/images/4.4.3.image3.png)
+![image](assets/chapter-4/images/4.4.3.image4.png)
 
 ### 4.4.4 Web Applications User Flow Diagrams
 
