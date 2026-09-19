@@ -504,12 +504,17 @@ Finalmente, el sistema de navegación deberá mantener consistencia visual entre
 
 ### 4.3.1 Landing Page Wireframe
 
-TODO: Insertar wireframes Desktop y Mobile.
+Este wireframe representa la estructura de la landing page de FleetProof, incluyendo la disposición de los elementos, la jerarquía visual y la organización de las secciones principales.
+
+<img src="assets/chapter-4/web-style/fleetproof-wireframe.svg" alt="Identidad visual y logotipo de FleetProof" width="200">
+
 
 ### 4.3.2 Landing Page Mock-up
+Este mock-up representa la propuesta de diseño visual de la landing page de FleetProof, incluyendo la disposición de los elementos, la paleta de colores, la tipografía y los componentes interactivos.
 
-TODO: Insertar mock-ups Desktop y Mobile.
+<img src="assets/chapter-4/web-style/fleetproof-mockup.svg" alt="Identidad visual y logotipo de FleetProof" width="200">
 
+Enlace de figma:
 ## 4.4 Web Applications UX/UI Design
 
 ### 4.4.1 Web Applications Wireframes
