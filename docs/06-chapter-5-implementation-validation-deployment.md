@@ -259,8 +259,17 @@ La arquitectura del backend y los servicios RESTful correspondientes al núcleo 
 
 #### 5.2.1.7 Software Deployment Evidence for Sprint Review
 
-TODO: Incluir URL desplegada, capturas del proveedor y versión `v1.0.0` del Landing Page.
+A continuación, se documenta el registro formal y las evidencias del despliegue en producción de la Landing Page correspondiente al cierre del Sprint 1:
 
+| Producto | Versión / tag real | Commit | URL desplegada | Fecha | Evidencia de despliegue y verificación |
+|---|---|---|---|---|---|
+| Landing Page | `main` (o `v1.0.0`) | `635ceaa` | `https://1asi0730-8088-blit.github.io/fleetproof-landing-page/` | 2026-09-19 | ![image](https://hackmd.io/_uploads/rJCV2ahYzg.png) |
+
+##### Verificación del Despliegue Operativo
+
+* **Plataforma de Alojamiento:** GitHub Pages mediante GitHub Actions workflow (`pages-build-deployment`).
+* **Estado de Disponibilidad:** Operativo con código de respuesta HTTP 200 OK.
+* **Criterios Validados:** Carga responsiva completa, funcionamiento del selector bilingüe (ES/EN), apertura interactiva de modales legales y notificación flotante (toast) en llamadas a la acción.
 #### 5.2.1.8 Team Collaboration Insights during Sprint
 
 | Integrante | Aporte concreto | Evidencia verificable | Revisión o colaboración |
