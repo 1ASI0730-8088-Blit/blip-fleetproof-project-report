@@ -160,13 +160,55 @@ Para cumplir con el Sprint Goal formulado, se incluyeron en el Sprint Backlog la
 
 #### 5.2.1.3 Sprint Backlog 1
 
-| Sprint # | Story Id | Story Title | Task Id | Task Title | Task Description | Estimation (Hours) | Assigned To | Status |
-|---|---|---|---|---|---|---:|---|---|
-| Sprint 1 | US001 | View value proposition | T001 | Draft Landing Page content | Redactar propuesta de valor, segmentos y beneficios. | 2 | Payesa Torres Harrison Hubert | To-do |
-| Sprint 1 | US002 | Fleet monitoring CTA | T002 | Implement fleet CTA | Crear call-to-action hacia flujo empresarial. | 2 | Payesa Torres Harrison Hubert | To-do |
-| Sprint 1 | US003 | Vehicle report CTA | T003 | Implement vehicle CTA | Crear call-to-action hacia flujo particular. | 2 | Payesa Torres Harrison Hubert | To-do |
-| Sprint 1 | US004 | Compare plans | T004 | Add plan comparison | Presentar tres planes con límites. | 3 | Gómez De La Torre Huertas Rodrigo Fernando | To-do |
-| Sprint 1 | US005 | View legal pages | T005 | Add legal links | Crear Terms and Conditions y Privacy Policy. | 2 | Reyes Limo Sebastian | To-do |
+En esta sección se presenta el Sprint Backlog correspondiente al Sprint 1, detallando la descomposición de las historias de usuario del Epic EP01 (Landing Page) en tareas de trabajo (Work-items / Tasks) ejecutables por los miembros del equipo. Cada ítem cuenta con su estimación de esfuerzo en horas, la asignación de un responsable y el seguimiento de su estado de cumplimiento.
+
+###### Tablero de Gestión del Sprint 1
+
+Para el control del flujo de trabajo y seguimiento ágil bajo Kanban/Scrum, el equipo utilizó la plataforma Trello:
+* **Enlace público al tablero de gestión:** https://miro.com/welcomeonboard/UGpPdEgzanRlS0RmMFBmWXpyclVZeHJiQVhRRjI0dTZpV0I0czlPeWNyUnVVdWJOcXF3eE8rTEZKMnNBaW1jb1hVYkptMmpacEpSWE0zMXBlcGVEQjNXS2xZSFczaFM3dnl6c3dmVnNJdlY5akRQMjhSZVFOanFHWGhnUVhycVN0R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=821007824686
+
+![image](https://hackmd.io/_uploads/SypwBBUFMx.png)
+
+
+###### Distribución de Tarjetas en el Tablero Digital
+
+* **Lista: To-do (Por hacer)**
+  * *(Vacía al cierre del Sprint 1)*
+* **Lista: In-Process (En proceso)**
+  * *(Vacía al cierre del Sprint 1)*
+* **Lista: To-Review (En revisión / QA)**
+  * *(Vacía tras la verificación de criterios de aceptación)*
+* **Lista: Done (Completado)**
+  * `[T01]` Estructuración HTML semántica del encabezado y Hero (US001) - DanielPM23
+  * `[T02]` Estilización CSS responsiva y tokens de diseño Material Design (US001) - Sebasdev28
+  * `[T03]` Maquetación de la sección y llamada a la acción empresarial (US002) - Harrison1024
+  * `[T04]` Configuración de eventos de redirección para monitoreo de flotas (US002) - Ilegastian
+  * `[T05]` Construcción visual del bloque de consulta vehicular para particulares (US003) - DanielPM23
+  * `[T06]` Enrutamiento y script de interacción para reporte unitario (US003) - Ilegastian
+  * `[T07]` Maquetación HTML de tarjetas de planes de suscripción (US004) - Sebasdev28
+  * `[T08]` Diseño responsivo en cuadrícula (CSS Grid/Flexbox) de planes (US004) - DanielPM23
+  * `[T09]` Redacción y estructura de Términos de Servicio y Privacidad (US005) - Harrison1024
+  * `[T10]` Integración de navegación en el pie de página y metadatos SEO/a11y (US005) - Harrison1024
+  * `[T11]` Pipeline de despliegue continuo en Vercel y verificación HTTPS (Restricción) - rod670
+  * `[T12]` Documentación técnica del Capítulo V y preparación del informe (Restricción) - rod670
+
+###### Tabla de Control de Estado de Tareas - Sprint 1
+
+| Sprint # | Sprint 1 | | | | | |
+| :--- | :--- | :--- | :--- | :---: | :--- | :---: |
+| **Story Id** | **Story Title** | **Task Id** | **Task Title & Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| **US001** | View value proposition | T01 | **HTML Semantic Layout:** Estructurar el marcado semántico del encabezado y la sección hero principal con la propuesta de valor. | 4 | DanielPM23 (Daniel) | Done |
+| **US001** | View value proposition | T02 | **Hero Section Styling:** Aplicar reglas de estilo CSS adaptativas, tipografía y elementos visuales basados en Material Design. | 4 | Sebasdev28 (Becerra) | Done |
+| **US002** | Fleet monitoring CTA | T03 | **Enterprise CTA Component:** Maquetar y estilar el componente de llamada a la acción enfocado en administradores de flotas. | 3 | Harrison1024 (Harrison) | Done |
+| **US002** | Fleet monitoring CTA | T04 | **Enterprise Redirect Behavior:** Implementar la lógica de redirección y eventos de navegación hacia el flujo empresarial. | 3 | Ilegastian (Reyes) | Done |
+| **US003** | Vehicle report CTA | T05 | **B2C CTA Component:** Construir la sección de consulta vehicular individual y diseño del botón de acción para particulares. | 3 | DanielPM23 (Daniel) | Done |
+| **US003** | Vehicle report CTA | T06 | **B2C Query Navigation:** Configurar el enrutamiento interactivo para redirigir a los visitantes hacia la consulta por placa. | 3 | Ilegastian (Reyes) | Done |
+| **US004** | Compare plans | T07 | **Subscription Pricing Layout:** Diseñar la estructura HTML y tarjetas comparativas para los planes Personal, Fleet Starter y Fleet Business. | 5 | Sebasdev28 (Becerra) | Done |
+| **US004** | Compare plans | T08 | **Pricing Grid Responsiveness:** Ajustar el diseño responsivo en cuadrícula (CSS Grid/Flexbox) para la visualización en móviles y escritorio. | 4 | DanielPM23 (Daniel) | Done |
+| **US005** | View legal pages | T09 | **Legal Content Views:** Redactar y maquetar los términos de servicio (Terms) y políticas de privacidad (Privacy Policy). | 4 | Harrison1024 (Harrison) | Done |
+| **US005** | View legal pages | T10 | **Footer Navigation Links:** Integrar los enlaces de navegación y metadatos de accesibilidad en el pie de página. | 2 | Harrison1024 (Harrison) | Done |
+| **General** | Sprint Constraint | T11 | **Deployment Pipeline Setup:** Configurar la integración continua en Vercel vinculada a la rama main de GitHub y validar disponibilidad HTTPS. | 4 | rod670 (Gómez De La Torre) | Done |
+| **General** | Sprint Constraint | T12 | **Sprint Documentation & Verification:** Consolidar las evidencias técnicas, matrices y redacción del Capítulo V en el informe Markdown. | 6 | rod670 (Gómez De La Torre) | Done |
 
 #### 5.2.1.4 Development Evidence for Sprint Review
 
