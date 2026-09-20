@@ -154,9 +154,9 @@ Para cumplir con el Sprint Goal formulado, se incluyeron en el Sprint Backlog la
 |---|---|---|---|---|---|---|
 | Reyes Limo Sebastian | llegastian11 | L | C | C | C | C |
 | Palomino Murga Daniel Stalin | DanielPM23 | C | L | C | C | C |
-| Becerra Durand Sebastian Uriel | TODO | C | C | L | C | C |
-| Gómez De La Torre Huertas Rodrigo Fernando | TODO | C | C | C | L | C |
-| Payesa Torres Harrison Hubert | TODO | C | C | C | C | L |
+| Becerra Durand Sebastian Uriel | Sebasdev28 | C | C | L | C | C |
+| Gómez De La Torre Huertas Rodrigo Fernando | rod670 | C | C | C | L | C |
+| Payesa Torres Harrison Hubert | Harrison1024 | C | C | C | C | L |
 
 #### 5.2.1.3 Sprint Backlog 1
 
