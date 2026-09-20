@@ -859,7 +859,58 @@ El diagrama C3 ilustra la arquitectura interna de la API en ASP.NET Core bajo DD
 
 ### 4.6.4 Software Architecture Components Diagrams
 
-TODO: Insertar C4 Component Diagrams.
+El siguiente diagrama presenta la distribución de FleetProof en una infraestructura basada en servicios en la nube. Se muestran las aplicaciones, los componentes del backend, la base de datos y los servicios externos necesarios para el funcionamiento de la plataforma.
+
+```mermaid
+flowchart TB
+    classDef clientNode fill:#eceff1,stroke:#607d8b,stroke-width:2px,color:#263238;
+    classDef edgeNode fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#0d47a1;
+    classDef computeNode fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px,color:#1a237e;
+    classDef dbNode fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#1b5e20;
+    classDef extNode fill:#eeeeee,stroke:#757575,stroke-width:2px,color:#212121;
+    classDef artifact fill:#ffffff,stroke:#455a64,stroke-width:1px,color:#263238;
+
+    subgraph Client_Device [Dispositivo de Usuario Desktop / Mobile]
+        browser[Navegador Web Chrome / Firefox / Edge]:::artifact
+    end
+
+    subgraph Hosting_Static [Hosting Estatico Vercel / Netlify]
+        landing_art[Landing Page HTML5 / CSS3 / JS]:::artifact
+        spa_art[Frontend SPA Vue 3 / PrimeVue]:::artifact
+    end
+
+    subgraph Cloud_PaaS [Plataforma Cloud Render / Azure]
+        api_art[FleetProof Web API ASP.NET Core]:::artifact
+        worker_art[Background Task Runner Monitoring Worker]:::artifact
+    end
+
+    subgraph Cloud_DB [Base de Datos Gestionada]
+        db_engine[(PostgreSQL Engine Schemas IAM / Fleet / Reports)]:::artifact
+    end
+
+    subgraph External_Cloud [Servicios Externos Integrados]
+        srv_pay[Taypi Payment Gateway]:::extNode
+        srv_captcha[2Captcha Service]:::extNode
+        srv_gov[Portales Oficiales SUNARP / SAT]:::extNode
+        srv_notif[Notification Provider Resend / SendGrid]:::extNode
+        srv_media[Cloudinary Storage]:::extNode
+    end
+
+    browser -->|HTTPS 443| landing_art
+    browser -->|HTTPS 443| spa_art
+    browser -->|JSON HTTPS 443| api_art
+
+    api_art -->|TCP 5432 EF Core| db_engine
+    worker_art -->|TCP 5432 EF Core| db_engine
+
+    api_art -->|HTTPS 443| srv_pay
+    api_art -->|HTTPS 443| srv_captcha
+    api_art -->|HTTPS 443| srv_gov
+    worker_art -->|HTTPS 443| srv_gov
+    worker_art -->|HTTPS 443| srv_notif
+    api_art -->|HTTPS 443| srv_media
+```
+El diagrama muestra cómo se organiza el despliegue de FleetProof, separando la interfaz web, la API y las tareas de monitoreo. La solución contempla servicios de alojamiento en la nube, una base de datos PostgreSQL y conexiones seguras con proveedores externos para consultas vehiculares, pagos, notificaciones y almacenamiento de archivos.
 
 ## 4.7 Software Object-Oriented Design
 
