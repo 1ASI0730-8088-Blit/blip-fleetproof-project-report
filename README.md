@@ -89,10 +89,10 @@
 
 | Producto | Repositorio | Versiones requeridas |
 |---|---|---|
-| Project Report | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-project-report | AV1, TB1, AV2, TB2 |
-| Landing Page | https://github.com/1ASI0730-8088-Blit/fleetproof-landing-page | v1.0.0 publicada; v2.0.0, v3.0.0, v4.0.0 |
-| Frontend Web Application | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-frontend | v1.0.0, v2.0.0, v3.0.0 |
-| Web Services | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-backend | v1.0.0, v2.0.0 |
+| Project Report | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-project-report | AV1 |
+| Landing Page | https://github.com/1ASI0730-8088-Blit/fleetproof-landing-page | v1.0.0 publicada |
+| Frontend Web Application | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-frontend | v1.0.0|
+| Web Services | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-backend | v1.0.0|
 
 Landing Page desplegada en GitHub Pages: https://1asi0730-8088-blit.github.io/fleetproof-landing-page/
 
