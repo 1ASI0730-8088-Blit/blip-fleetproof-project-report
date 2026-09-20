@@ -10,7 +10,7 @@
   <h2>1ASI0730</h2>
   <h2>Aplicaciones Web</h2>
 
-  <p><strong>NRC</strong><br /><strong>8088rong></p>
+  <p><strong>NRC</strong><br /><strong>8088</p>
 
   <h1>Informe del Trabajo Final</h1>
 
