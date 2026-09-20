@@ -323,7 +323,7 @@ Adicionalmente, se establecen los siguientes metadatos:
 
 La URL principal de la landing page es:
 
-https://danielpm23.github.io/fleetproof-preview/
+https://1asi0730-8088-blit.github.io/fleetproof-landing-page/
 
 Se propone mantener metadatos diferenciados según el idioma del contenido. Asimismo, los módulos privados de la aplicación web, como el dashboard y los reportes asociados a cuentas de usuario, deberán permanecer fuera de la indexación pública mediante mecanismos apropiados, sin depender de dichas etiquetas como medida de seguridad.
 
