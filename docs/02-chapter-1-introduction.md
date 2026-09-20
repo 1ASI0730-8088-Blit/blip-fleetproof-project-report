@@ -48,10 +48,10 @@ La identidad visual de BLIP se representa mediante el logotipo oficial de la sta
 
 | Foto | Integrante | Código | Carrera | Perfil técnico | Aporte al equipo |
 |---|---|---|---|---|--|
-| <img src="assets/chapter-1/team-menbers/team-menber-u2022311656.png" width="600"><br>  | Reyes Limo Sebastian | U2022311656 | Ingeniería de Software | TODO | Technical Lead, SCM and Rubric Owner |
+| <img src="assets/chapter-1/team-menbers/team-menber-u2022311656.png" width="600"><br>  | Reyes Limo Sebastian | U2022311656 | Ingeniería de Software | Estudiante de la carrera de Ingeniería de Software, cursando el quinto ciclo de la carrera. Me gusta trabajar en equipo, soy puntual, responsable, empático y me gusta aprender tecnologías nuevas. Orgulloso VibeCoder. | Technical Lead, SCM and Rubric Owner |
 | <img src="assets/chapter-1/team-menbers/team-menber-u20201b253.jpeg" width="600"><br> | Palomino Murga Daniel Stalin | U20201B253 | Ingeniería de Software | Estudiante de Ingeniería de Software apasionado por la tecnología y el desarrollo de soluciones digitales. Cuento con conocimientos en programación, bases de datos, algoritmos y desarrollo de aplicaciones, además de habilidades en trabajo en equipo, resolución de problemas, pensamiento lógico y aprendizaje continuo. | Lean UX Owner |
-| <img src="assets/chapter-1/team-menbers/team-menber-u20221B756.jpg" width="600"><br>  | Becerra Durand Sebastian Uriel | U20221B756 | Ingeniería de Software | TODO | UX Research Owner |
-| <img src="assets/chapter-1/team-menbers/team-menber-u202311464.png" width="600"><br> | Gómez De La Torre Huertas Rodrigo Fernando | TODO | Ingeniería de Software | TODO | Requirements Owner |
+| <img src="assets/chapter-1/team-menbers/team-menber-u20221B756.jpg" width="600"><br>  | Becerra Durand Sebastian Uriel | U20221B756 | Ingeniería de Software | Estudiante de Ingeniería de Software en la UPC enfocado en el ciclo de vida del desarrollo de software, desde la conceptualización técnica hasta el despliegue de componentes backend y frontend. Aplica principios de modelado de datos, consumo de APIs y estandarización de código bajo flujos de trabajo en Git y marcos de trabajo ágiles (Scrum/Kanban). Se orienta al aprendizaje continuo de nuevos stacks tecnológicos y a la optimización de procesos dentro de equipos de desarrollo. | UX Research Owner |
+| <img src="assets/chapter-1/team-menbers/team-menber-u202311464.png" width="600"><br> | Gómez De La Torre Huertas Rodrigo Fernando | U202311464 | Ingeniería de Software | Soy estudiante de la carrera de ingeniería de software. Tengo 21 años y me encuentro cursando el 4to año de la carrera. Me gustan mucho los deportes y la geopolítica. En cuanto a la carrera me gusta mucho programar y constantemente trato de mejorar mis fundamentos de programación para seguir con esta carrera. | Requirements Owner |
 | <img src="assets/chapter-1/team-menbers/team-menber-u202221024.png" width="600"><br> | Payesa Torres Harrison Hubert | U202221024 | Ingeniería de Software | Estudiante de Ingeniería de Software inclinado hacia el desarrollo de soluciones digitales. Cuento con conocimientos en programación utilizando Python, C++, C y JavaScript, así como en bases de datos y consultas SQL. Me caracterizo por mi pensamiento lógico, capacidad de resolución de problemas, trabajo en equipo, aprendizaje continuo y disposición para adquirir nuevos conocimientos. | Product Design and Landing Page Owner |
 
 ## 1.2. Solution Profile
@@ -63,6 +63,10 @@ La solución está dirigida principalmente a empresas que administran flotas peq
 A diferencia de una consulta puntual orientada únicamente a obtener un reporte, FleetProof propone extender el proceso hacia un esquema de monitoreo recurrente. Para ello, la solución contempla el registro de resultados y evidencias por fuente, la comparación de diferentes estados de un vehículo, la generación de alertas y el seguimiento de observaciones mediante responsables y evidencias de resolución.
 
 El alcance inicial se concentra en la gestión de información documentaria y administrativa relacionada con los vehículos. FleetProof no contempla convertirse en una plataforma de GPS o telemetría, ni administrar combustible, mantenimiento mecánico o sensores del vehículo. Asimismo, el MVP no busca automatizar todas las fuentes existentes, sino trabajar inicialmente con un número limitado de conectores o proveedores de prueba y mantener una arquitectura que permita incorporar nuevas fuentes posteriormente.
+
+![Logo de FleetProof](assets/chapter-1/fleet-proof-logo.png)
+**Figura 1.1.** Logo de FleetProof.  
+*Fuente: Elaboración propia.*
 
 ### 1.2.1. Antecedentes y problemática
 
