@@ -653,6 +653,8 @@ https://www.figma.com/make/LkD3mKP9wjNjnOPTRRzoCt/Create-web-wireframes?p=f&full
 
 ## 4.6 Domain-Driven Software Architecture
 
+En esta sección se presenta la arquitectura de software de FleetProof, aplicando los principios de Domain-Driven Design (DDD). Mediante el Event Storming y los diagramas de arquitectura, se identifican los principales procesos del negocio, los componentes del sistema y sus interacciones, estableciendo una estructura organizada para el desarrollo de la plataforma.
+
 ### 4.6.1 Design-Level Event Storming
 
 TODO: Identificar Bounded Contexts, Aggregates, Events, Commands and Queries.
