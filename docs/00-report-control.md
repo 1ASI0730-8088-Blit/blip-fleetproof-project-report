@@ -3,6 +3,7 @@
 | Versión | Fecha | Autor | Descripción de modificación |
 |---|---|---|---|
 | 0.1.0 | 2026-09-02 | BLIP | Estructura inicial del informe en Markdown hasta Capítulo V. |
+| 0.2.0 | 2026-09-13 | Reyes Limo, Sebastian Eduardo | Desarrollo del Capítulo II, evidencias de Needfinding, Big Picture Event Storming y mejora del Ubiquitous Language. |
 
 # Project Report Collaboration Insights
 

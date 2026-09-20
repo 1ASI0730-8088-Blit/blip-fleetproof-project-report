@@ -39,7 +39,7 @@
 
 | Código | Apellidos y nombres |
 |---|---|
-| u2022311656 | Reyes Limo, Sebastian Eduardo |
+| u202311656 | Reyes Limo, Sebastian Eduardo |
 | U20201B253 | Palomino Murga, Daniel Stalin |
 | Pendiente | Becerra Durand, Sebastian Uriel |
 | u202311464 | Gómez De La Torre Huertas, Rodrigo Fernando |
