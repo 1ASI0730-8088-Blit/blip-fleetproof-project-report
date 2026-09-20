@@ -35,7 +35,7 @@
 
   <p><strong>U20221B756</strong> — Becerra Durand, Sebastian Uriel</p>
 
-  <p><strong>U20221B756</strong> — Gómez De La Torre Huertas, Rodrigo Fernando</p>
+  <p><strong>U202311464</strong> — Gómez De La Torre Huertas, Rodrigo Fernando</p>
 
   <p><strong>U202221024</strong> — Payesa Torres, Harrison Hubert</p>
 
@@ -53,11 +53,11 @@
 
 | Código | Apellidos y nombres | Carrera | GitHub username | Rol AV1 |
 |---|---|---|---|---|
-| u2022311656 | Reyes Limo, Sebastian Eduardo | Ingeniería de Software | llegastian11 | Technical Lead, SCM and Rubric Owner |
-| U20201B253 | Palomino Murga, Daniel Stalin | Ingeniería de Software | DanielPM23 |Product Design and Landing Page Owner |
-| U20221B756 | Becerra Durand, Sebastian Uriel | Ingeniería de Software | sebasdev28 | UX Research Owner |
-| u202311464 | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | pendiente | Requirements Owner |
-| Pendiente | Payesa Torres, Harrison Hubert | Ingeniería de Software | Harrison1024 | Lean UX Owner |
+| U202311656 | Reyes Limo, Sebastian Eduardo | Ingeniería de Software | llegastian11 | Team Leader; organización del repositorio, GitFlow, control de rúbrica y Capítulo II (Requirements Elicitation & Analysis) |
+| U20201B253 | Palomino Murga, Daniel Stalin | Ingeniería de Software | DanielPM23 | Landing Page Owner y Capítulo IV (primera mitad): Style Guidelines, Information Architecture y UI Design; primer feature y despliegue en GitHub Pages |
+| U20221B756 | Becerra Durand, Sebastian Uriel | Ingeniería de Software | sebasdev28 | Capítulo IV (segunda mitad) y arquitectura: diseño UX/UI, wireframes, wireflows, mock-ups, prototipado, arquitectura de software, Event Storming y modelo de base de datos |
+| U202311464 | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | rod670 | Capítulo V (Product Implementation, Validation & Deployment) Owner; control de versiones y coordinación de aportes |
+| U202221024 | Payesa Torres, Harrison Hubert | Ingeniería de Software | Harrison1024 | Capítulo I (Startup Profile, Solution Profile y Lean UX) Owner; colaborador en Capítulo III (User Stories, Impact Mapping y Product Backlog) y en la Landing Page |
 
 ## Tabla de Contenidos
 
@@ -79,17 +79,23 @@
 
 | Bloque | Responsable | Estado | Evidencia |
 |---|---|---|---|
-| GitHub, GitFlow y releases | Reyes Limo Sebastian | Completado | Repositorio del informe y estructura base. |
-| Lean UX Process | Payesa Torres Harrison Hubert | Completado | Impletación de los artefactos de Lean UX process |
-| UX Research y competidores | Becerra Durand Sebastian Uriel | Completado | Artefactos UX implementados |
-| User Stories y Product Backlog | Gómez De La Torre Huertas Rodrigo Fernando | Completado | Implementacion del product backlog y las user stories |
-| Product Design y Landing Page v1.0.0 | Palomino Murga Daniel Stalin | Completado | Landing pages deplegada |
+| Organización del repositorio, GitFlow, releases y Capítulo II | Reyes Limo Sebastian | Completado | Estructura Markdown del informe, ramas y Pull Requests integrados en `develop`, control de rúbrica, Capítulo II completo (análisis competitivo, entrevistas, Needfinding, Big Picture Event Storming y Ubiquitous Language) y feature 4 de la Landing Page (planes de suscripción). |
+| Capítulo I, Lean UX Process y Capítulo III | Payesa Torres Harrison | Completado | Definición y descripción de la startup y el producto, Lean UX Process y segmentos objetivo (Capítulo I), User Stories, Impact Mapping y Product Backlog (Capítulo III) y feature 3 de la Landing Page (soluciones y flujo de trabajo). |
+| Landing Page v1.0.0, GitHub Pages, Style Guidelines y UI Design | Palomino Murga Daniel Stalin | Completado | Feature 1 de la Landing Page (navegación y layout base), publicación en GitHub Pages, primera mitad del Capítulo IV con los Style Guidelines e Information Architecture y los wireframes y mock-ups de escritorio y móvil. |
+| Capítulo IV y arquitectura de software | Becerra Durand Sebastian Uriel | Completado | Segunda mitad del Capítulo IV (diseño UX/UI, wireframes, wireflows, mock-ups, prototipado y diagramas de flujo), documentación de la arquitectura de software, Event Storming, diseño orientado a objetos y modelo de base de datos, y feature 2 de la Landing Page (hero y beneficios). |
+| Capítulo V | Gómez De La Torre Huertas Rodrigo Fernando | Completado | Documentación del Capítulo V (implementación, validación y despliegue), coordinación del control de versiones con el equipo y feature 5 de la Landing Page (localización, accesibilidad, sección About us y rutas de demostración). |
 
 ## Repositorios del Proyecto
 
 | Producto | Repositorio | Versiones requeridas |
 |---|---|---|
 | Project Report | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-project-report | AV1, TB1, AV2, TB2 |
-| Landing Page | TODO | v1.0.0, v2.0.0, v3.0.0, v4.0.0 |
-| Frontend Web Application | TODO | v1.0.0, v2.0.0, v3.0.0 |
-| Web Services | TODO | v1.0.0, v2.0.0 |
+| Landing Page | https://github.com/1ASI0730-8088-Blit/fleetproof-landing-page | v1.0.0 publicada; v2.0.0, v3.0.0, v4.0.0 |
+| Frontend Web Application | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-frontend | v1.0.0, v2.0.0, v3.0.0 |
+| Web Services | https://github.com/1ASI0730-8088-Blit/blip-fleetproof-backend | v1.0.0, v2.0.0 |
+
+Landing Page desplegada en GitHub Pages: https://1asi0730-8088-blit.github.io/fleetproof-landing-page/
+
+Release de la Landing Page: https://github.com/1ASI0730-8088-Blit/fleetproof-landing-page/releases/tag/v1.0.0
+
+Los repositorios de Frontend Web Application y Web Services ya fueron creados en la organización y su implementación corresponde a las siguientes entregas del curso.

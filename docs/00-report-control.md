@@ -4,6 +4,7 @@
 |---|---|---|---|
 | 0.1.0 | 2026-09-02 | BLIP | Estructura inicial del informe en Markdown hasta Capítulo V. |
 | 0.2.0 | 2026-09-13 | Reyes Limo, Sebastian Eduardo | Desarrollo del Capítulo II, evidencias de Needfinding, Big Picture Event Storming y mejora del Ubiquitous Language. |
+| 0.3.0 | 2026-09-20 | Reyes Limo, Sebastian Eduardo | Corrección de los datos de colaboración del `README.md` (códigos y usuarios de GitHub), incorporación de los enlaces de los repositorios del proyecto, actualización de los roles y del estado de AV1, conclusiones del Student Outcome por integrante y cierre de los entregables del plan AV1. Se agregó el video About-the-Team y se completaron las evidencias de ejecución del Capítulo V (US01 a US04) y los anexos de entrevistas y de navegación del prototipo. |
 
 # Project Report Collaboration Insights
 
@@ -19,12 +20,12 @@ El equipo BLIP elaborará el informe en Markdown usando GitHub como sistema de c
 
 | Entrega | Evidencia requerida | Estado |
 |---|---|---|
-| AV1 | Commits, ramas, Pull Requests, merges y capturas de colaboración del informe. | En progreso |
-| TB1 | Actualización de commits, mejoras sobre feedback y nueva versión del informe. | TODO |
-| AV2 | Evidencias ampliadas de colaboración, validación y mejoras. | TODO |
-| TB2 | Evidencia final de colaboración durante todo el ciclo. | TODO |
+| AV1 | Commits, ramas, Pull Requests, merges y capturas de colaboración del informe. | Completado: 6 Pull Requests mergeados en `develop`, release `v1.0.0` de la Landing Page, despliegue en GitHub Pages y video About-the-Team. |
+| TB1 | Actualización de commits, mejoras sobre feedback y nueva versión del informe. | Pendiente para esa entrega |
+| AV2 | Evidencias ampliadas de colaboración, validación y mejoras. | Pendiente para esa entrega |
+| TB2 | Evidencia final de colaboración durante todo el ciclo. | Pendiente para esa entrega |
 
-## Convenciónes de GitFlow
+## Convenciones de GitFlow
 
 | Tipo | Convención |
 |---|---|

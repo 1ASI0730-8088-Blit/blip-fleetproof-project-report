@@ -1,42 +1,54 @@
 # Plan de Trabajo AV1
 
-## Roles recomendados
+## Roles y aportes de AV1
 
-| Integrante | Rol AV1 | Responsabilidad principal | Evidencia mínima |
+La distribución final de aportes de la entrega AV1 coincide con la registrada en el [Student Outcome](01-student-outcome.md) y en el `README.md` del repositorio.
+
+| Integrante | Rol AV1 | Responsabilidad principal | Evidencia |
 |---|---|---|---|
-| Reyes Limo Sebastian | Technical Lead, SCM and Rubric Owner | Organizar repositorios, GitFlow, releases, matriz de cumplimiento, Capítulo V 5.1 y revisión final contra rúbrica. | 1 rama, 5 commits, 1 Pull Request, capturas de GitHub, checklist de rúbrica. |
-| Palomino Murga Daniel Stalin | Lean UX Owner | Capítulo I: Startup Profile, Solution Profile, Problem Statement, Assumptions, Hypothesis Statements y Lean UX Canvas. | 1 rama, 3 commits, 1 Pull Request, captura de Lean UX Canvas. |
-| Becerra Durand Sebastian Uriel | UX Research Owner | Capítulo II: competidores, entrevistas, diseño de entrevistas y plan de Needfinding. | 1 rama, 3 commits, 1 Pull Request, matriz de competidores y preguntas. |
-| Gómez De La Torre Huertas Rodrigo Fernando | Requirements Owner | Capítulo III: User Stories, Acceptance Criteria, Impact Map y Product Backlog. | 1 rama, 3 commits, 1 Pull Request, backlog público. |
-| Payesa Torres Harrison Hubert | Product Design and Landing Page Owner | Capítulo IV y Landing Page v1.0.0: wireframes, mock-ups, style guide y despliegue. | 1 rama, 5 commits, 1 Pull Request, URL desplegada y release. |
+| Reyes Limo Sebastian | Team Leader, SCM and Rubric Owner | Organizar el repositorio del informe, definir GitFlow, mantener el control de rúbrica y desarrollar el Capítulo II (análisis competitivo, entrevistas, Needfinding, Big Picture Event Storming y Ubiquitous Language). | Estructura Markdown del informe, ramas y Pull Requests integrados en `develop`, control de rúbrica, registro de evidencias y `feature/landing-subscription-plans` (PR #4) en la Landing Page. |
+| Palomino Murga Daniel Stalin | Landing Page Owner | Implementar el primer feature de la Landing Page, publicarla en GitHub Pages y definir los Style Guidelines, la Information Architecture y el diseño de UI para escritorio y móvil. | `feature/landing-navigation` (PR #1), sitio desplegado en GitHub Pages y wireframes y mock-ups de escritorio y móvil. |
+| Becerra Durand Sebastian Uriel | Capítulo IV Owner | Documentar el diseño UX/UI (wireframes, wireflows, mock-ups, prototipado y diagramas de flujo) y la arquitectura de software, Event Storming, diseño orientado a objetos y modelo de base de datos. | `feature/sprint1-capitulo-4` (PR #3) y `feature/landing-hero-benefits` (PR #2). |
+| Gómez De La Torre Huertas Rodrigo Fernando | Capítulo V Owner | Documentar la implementación, validación y despliegue del producto y coordinar con el equipo el control de versiones en GitHub. | `feature/sprint1-capitulo-5` (PR #4) y `feature/localization-accesibility-support` (feature 5 de la Landing Page, en curso). |
+| Payesa Torres Harrison Hubert | Capítulo I y III Owner | Definir y describir la startup y el producto, desarrollar el Lean UX Process y los segmentos objetivo, y elaborar las User Stories, el Impact Mapping y el Product Backlog. | `feature/sprint1-capitulos-1-3` (PR #1) y `feature/landing-product-solutions` (PR #3). |
 
 ## Por qué Reyes Limo Sebastian debe tomar Technical Lead, SCM and Rubric Owner
 
 Reyes Limo Sebastian debe asumir el rol de Technical Lead, SCM and Rubric Owner porque tendrá apoyo directo para revisar estructura, redacción, GitFlow, releases, trazabilidad y cumplimiento de rúbrica. Ese rol no significa hacer todo el proyecto, sino asegurar que cada integrante entregue evidencia correcta y que nada quede fuera de la evaluación.
 
-## Ramas AV1 sugeridas
+## Ramas y Pull Requests de AV1
 
-| Rama | Dueño | Objetivo |
-|---|---|---|
-| `docs/scm-and-planning` | Reyes Limo Sebastian | Completar GitFlow, releases, herramientas y Capítulo V 5.1. |
-| `docs/chapter-1-lean-ux` | Palomino Murga Daniel Stalin | Completar Capítulo I. |
-| `docs/chapter-2-research` | Becerra Durand Sebastian Uriel | Completar Capítulo II. |
-| `docs/chapter-3-requirements` | Gómez De La Torre Huertas Rodrigo Fernando | Completar Capítulo III. |
-| `docs/chapter-4-product-design` | Payesa Torres Harrison Hubert | Completar Capítulo IV. |
-| `feature/us001-landing-page-value-proposition` | Equipo | Implementar primera User Story de Landing Page. |
+Las ramas se crearon a partir del plan de trabajo del sprint y se integraron en `develop` mediante Pull Requests revisados.
+
+| Rama | Pull Request | Contenido | Estado |
+|---|---|---|---|
+| `feature/sprint1-capitulos-1-3` | PR #1 | Capítulos I y III: Startup Profile, Solution Profile, Lean UX, User Stories, Impact Mapping y Product Backlog. | Mergeado en `develop` |
+| `feature/sprint1-capitulo-2` | PR #2 | Capítulo II: análisis competitivo, entrevistas, Needfinding, Big Picture Event Storming y Ubiquitous Language. | Mergeado en `develop` |
+| `feature/sprint1-capitulo-4` | PR #3 | Capítulo IV: diseño UX/UI, wireframes, wireflows, mock-ups, arquitectura de software y modelo de base de datos. | Mergeado en `develop` |
+| `feature/sprint1-capitulo-5` | PR #4 | Capítulo V: implementación, validación y despliegue. | Mergeado en `develop` |
+| `feature/student-outcome` | PR #5 | Student Outcome con los aportes de los integrantes. | Mergeado en `develop` |
+| `feature/conclusions` | PR #6 | Conclusiones y recomendaciones de AV1. | Mergeado en `develop` |
+| `feature/landing-navigation` | PR #1 (Landing Page) | Landing Page: navegación y layout base (feature 1). | Mergeado en `develop` |
+| `feature/landing-hero-benefits` | PR #2 (Landing Page) | Landing Page: hero y beneficios del producto (feature 2). | Mergeado en `develop` |
+| `feature/landing-product-solutions` | PR #3 (Landing Page) | Landing Page: soluciones y flujo de trabajo (feature 3). | Mergeado en `develop` |
+| `feature/landing-subscription-plans` | PR #4 (Landing Page) | Landing Page: planes de suscripción (feature 4). | Mergeado en `develop` |
+| `feature/localization-accesibility-support` | PR #5 (Landing Page) | Landing Page: localización ES/EN, accesibilidad, sección About us y rutas de demostración (feature 5). | Mergeado en `develop` |
+| `develop` → `main` | PR #6 (Landing Page) | Integración del release `v1.0.0` de la Landing Page en `main` y despliegue en GitHub Pages. | Mergeado en `main` |
 
 ## Entregables AV1
 
-| Entregable | Responsable | Fecha límite interna | Estado |
+| Entregable | Responsable | Fecha de cierre | Estado |
 |---|---|---|---|
-| Informe Markdown hasta Capítulo V | Reyes Limo Sebastian | TODO | To-do |
-| Lean UX Process | Palomino Murga Daniel Stalin | TODO | To-do |
-| UX Research plan | Becerra Durand Sebastian Uriel | TODO | To-do |
-| User Stories and Product Backlog | Gómez De La Torre Huertas Rodrigo Fernando | TODO | To-do |
-| Landing Page v1.0.0 desplegada | Payesa Torres Harrison Hubert | TODO | To-do |
-| Keynote AV1 | Equipo | TODO | To-do |
-| Video de exposición AV1 | Equipo | TODO | To-do |
-| Participant Performance Report | Team Leader | TODO | To-do |
+| Informe Markdown hasta Capítulo V | Reyes Limo Sebastian | 2026-09-20 | Completado |
+| Capítulo I: Startup Profile, Solution Profile y Lean UX Process | Payesa Torres Harrison | 2026-09-20 | Completado |
+| Capítulo II: competidores, entrevistas y Needfinding | Reyes Limo Sebastian | 2026-09-20 | Completado |
+| Capítulo III: User Stories, Impact Mapping y Product Backlog | Payesa Torres Harrison | 2026-09-20 | Completado |
+| Capítulo IV: Product Design (UX/UI, wireframes y mock-ups) | Becerra Durand Sebastian Uriel | 2026-09-20 | Completado |
+| Capítulo V: Implementation, Validation & Deployment | Gómez De La Torre Huertas Rodrigo Fernando | 2026-09-20 | Completado |
+| Landing Page v1.0.0 desplegada en GitHub Pages | Palomino Murga Daniel Stalin | 2026-09-20 | Completado |
+| Keynote AV1 | Equipo | 2026-09-20 | Completado |
+| Video de exposición AV1 | Equipo | 2026-09-20 | Completado |
+| Participant Performance Report | Team Leader | 2026-09-20 | Completado |
 
 ## Checklist diario
 
