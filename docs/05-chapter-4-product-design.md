@@ -733,7 +733,129 @@ flowchart TB
 
 ### 4.6.3 Software Architecture Container Diagrams
 
-TODO: Insertar C4 Container Diagram.
+En esta sección se presenta la organización interna del backend de FleetProof, desarrollado con ASP.NET Core. El diagrama muestra los principales módulos del sistema, sus componentes y las conexiones con la base de datos y los servicios externos, siguiendo los principios de Domain-Driven Design (DDD).
+
+```mermaid
+flowchart TB
+    %% Estilos
+    classDef client fill:#08427b,stroke:#073b6f,stroke-width:2px,color:#fff;
+    classDef controller fill:#438dd5,stroke:#2e6295,stroke-width:2px,color:#fff;
+    classDef appService fill:#1168bd,stroke:#0b4884,stroke-width:2px,color:#fff;
+    classDef domain fill:#0d47a1,stroke:#002171,stroke-width:2px,color:#fff;
+    classDef infra fill:#5c6bc0,stroke:#3949ab,stroke-width:2px,color:#fff;
+    classDef db fill:#2e7d32,stroke:#1b5e20,stroke-width:2px,color:#fff;
+    classDef external fill:#757575,stroke:#424242,stroke-width:2px,color:#fff;
+
+    %% Clientes Frontend
+    spa["Frontend Web Application<br/>Vue 3 / PrimeVue"]:::client
+
+    %% Sistemas Externos y BD
+    db[("Core Database<br/>PostgreSQL / MySQL")]:::db
+    ext_taypi["Taypi Payment System"]:::external
+    ext_captcha["CAPTCHA Resolution Service"]:::external
+    ext_sources["Fuentes Oficiales<br/>SUNARP / Transito"]:::external
+    ext_notif["Notification Provider<br/>Email / SMS / Push"]:::external
+
+    %% Componentes del Backend API
+    subgraph BackendAPI ["Backend RESTful API - ASP.NET Core"]
+        
+        subgraph Sub_Module ["Subscriptions Context"]
+            sub_ctrl["SubscriptionController<br/>Manejo de endpoints de planes"]:::controller
+            sub_srv["SubscriptionService<br/>Logica de activacion y cuotas"]:::appService
+            sub_agg["Aggregate: Subscription<br/>Plan, Status, Limits"]:::domain
+        end
+
+        subgraph User_Module ["User Management Context"]
+            user_ctrl["UserController / AuthController<br/>Endpoints JWT y registro"]:::controller
+            user_srv["UserService<br/>Validacion de credenciales"]:::appService
+            user_agg["Aggregate: User<br/>Identity, Profile, Roles"]:::domain
+        end
+
+        subgraph Veh_Module ["Vehicle Information Context"]
+            veh_ctrl["VehicleController<br/>Validacion y consultas"]:::controller
+            veh_srv["VehicleQueryService<br/>Orquestacion de consultas y retry"]:::appService
+            veh_agg["Aggregate: Vehicle<br/>Plate, TechnicalData, History"]:::domain
+            veh_conn["SourceConnectorAdapter<br/>Llamadas HTTP y bypass CAPTCHA"]:::infra
+        end
+
+        subgraph Rep_Module ["Report Management Context"]
+            rep_ctrl["ReportController<br/>Descarga y generacion"]:::controller
+            rep_srv["ReportGenerationService<br/>Consolidacion de antecedentes"]:::appService
+            rep_agg["Aggregate: VehicleReport<br/>Findings, RiskSummary, Status"]:::domain
+        end
+
+        subgraph Mon_Module ["Vehicle Monitoring Context"]
+            mon_wrk["MonitoringBackgroundWorker<br/>Cron/Scheduler de revisiones"]:::appService
+            mon_srv["ChangeDetectionService<br/>Comparador de snapshots"]:::appService
+            mon_agg["Aggregate: VehicleMonitoring<br/>Schedule, Alerts, Discrepancies"]:::domain
+        end
+
+        subgraph Flt_Module ["Fleet Management Context"]
+            flt_ctrl["FleetController<br/>Gestion de flotas y asignacion"]:::controller
+            flt_srv["FleetRiskService<br/>Evaluacion de riesgo y casos"]:::appService
+            flt_agg["Aggregate: Fleet<br/>Vehicles, AssignedPersons, Risks"]:::domain
+        end
+
+        infra_ef["EF Core DbContext<br/>Unit of Work y Repositorios"]:::infra
+        infra_notif["NotificationAdapter<br/>Cliente HTTP para envios"]:::infra
+    end
+
+    %% Peticiones desde Frontend
+    spa -->|POST /api/v1/auth| user_ctrl
+    spa -->|POST /api/v1/subscriptions| sub_ctrl
+    spa -->|GET /api/v1/vehicles| veh_ctrl
+    spa -->|GET /api/v1/reports| rep_ctrl
+    spa -->|POST /api/v1/fleets| flt_ctrl
+
+    %% Flujos Internos de Aplicacion
+    user_ctrl --> user_srv
+    user_srv --> user_agg
+
+    sub_ctrl --> sub_srv
+    sub_srv --> sub_agg
+    sub_srv -->|Procesa cobro| ext_taypi
+
+    veh_ctrl --> veh_srv
+    veh_srv --> veh_agg
+    veh_srv --> veh_conn
+    veh_conn -->|Resuelve token| ext_captcha
+    veh_conn -->|Extrae datos| ext_sources
+
+    rep_ctrl --> rep_srv
+    rep_srv --> rep_agg
+    rep_srv -->|Solicita antecedentes| veh_srv
+
+    mon_wrk --> mon_srv
+    mon_srv --> mon_agg
+    mon_srv -->|Consulta estado actual| veh_srv
+    mon_srv -->|Dispara alerta de cambio| infra_notif
+
+    flt_ctrl --> flt_srv
+    flt_srv --> flt_agg
+    flt_srv -->|Verifica alertas| mon_srv
+    flt_srv -->|Notifica responsable| infra_notif
+
+    infra_notif -->|Despacha mensaje| ext_notif
+
+    %% Persistencia hacia la BD
+    user_agg --> infra_ef
+    sub_agg --> infra_ef
+    veh_agg --> infra_ef
+    rep_agg --> infra_ef
+    mon_agg --> infra_ef
+    flt_agg --> infra_ef
+
+    infra_ef --> db
+```
+
+**Explicación, decisiones y relación con otros artefactos:**
+El diagrama C3 ilustra la arquitectura interna de la API en ASP.NET Core bajo DDD:
+ * **VehicleQueryService y SourceConnectorAdapter:** Aseguran la resiliencia contra caídas de servicios externos aplicando reintentos exponenciales y resolviendo retos CAPTCHA antes de registrar los datos de cada placa.
+
+* **MonitoringBackgroundWorker y ChangeDetectionService:** Implementan workers desacoplados (IHostedService) que consultan fuentes a intervalos regulares, identifican cambios de estado y disparan notificaciones a través de NotificationAdapter.
+
+* **Persistencia con EF Core:** Utiliza Repository y Unit of Work para abstraer la base de datos relacional y salvaguardar la integridad transaccional al persistir reportes, auditorías de monitoreo y estados de suscripción.
+
 
 ### 4.6.4 Software Architecture Components Diagrams
 
