@@ -647,7 +647,9 @@ flowchart TD
 
 ## 4.5 Web Applications Prototyping
 
-TODO: Incluir enlace a prototipo interactivo y video de navegación.
+El prototipo de FleetProof permite visualizar la propuesta interactiva de la aplicación web, integrando las pantallas y los flujos definidos anteriormente. Su desarrollo en Figma facilita la exploración de la navegación y las principales funcionalidades del sistema antes de su implementación.
+
+https://www.figma.com/make/LkD3mKP9wjNjnOPTRRzoCt/Create-web-wireframes?p=f&fullscreen=1
 
 ## 4.6 Domain-Driven Software Architecture
 
