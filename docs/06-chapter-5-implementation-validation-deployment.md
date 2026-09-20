@@ -118,17 +118,35 @@ A continuación, se describen las especificaciones técnicas y los procedimiento
 
 #### 5.2.1.1 Sprint Planning 1
 
-| Campo | Valor |
-|---|---|
+El equipo llevó a cabo la sesión de Sprint Planning con el propósito de definir el objetivo central de la iteración, establecer el alcance operativo para el hito AV1 y seleccionar del Product Backlog las historias de usuario orientadas a la implementación, estilizado y despliegue del sitio web estático (Landing Page).
+
+A continuación se presenta el resumen formal de la reunión de planificación del Sprint 1:
+
 | Sprint # | Sprint 1 |
-| Date | TODO |
-| Time | TODO |
-| Location | TODO |
-| Prepared By | Reyes Limo Sebastian |
-| Attendees | Reyes Limo Sebastian / Palomino Murga Daniel Stalin / Becerra Durand Sebastian Uriel / Gómez De La Torre Huertas Rodrigo Fernando / Payesa Torres Harrison Hubert |
-| Sprint 1 Goal | Our focus is on presenting FleetProof's value proposition and segment-specific calls to action through the first deployed Landing Page. We believe it delivers clarity to fleet companies and vehicle owners. This will be confirmed when visitors can understand the product and access the corresponding call-to-action for their segment. |
-| Sprint 1 Velocity | TODO |
-| Sum of Story Points | TODO |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| **Date** | 2026-08-30 |
+| **Time** | 14:00 - 15:30 |
+| **Location** | Sesión virtual vía Discord |
+| **Prepared By** | Gómez De La Torre Huertas, Rodrigo Fernando |
+| **Attendees (to planning meeting)** | Gómez De La Torre Huertas, Rodrigo  / reyes Limo, Sebastian / Palomino Murga, Daniel / Becerra Durand, Sebastian / Payesa Torres Harrison |
+| **Sprint 0 Review Summary** | Al tratarse del primer sprint del ciclo de desarrollo, no existe un incremento de software previo sujeto a revisión formal. El equipo consolidó los requerimientos iniciales, los arquetipos de usuario y las directrices de diseño visual en Figma. |
+| **Sprint 0 Retrospective Summary** | Como retrospectiva previa, el equipo acordó estandarizar el flujo de trabajo mediante ramas GitFlow y Conventional Commits para evitar conflictos de integración en el repositorio del informe y del producto. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 1 Goal** | **Our focus is on** delivering a responsive and accessible public Landing Page communicating the FleetProof value proposition and subscription plans. **We believe it delivers** clear market positioning, transparent compliance pricing, and dedicated conversion paths for both enterprise fleet managers and individual vehicle owners. **This will be confirmed when** visitors can seamlessly explore the business model, compare subscription limits, access legal policies, and interact with call-to-action flows directing to fleet monitoring and single vehicle report inquiries on the deployed web platform. |
+| **Sprint 1 Velocity** | 11 Story Points |
+| **Sum of Story Points** | 11 Story Points |
+
+###### User Stories Comprometidas en el Sprint 1
+
+Para cumplir con el Sprint Goal formulado, se incluyeron en el Sprint Backlog la totalidad de historias de usuario asociadas al Epic EP01 (Landing Page):
+
+* **US001 - View value proposition** (2 Story Points): Presentación visual de la propuesta de valor, segmentos objetivo y llamada a la acción principal.
+* **US002 - Fleet monitoring CTA** (2 Story Points): Enlace y redirección de conversión hacia el flujo de incorporación y monitoreo empresarial de flotas.
+* **US003 - Vehicle report CTA** (2 Story Points): Enlace y redirección hacia el flujo de consulta y reporte unitario para propietarios y compradores particulares.
+* **US004 - Compare plans** (3 Story Points): Cuadro comparativo de los tres planes de suscripción (Personal, Fleet Starter y Fleet Business) con sus respectivos límites y capacidades.
+* **US005 - View legal pages** (2 Story Points): Enlaces en el pie de página hacia los Términos y Condiciones del Servicio y las Políticas de Privacidad.
+
 
 #### 5.2.1.2 Aspect Leaders and Collaborators
 
