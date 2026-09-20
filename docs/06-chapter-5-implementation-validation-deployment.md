@@ -225,16 +225,37 @@ A continuación, se presentan las evidencias de desarrollo y registros de confir
 
 #### 5.2.1.5 Execution Evidence for Sprint Review
 
-TODO: Incluir screenshots de Landing Page desplegada y video de navegación.
+#### 1
+![image](https://hackmd.io/_uploads/HJsiF5htMg.png)
+![image](https://hackmd.io/_uploads/Sy2nK92Kzg.png)
+
+#### 2
+![image](https://hackmd.io/_uploads/SyALccnKfl.png)
+![image](https://hackmd.io/_uploads/BkrKqq3KGg.png)
+
+#### 3
+![image](https://hackmd.io/_uploads/S1V3cc3Fzx.png)
+
+#### 4
+![image](https://hackmd.io/_uploads/HyWZicntGg.png)
+
+A continuación, se presentan las evidencias de ejecución y validación funcional de la Landing Page correspondientes al cierre del Sprint 1, organizadas por historia de usuario y escenarios de prueba:
+
+| User Story / escenario | Resultado esperado | Resultado observado | Captura / video | Estado |
+|---|---|---|---|---|
+| **US01: Diseño adaptable (Desktop y Móvil)** | La landing page debe adaptarse fluidamente a pantallas de escritorio y dispositivos móviles sin desbordamientos ni textos truncados. | El diseño responsivo se ajusta correctamente en diferentes resoluciones; los bloques de navegación, tarjetas de planes y secciones informativas mantienen legibilidad. | `![Diseño adaptable](assets/evidences/us01-responsive.png)` | Aprobado |
+| **US02: Soporte Multi-idioma (i18n)** | Al cambiar el selector de idioma (EN/ES), todos los encabezados, descripciones y planes de suscripción deben actualizarse dinámicamente sin recargar la página. | La interfaz actualiza reactivamente los textos en base al atributo `data-i18n`, traduciendo títulos, botones y monedas de manera instantánea. | `![Soporte de idiomas](assets/evidences/us02-localization.png)` | Aprobado |
+| **US03: Diálogos Legales Accesibles** | Al pulsar sobre "Terms" o "Privacy" en el pie de página, debe desplegarse un diálogo modal accesible que presente los términos y permita cerrarse con `Escape` o clic externo. | El modal se renderiza correctamente sobre la interfaz, bloquea la interacción de fondo y se cierra sin inconvenientes al presionar la tecla `Escape` o el botón de cierre. | `![Modal legal](assets/evidences/us03-modal-legal.png)` | Aprobado |
+| **US04: Enrutamiento de Acciones y Notificaciones Toast** | Al hacer clic en los botones de llamada a la acción (CTA) de los planes o de inicio de sesión, el sistema debe disparar un toast informativo de demostración. | Se despliega la notificación toast flotante en la esquina inferior derecha informando la ruta de demostración configurada, permaneciendo visible temporalmente. | `![Notificación Toast](assets/evidences/us04-toast-cta.png)` | Aprobado |
+
 
 #### 5.2.1.6 Services Documentation Evidence for Sprint Review
 
-Para AV1, los Web Services se registran como planificación técnica si todavía no forman parte del alcance implementado.
+Durante el desarrollo del **Sprint 1**, el alcance operativo planificado en el Sprint Backlog estuvo focalizado de manera exclusiva en el diseño, estructuración semántica, estilización responsiva, accesibilidad, soporte multi-idioma y despliegue del sitio web estático (Landing Page). 
 
-| Endpoint | HTTP Verb | Description | Status | Evidence |
-|---|---|---|---|---|
-| `/api/v1/plans` | GET | List plans | Planned | TODO |
-| `/api/v1/report-requests` | POST | Create report request | Planned | TODO |
+Por lo tanto, en la presente iteración **no se implementaron servicios web (Web Services / APIs) del lado del servidor**, ni se generaron endpoints operativos ni especificaciones OpenAPI/Swagger.
+
+La arquitectura del backend y los servicios RESTful correspondientes al núcleo de la solución (gestión de flotas, generación de reportes y autenticación) están programados para su diseño e implementación formal a partir del **Sprint 2 (Hito AV2)**. En dicho hito se incorporará la documentación exhaustiva de las APIs, especificaciones interactivas de Swagger/OpenAPI, URLs base de los servicios desplegados y las respectivas evidencias de consumo de endpoints.
 
 #### 5.2.1.7 Software Deployment Evidence for Sprint Review
 
@@ -242,7 +263,17 @@ TODO: Incluir URL desplegada, capturas del proveedor y versión `v1.0.0` del Lan
 
 #### 5.2.1.8 Team Collaboration Insights during Sprint
 
-TODO: Incluir capturas de commits, Pull Requests, merges y contributors.
+| Integrante | Aporte concreto | Evidencia verificable | Revisión o colaboración |
+|---|---|---|---|
+| Reyes Limo, Sebastian Eduardo | Capitulo número 2 y feat 4 de la landing page | ![image](https://hackmd.io/_uploads/BkQaaqhFMg.png)| Completo
+| Palomino Murga, Daniel Stalin | La primera mitad del capitulo 4 y feat 1 de la landing page| ![image](https://hackmd.io/_uploads/BJjyyi2tfl.png)
+] | Completo |
+| Becerra Durand, Sebastian Uriel | Segunda mitad del capitulo 4 y feat 2 de la landing page| ![image](https://hackmd.io/_uploads/HJY3qs3YMg.png)
+ | Completo |
+| Payesa Torres, Harrison Hubert | Capitulos 1 y 3 y feat 3 de la landing page  | ![image](https://hackmd.io/_uploads/ByZXkohFzx.png)
+ | Completo |
+| Gómez De La Torre Huertas, Rodrigo Fernando | Capitulo número 5 y feat 5 de la landing| ![image](https://hackmd.io/_uploads/rJ_95o3YGl.png)
+ | Completo |
 
 
 
