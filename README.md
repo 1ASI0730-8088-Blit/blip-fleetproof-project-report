@@ -39,10 +39,10 @@
 
 | Código | Apellidos y nombres |
 |---|---|
-| u2022311656 | Reyes Limo, Sebastian Eduardo |
+| u202311656 | Reyes Limo, Sebastian Eduardo |
 | U20201B253 | Palomino Murga, Daniel Stalin |
 | U20221B756 | Becerra Durand, Sebastian Uriel |
-| Pendiente | Gómez De La Torre Huertas, Rodrigo Fernando |
+| u202311464 | Gómez De La Torre Huertas, Rodrigo Fernando |
 | Pendiente | Payesa Torres, Harrison Hubert |
 
 <br>
@@ -64,7 +64,7 @@
 | u2022311656 | Reyes Limo, Sebastian Eduardo | Ingeniería de Software | llegastian11 | Technical Lead, SCM and Rubric Owner |
 | U20201B253 | Palomino Murga, Daniel Stalin | Ingeniería de Software | DanielPM23 | Lean UX Owner |
 | U20221B756 | Becerra Durand, Sebastian Uriel | Ingeniería de Software | sebasdev28 | UX Research Owner |
-| Pendiente | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | Pendiente | Requirements Owner |
+| u202311464 | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | Pendiente | Requirements Owner |
 | Pendiente | Payesa Torres, Harrison Hubert | Ingeniería de Software | Pendiente | Product Design and Landing Page Owner |
 
 ## Tabla de Contenidos
