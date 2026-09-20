@@ -212,9 +212,16 @@ Para el control del flujo de trabajo y seguimiento ágil bajo Kanban/Scrum, el e
 
 #### 5.2.1.4 Development Evidence for Sprint Review
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-|---|---|---|---|---|---|
-| TODO | TODO | TODO | TODO | TODO | TODO |
+A continuación, se presentan las evidencias de desarrollo y registros de confirmación (*commits*) correspondientes al hito del Sprint 1, organizadas por integrante del equipo mediante capturas directas del historial de Git / GitHub:
+
+| Integrante / Rol | Rama de trabajo | Descripción de aportes | Captura de commits (Git log / GitHub) |
+|---|---|---|---|
+| **Sebastina Becerra**<br>(Developer) | `implement hero and product benefits sections` | feat 2. | ![image](https://hackmd.io/_uploads/rJtIvi2Yfg.png)|
+| **Daniel Palomino**<br>(Developer) | ` implement landing page navigation and base layout` | feat 1. | ![image](https://hackmd.io/_uploads/Hy4ldjnKMg.png) |
+| **Rodrigo Gómez De La Torre**<br>(Developer) | `add localization and accessibility suppor` | feat 5. | ![image](https://hackmd.io/_uploads/BJcVus3tGe.png) |
+| **Sebastian Reyes**<br>(Developer) | `implement subscription plans section` | feat 4 | ![image](https://hackmd.io/_uploads/SJa2_o2tGg.png)|
+| **Harrison Payesa**<br>(Developer) | `implement product solutions and workflow` | feat 3 | ![image](https://hackmd.io/_uploads/BJo4Fontze.png)|
+
 
 #### 5.2.1.5 Execution Evidence for Sprint Review
 
@@ -237,21 +244,5 @@ TODO: Incluir URL desplegada, capturas del proveedor y versión `v1.0.0` del Lan
 
 TODO: Incluir capturas de commits, Pull Requests, merges y contributors.
 
-## 5.3 Validation Interviews
 
-### 5.3.1 Diseño de Entrevistas
-
-TODO: Definir tareas de validación para Landing Page y Web Application.
-
-### 5.3.2 Registro de Entrevistas
-
-TODO: Registrar entrevistas de validación por segmento.
-
-### 5.3.3 Evaluaciones según heurísticas
-
-TODO: Aplicar formato de evaluación UX por heurísticas.
-
-## 5.4 Video About-the-Product
-
-TODO: Incluir screenshot, URL Microsoft Stream, URL YouTube y duración.
 
