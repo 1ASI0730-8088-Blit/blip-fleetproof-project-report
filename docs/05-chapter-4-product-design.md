@@ -914,9 +914,180 @@ El diagrama muestra cómo se organiza el despliegue de FleetProof, separando la 
 
 ## 4.7 Software Object-Oriented Design
 
+En esta sección se presenta el diseño orientado a objetos de FleetProof mediante un diagrama de clases. Se identifican las principales entidades del sistema, sus atributos, operaciones y relaciones, estableciendo una estructura que representa las funcionalidades del dominio vehicular.
+
 ### 4.7.1 Class Diagrams
 
-TODO: Insertar class diagrams por bounded context.
+```mermaid
+classDiagram
+    %% Estilos de tipos DDD
+    class SubscriptionStatus {
+        <<Enumeration>>
+        Active
+        Cancelled
+        Suspended
+    }
+
+    class SeverityLevel {
+        <<Enumeration>>
+        Low
+        Medium
+        High
+        Critical
+    }
+
+    class AlertStatus {
+        <<Enumeration>>
+        Pending
+        Acknowledged
+        Resolved
+    }
+
+    %% 1. User Management Context
+    class User {
+        <<AggregateRoot>>
+        +Guid Id
+        +string FullName
+        +string Email
+        +string PasswordHash
+        +string UserRole
+        +DateTime CreatedAt
+        +CreateUserAccount() void
+        +LogIntoPlatform() bool
+    }
+
+    %% 2. Subscription Management Context
+    class Subscription {
+        <<AggregateRoot>>
+        +Guid Id
+        +Guid UserId
+        +string ServiceType
+        +SubscriptionStatus Status
+        +DateTime StartDate
+        +DateTime EndDate
+        +SelectMonitoringService() void
+        +SelectFleetService() void
+        +SubmitPayment() void
+        +ActivateSubscription() void
+    }
+
+    %% 3. Vehicle Information Context
+    class Vehicle {
+        <<AggregateRoot>>
+        +Guid Id
+        +string LicensePlate
+        +string Brand
+        +string Model
+        +int Year
+        +bool IsValidPlate
+        +EnterLicensePlate() void
+        +RequestVehicleConsultation() void
+        +ValidatePlateRequirements() bool
+        +RetryQueryIfUnavailable() void
+    }
+
+    %% 4. Report Management Context
+    class VehicleReport {
+        <<AggregateRoot>>
+        +Guid Id
+        +Guid VehicleId
+        +Guid RequestedByUserId
+        +DateTime GeneratedAt
+        +string ReportType
+        +string SunarpData
+        +string TrafficViolationsData
+        +RequestCompleteReport() void
+        +RequestTrafficViolationsReport() void
+        +RequestSunarpReport() void
+        +GenerateReportWhenDataAvailable() void
+        +ReviewGeneratedReport() void
+    }
+
+    %% 5. Vehicle Monitoring Context
+    class VehicleMonitoring {
+        <<AggregateRoot>>
+        +Guid Id
+        +Guid VehicleId
+        +Guid SubscribedUserId
+        +bool IsActive
+        +DateTime LastCheckDate
+        +DateTime NextScheduledCheck
+        +RegisterVehicleForMonitoring() void
+        +SchedulePeriodicChecks() void
+        +CheckVehicleChanges() void
+        +DetectVehicleChange() bool
+        +GenerateAlert() void
+    }
+
+    class MonitoringAlert {
+        <<Entity>>
+        +Guid Id
+        +Guid MonitoringId
+        +string ChangeDetail
+        +AlertStatus Status
+        +DateTime CreatedAt
+        +ReviewAlert() void
+    }
+
+    %% 6. Fleet Management Context
+    class Fleet {
+        <<AggregateRoot>>
+        +Guid Id
+        +Guid ManagerUserId
+        +string FleetName
+        +DateTime RegisteredAt
+        +RegisterFleet() void
+        +AssignVehicleToFleet(vehicleId: Guid) void
+        +AssignResponsiblePerson(personId: Guid) void
+        +CheckFleetStatus() void
+        +IdentifyFleetRisk() bool
+        +NotifyResponsiblePerson() void
+    }
+
+    class FleetVehicleAssignment {
+        <<Entity>>
+        +Guid Id
+        +Guid FleetId
+        +Guid VehicleId
+        +Guid ResponsiblePersonId
+        +DateTime AssignedAt
+        +string CurrentRiskLevel
+    }
+
+    %% Relaciones entre Contextos y Agregados
+    User "1" --> "0..*" Subscription : contrata
+    User "1" --> "0..*" VehicleReport : solicita
+    User "1" --> "0..*" Fleet : administra
+
+    Subscription "1" ..> "1" VehicleReport : habilita tras pago
+    Subscription "1" ..> "1" VehicleMonitoring : activa servicio
+    Subscription "1" ..> "1" Fleet : habilita gestion
+
+    Vehicle "1" <-- "1" VehicleReport : extrae datos de
+    Vehicle "1" <-- "1" VehicleMonitoring : monitorea cambios de
+    Vehicle "1" <-- "0..*" FleetVehicleAssignment : es asignado a
+
+    VehicleMonitoring "1" *-- "0..*" MonitoringAlert : genera
+    Fleet "1" *-- "0..*" FleetVehicleAssignment : contiene
+```
+
+**Explicación, decisiones y relación con otros artefactos:**
+
+El diagrama de clases organiza las entidades y operaciones de FleetProof en seis Bounded Contexts, estableciendo las responsabilidades de cada módulo y sus relaciones dentro del sistema:
+
+* **User Management:** La entidad `User` administra la identidad, las credenciales y los roles, permitiendo el registro y la autenticación de usuarios.
+
+* **Subscription Management:** La clase `Subscription` gestiona la contratación de servicios, sus estados y la activación de suscripciones después de validar los pagos mediante Taypi.
+
+* **Vehicle Information:** La entidad `Vehicle` almacena los datos vehiculares, valida las placas y contempla reintentos cuando las fuentes oficiales no están disponibles.
+
+* **Report Management:** `VehicleReport` administra las consultas y la elaboración de reportes completos, de tránsito o SUNARP, generándolos cuando la información está consolidada.
+
+* **Vehicle Monitoring:** `VehicleMonitoring` programa revisiones periódicas y detecta cambios en los vehículos, mientras que `MonitoringAlert` registra las alertas generadas.
+
+* **Fleet Management:** Las clases `Fleet` y `FleetVehicleAssignment` permiten organizar vehículos, asignar responsables, identificar riesgos y gestionar las notificaciones correspondientes.
+
+Esta estructura conecta los procesos del negocio con las entidades del sistema y mantiene coherencia con los contextos identificados mediante Event Storming.
 
 ## 4.8 Database Design
 
