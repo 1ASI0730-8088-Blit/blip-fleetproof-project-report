@@ -54,10 +54,10 @@
 | Código | Apellidos y nombres | Carrera | GitHub username | Rol AV1 |
 |---|---|---|---|---|
 | u2022311656 | Reyes Limo, Sebastian Eduardo | Ingeniería de Software | llegastian11 | Technical Lead, SCM and Rubric Owner |
-| U20201B253 | Palomino Murga, Daniel Stalin | Ingeniería de Software | DanielPM23 | Lean UX Owner |
+| U20201B253 | Palomino Murga, Daniel Stalin | Ingeniería de Software | DanielPM23 |Product Design and Landing Page Owner |
 | U20221B756 | Becerra Durand, Sebastian Uriel | Ingeniería de Software | sebasdev28 | UX Research Owner |
-| u202311464 | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | Pendiente | Requirements Owner |
-| Pendiente | Payesa Torres, Harrison Hubert | Ingeniería de Software | Pendiente | Product Design and Landing Page Owner |
+| u202311464 | Gómez De La Torre Huertas, Rodrigo Fernando | Ingeniería de Software | pendiente | Requirements Owner |
+| Pendiente | Payesa Torres, Harrison Hubert | Ingeniería de Software | Harrison1024 | Lean UX Owner |
 
 ## Tabla de Contenidos
 
@@ -79,11 +79,11 @@
 
 | Bloque | Responsable | Estado | Evidencia |
 |---|---|---|---|
-| GitHub, GitFlow y releases | Reyes Limo Sebastian | En progreso | Repositorio del informe y estructura base. |
-| Lean UX Process | Palomino Murga Daniel Stalin | Pendiente | TODO |
-| UX Research y competidores | Becerra Durand Sebastian Uriel | Pendiente | TODO |
-| User Stories y Product Backlog | Gómez De La Torre Huertas Rodrigo Fernando | Pendiente | TODO |
-| Product Design y Landing Page v1.0.0 | Payesa Torres Harrison Hubert | Pendiente | TODO |
+| GitHub, GitFlow y releases | Reyes Limo Sebastian | Completado | Repositorio del informe y estructura base. |
+| Lean UX Process | Payesa Torres Harrison Hubert | Completado | Impletación de los artefactos de Lean UX process |
+| UX Research y competidores | Becerra Durand Sebastian Uriel | Completado | Artefactos UX implementados |
+| User Stories y Product Backlog | Gómez De La Torre Huertas Rodrigo Fernando | Completado | Implementacion del product backlog y las user stories |
+| Product Design y Landing Page v1.0.0 | Palomino Murga Daniel Stalin | Completado | Landing pages deplegada |
 
 ## Repositorios del Proyecto
 
