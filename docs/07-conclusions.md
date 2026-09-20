@@ -24,4 +24,29 @@ Finalmente, se recomienda mantener el carácter iterativo del proceso Lean UX. L
 
 ## Video About-the-Team
 
-TODO: Incluir resumen, pauta de secuencias, screenshot y URL del video.
+### Resumen
+
+El video presenta el trabajo del equipo BLIP en la entrega AV1 del curso Aplicaciones Web (1ASI0730, NRC 8088) sobre el producto FleetProof. Los integrantes exponen la startup y el producto, los segmentos objetivo y el proceso Lean UX, los artefactos de Needfinding del Capítulo II, la especificación de requisitos del Capítulo III, el diseño de producto y la arquitectura de software del Capítulo IV, la evidencia de desarrollo del Sprint 1 por integrante y las conclusiones de la entrega.
+
+**Duración:** 21 min 54 s.
+
+### Pauta de secuencias
+
+| Momento | Contenido |
+|---|---|
+| 00:00 | Portada: curso Aplicaciones Web (1ASI0730), NRC 8088, docente y producto FleetProof. |
+| 00:15 | Startup profile: misión y visión de BLIP, propuesta de valor y presentación de los integrantes. |
+| 05:00 | Capítulo II: User Personas de los segmentos entrevistados (asesor automotor y responsable comercial) y hallazgos del Needfinding. |
+| 10:00 | Capítulo III: Impact Mapping con el objetivo de negocio y su relación con las User Stories (US012, US013 y US015). |
+| 11:40 | Capítulo IV: Style Guidelines con la paleta de colores, la tipografía y la navegación del producto. |
+| 15:00 | Capítulo IV: arquitectura de software a nivel de Bounded Context. |
+| 18:20 | Evidencia de desarrollo del Sprint 1: ramas de trabajo y capturas de commits de cada integrante. |
+| 21:20 | Conclusiones de AV1: validación del problema, viabilidad de la solución, solidez metodológica del Lean UX y despliegue de la Landing Page en GitHub Pages. |
+
+### Screenshot
+
+![Portada del video About-the-Team de la entrega AV1](assets/team/about-the-team-av1.png)
+
+### URL del video
+
+[Video About-the-Team - AV1 (Google Drive)](https://drive.google.com/file/d/1FLNnxTZTzsK9Y0VTbScm8yhSiuJtYtqe/view?usp=sharing)
