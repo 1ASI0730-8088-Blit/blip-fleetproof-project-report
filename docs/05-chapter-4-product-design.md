@@ -698,9 +698,38 @@ Step 9: Aggregates
 Step 10: Bounded Contexts
 
 ![image](https://hackmd.io/_uploads/BJYAmRYYzl.png)
+
 ### 4.6.2 Software Architecture Context Diagram
 
-TODO: Insertar C4 Context Diagram.
+El diagrama de contexto de FleetProof presenta una visión general del sistema y su relación con los usuarios y servicios externos. Se identifican las interacciones entre los usuarios finales, los responsables del monitoreo, los gestores de flota y los servicios de pagos, consultas oficiales y notificaciones.
+
+```mermaid
+flowchart TB
+    classDef person fill:#08427b,stroke:#073b6f,stroke-width:2px,color:#fff;
+    classDef internal fill:#1168bd,stroke:#0b4884,stroke-width:2px,color:#fff;
+    classDef external fill:#999999,stroke:#666666,stroke-width:2px,color:#fff;
+
+    user1["Usuario Final"]:::person
+    user2["Usuario de Monitoreo"]:::person
+    user3["Gestor de Flota"]:::person
+
+    core["Sistema de Consulta y Monitoreo Vehicular"]:::internal
+
+    ext1["Taypi Payment System"]:::external
+    ext2["CAPTCHA Resolution Service"]:::external
+    ext3["Fuentes Oficiales"]:::external
+    ext4["Notification Provider"]:::external
+
+    user1 -->|Solicita reportes y paga consultas| core
+    user2 -->|Activa suscripcion y monitorea| core
+    user3 -->|Registra flotas y atiende riesgos| core
+
+    core -->|Procesa transacciones| ext1
+    core -->|Resuelve desafios visuales| ext2
+    core -->|Consulta datos registrales y papeletas| ext3
+    core -->|Despacha alertas y avisos| ext4
+```
+**Explicación, decisiones y relación con otros artefactos:** A través del diagrama de contexto se definen las fronteras de la aplicación, mostrando cómo se conecta con tres perfiles de usuario clave y con cuatro integraciones de terceros: procesamiento de cobros, resolución de CAPTCHA, verificación en registros oficiales y despacho de notificaciones.
 
 ### 4.6.3 Software Architecture Container Diagrams
 
