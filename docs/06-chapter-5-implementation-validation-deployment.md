@@ -56,11 +56,61 @@ Para mantener un historial de confirmaciones (*commits*) claro, legible y automa
 
 ### 5.1.3 Source Code Style Guide & Coding Conventions
 
-TODO: Documentar convenciones para HTML, CSS, JavaScript y C#. Toda nomenclatura de código debe estar en inglés.
+Para garantizar la legibilidad, mantenibilidad y consistencia del código fuente a lo largo del ciclo de vida del proyecto, el equipo adopta estándares oficiales de codificación reconocidos en la industria.
+
+Como principio general, todos los identificadores en el código (nombres de archivos, variables, funciones, métodos, clases, interfaces, comentarios en el código y mensajes de error o registros) deben redactarse estrictamente en idioma inglés.
+
+##### Convenciones Generales de Nomenclatura
+
+| Lenguaje / Tecnología | Elemento de Código | Convención de Nomenclatura | Ejemplo |
+| :--- | :--- | :--- | :--- |
+| **HTML5** | Nombres de etiquetas y atributos | lowercase | `<section class="hero">`, `<img src="..." alt="...">` |
+| **CSS3** | Clases y selectores | kebab-case | `.btn-primary`, `.vehicle-card-header` |
+| **JavaScript / Vue** | Variables y funciones | camelCase | `licensePlate`, `fetchVehicleReports()` |
+| **JavaScript / Vue** | Constantes globales | UPPER_SNAKE_CASE | `API_BASE_URL`, `DEFAULT_TIMEOUT` |
+| **JavaScript / Vue** | Componentes Vue y Clases | PascalCase | `VehicleReport.vue`, `RiskAssessmentService` |
+| **C# (.NET Core)** | Clases, Registros y Structs | PascalCase | `Vehicle`, `ReportService` |
+| **C# (.NET Core)** | Interfaces | PascalCase con prefijo 'I' | `IVehicleRepository`, `INotificationService` |
+| **C# (.NET Core)** | Métodos y Propiedades | PascalCase | `GetByIdAsync()`, `LicensePlate` |
+| **C# (.NET Core)** | Variables locales y parámetros | camelCase | `reportId`, `cancellationToken` |
+| **C# (.NET Core)** | Campos privados de clase | _camelCase (guion bajo) | `_dbContext`, `_logger` |
+
+##### Estándares por Lenguaje y Marco de Trabajo
+
+###### 1. HTML5
+Se adoptan las directrices de la *Google HTML/CSS Style Guide* y las especificaciones de *W3Schools*:
+* **Semántica estructural:** Se prioriza el uso de elementos semánticos de HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) en lugar de contenedores genéricos `<div>`.
+* **Sintaxis limpia:** No se emplean mayúsculas en nombres de elementos o atributos. Todos los valores de atributos deben delimitarse con comillas dobles.
+* **Accesibilidad (a11y):** Toda imagen debe incluir el atributo `alt` con una descripción textual representativa. Los elementos interactivos deben incluir atributos ARIA (`aria-label`, `aria-expanded`, etc.) cuando la semántica nativa resulte insuficiente.
+
+###### 2. CSS3
+Se adoptan las directrices de la *Google HTML/CSS Style Guide*:
+* **Formato e indentación:** Se emplea una indentación consistente de 2 espacios sin tabulaciones.
+* **Especificidad de selectores:** Se diseñan estilos basados en clases reutilizables (*kebab-case*). Se restringe estrictamente el uso de selectores de ID (`#`) para aplicar estilos y se evita el uso de declaraciones `!important`.
+* **Diseño adaptativo:** Las reglas de visualización adaptable deben organizarse mediante consultas de medios (*Media Queries*) siguiendo el enfoque de diseño responsivo.
+
+###### 3. JavaScript & Vue.js
+Se adoptan las directrices de la *Google JavaScript Style Guide* y la *Vue Style Guide*:
+* **Declaración de variables:** Se prohíbe el uso de la palabra clave `var`. Se utiliza `const` de manera predeterminada y `let` únicamente cuando la variable requiera reasignación.
+* **Componentes Vue:** Los nombres de componentes de archivo único (*Single File Components*) deben estructurarse en *PascalCase* y constar de más de una palabra para evitar colisiones con elementos HTML nativos (por ejemplo, `ReportCard.vue` en lugar de `Card.vue`).
+* **Manejo asíncrono:** Se prioriza el uso de la sintaxis `async/await` estructurada con bloques `try/catch` para el consumo de servicios asíncronos y llamadas HTTP.
+
+###### 4. C# & ASP.NET Core
+Se adoptan las directrices oficiales de *Microsoft C# Coding Conventions* y *Microsoft ASP.NET Core Coding Guidelines*:
+* **Estructura y llaves:** Se sigue el estilo Allman para la apertura y cierre de bloques de código, colocando las llaves (`{ }`) en una línea independiente alineada con el nivel de indentación correspondiente (4 espacios).
+* **Inyección de dependencias:** Los servicios y repositorios deben desacoplarse mediante interfaces inyectadas vía constructor, almacenándolos en campos privados de solo lectura (`private readonly`).
+* **Operaciones asíncronas:** Todo método asíncrono debe llevar el sufijo `Async` (por ejemplo, `SaveVehicleAsync`) y recibir o propagar un token de cancelación (`CancellationToken`) cuando aplique.
+
 
 ### 5.1.4 Software Deployment Configuration
 
-TODO: Especificar configuración de despliegue de Landing Page, Frontend Web Application y Web Services.
+A continuación, se describen las especificaciones técnicas y los procedimientos de construcción y despliegue continuo de los artefactos de software del proyecto FleetProof. La Landing Page estática cuenta con despliegue operativo continuo mediante GitHub Pages, mientras que la aplicación web y los servicios backend quedan documentados a nivel de planificación arquitectónica.
+
+| Producto | Proveedor | Pasos de construcción y despliegue | Variables por nombre, sin secretos | URL y verificación |
+|---|---|---|---|---|
+| Landing Page | GitHub Pages | 1. Integración de los cambios terminados hacia la rama `main` mediante Pull Request aprobado.<br>2. En el repositorio de GitHub, navegar a **Settings** > **Pages**.<br>3. En la sección **Build and deployment** > **Source**, seleccionar **Deploy from a branch**.<br>4. En el menú desplegable de rama, elegir `main` y en la carpeta seleccionar `/ (root)`. Presionar **Save**.<br>5. GitHub ejecuta de manera automática el workflow de GitHub Actions denominado `pages-build-deployment`. | No aplica justificado. Al tratarse de un sitio web estático desarrollado con HTML5 semántico, CSS3 y JavaScript vanilla, los archivos son interpretados directamente por el navegador del cliente y no requieren variables de entorno ni compilación del lado del servidor. | URL: `https://1asi0730-8088-blit.github.io/fleetproof-landing-page/`<br>Verificación: Respuesta HTTP 200 OK, renderizado responsivo correcto, funcionamiento del selector de idioma (ES/EN), apertura y foco de los modales legales y visualización de notificaciones toast en las llamadas a la acción. |
+| Frontend Web Application | Vercel / Netlify (Plan) | 1. Vinculación del repositorio del frontend con el proveedor cloud seleccionado.<br>2. Detección automática del framework base (Vue.js / Vite).<br>3. Comando de construcción: `npm run build`.<br>4. Directorio de salida de compilación: `dist/`.<br>5. Despliegue automatizado tras la integración a la rama `develop` (staging) o `main` (producción). | `VITE_API_BASE_URL` | PENDIENTE de implementación (previsto para Sprint 2). |
+| Web Services | Render / Railway / AWS (Plan) | 1. Conexión del repositorio backend con la plataforma de hospedaje cloud.<br>2. Definición de la construcción mediante contenedor Docker o entorno de ejecución nativo.<br>3. Comando de ejecución e inicio del servicio: `npm start` o binario generado.<br>4. Configuración del health check en el endpoint `/api/health`. | `PORT`, `DATABASE_URL`, `JWT_SECRET_KEY`, `CORS_ORIGIN` | PENDIENTE de implementación (previsto para Sprint 2 / 3). |
 
 ## 5.2 Landing Page, Services & Applications Implementation
 
