@@ -1,57 +1,49 @@
 <div align="center">
 
-<br>
-<br>
+  <img src="docs/assets/chapter-1/upc-logo.png" alt="Logo UPC" width="110" />
 
-## Universidad Peruana de Ciencias Aplicadas
+  <h2>Universidad Peruana de Ciencias Aplicadas</h2>
+  <h3>Carrera de Ingeniería de Software</h3>
 
-## Carrera de Ingeniería de Software
+  <br />
 
-<br>
+  <h2>1ASI0730</h2>
+  <h2>Aplicaciones Web</h2>
 
-# 1ASI0730
+  <p><strong>NRC</strong><br /><strong>8088</p>
 
-# Aplicaciones Web
+  <h1>Informe del Trabajo Final</h1>
 
-## NRC
+  <p><strong>Docente</strong><br />
+  Bautista Ubillús, Efrain Ricardo</p>
 
-# 8088
+  <br />
 
-# Informe del Trabajo Final
+  <p><strong>Equipo</strong><br />
+  Blip</p>
 
-## Docente
+  <p><strong>Proyecto</strong><br />
+  FleetProof</p>
 
-# Bautista Ubillús, Efraín Ricardo
+  <br />
 
-<br>
+  <h2>Integrantes</h2>
 
-## Equipo
+  <p><strong>U202311656</strong> — Reyes Limo, Sebastian Eduardo</p>
 
-# BLIP
+  <p><strong>U20201B253</strong> — Palomino Murga, Daniel Stalin</p>
 
-## Proyecto
+  <p><strong>U20221B756</strong> — Becerra Durand, Sebastian Uriel</p>
 
-# FleetProof
+  <p><strong>U20221B756</strong> — Gómez De La Torre Huertas, Rodrigo Fernando</p>
 
-<br>
+  <p><strong>U202221024</strong> — Payesa Torres, Harrison Hubert</p>
 
-## Integrantes
+  <br />
 
-| Código | Apellidos y nombres |
-|---|---|
-| u202311656 | Reyes Limo, Sebastian Eduardo |
-| U20201B253 | Palomino Murga, Daniel Stalin |
-| U20221B756 | Becerra Durand, Sebastian Uriel |
-| u202311464 | Gómez De La Torre Huertas, Rodrigo Fernando |
-| Pendiente | Payesa Torres, Harrison Hubert |
+  <p><strong>Período 202620</strong></p>
 
-<br>
-
-# Período 202620
-
-<br>
-
-# Septiembre 2026
+  <p><strong>Septiembre 2026</strong></p>
 
 </div>
 
