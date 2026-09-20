@@ -42,7 +42,16 @@ Las historias relacionadas con la Landing Page permiten comunicar la propuesta d
 
 ## 3.2 Impact Mapping
 
-TODO: Crear Impact Map en UXPressia con Business Goals SMART, Actors, Impacts, Deliverables y User Stories.
+El Impact Mapping de FleetProof relaciona los Business Goals definidos para el modelo de negocio con los User Personas identificados durante el proceso de Needfinding, los impactos esperados en su comportamiento, los Deliverables que debe proporcionar la solución y las User Stories correspondientes. Los Business Goals fueron formulados bajo criterios SMART, incorporando métricas y un horizonte temporal de 12 meses.
+
+El primer objetivo busca reducir el tiempo requerido para la investigación vehicular mediante la importación y consolidación de información. El segundo busca disminuir las omisiones durante la investigación mediante mecanismos de checklist, registro de evidencia y generación de reportes compartibles. El tercer objetivo busca mejorar la identificación y priorización de riesgos mediante un dashboard y mecanismos de seguimiento de observaciones.
+
+Los Actors utilizados corresponden a los User Personas de Roxana Limo y Cristhian Amaya, previamente definidos en el proceso de Needfinding. Las relaciones establecidas permiten mantener trazabilidad entre las necesidades identificadas, los impactos esperados y las User Stories especificadas en el capítulo.
+
+![Impact Mapping de FleetProof](assets/chapter-3/impact-mapping.png)
+
+**Figura 3.1. Impact Mapping de FleetProof.**  
+*Fuente: Elaboración propia mediante UXPressia.*
 
 ## 3.3 Product Backlog
 
