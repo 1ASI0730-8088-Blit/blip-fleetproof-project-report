@@ -780,159 +780,33 @@ El diagrama muestra cómo se organiza el despliegue de FleetProof, separando la 
 En esta sección se presenta el diseño orientado a objetos de FleetProof mediante un diagrama de clases. Se identifican las principales entidades del sistema, sus atributos, operaciones y relaciones, estableciendo una estructura que representa las funcionalidades del dominio vehicular.
 
 ### 4.7.1 Class Diagrams
+Domain Overview Class Diagram
 
-```mermaid
-classDiagram
-    %% Estilos de tipos DDD
-    class SubscriptionStatus {
-        <<Enumeration>>
-        Active
-        Cancelled
-        Suspended
-    }
+![image](assets/chapter-4/class-diagram/07-domain-overview.png)
 
-    class SeverityLevel {
-        <<Enumeration>>
-        Low
-        Medium
-        High
-        Critical
-    }
+Shared Class Diagram
 
-    class AlertStatus {
-        <<Enumeration>>
-        Pending
-        Acknowledged
-        Resolved
-    }
+![image](assets/chapter-4/class-diagram/00-shared.png)
 
-    %% 1. User Management Context
-    class User {
-        <<AggregateRoot>>
-        +Guid Id
-        +string FullName
-        +string Email
-        +string PasswordHash
-        +string UserRole
-        +DateTime CreatedAt
-        +CreateUserAccount() void
-        +LogIntoPlatform() bool
-    }
+User Management Class Diagram
 
-    %% 2. Subscription Management Context
-    class Subscription {
-        <<AggregateRoot>>
-        +Guid Id
-        +Guid UserId
-        +string ServiceType
-        +SubscriptionStatus Status
-        +DateTime StartDate
-        +DateTime EndDate
-        +SelectMonitoringService() void
-        +SelectFleetService() void
-        +SubmitPayment() void
-        +ActivateSubscription() void
-    }
+![image](assets/chapter-4/class-diagram/01-user-management.png)
 
-    %% 3. Vehicle Information Context
-    class Vehicle {
-        <<AggregateRoot>>
-        +Guid Id
-        +string LicensePlate
-        +string Brand
-        +string Model
-        +int Year
-        +bool IsValidPlate
-        +EnterLicensePlate() void
-        +RequestVehicleConsultation() void
-        +ValidatePlateRequirements() bool
-        +RetryQueryIfUnavailable() void
-    }
+Subscription Management Class Diagram
 
-    %% 4. Report Management Context
-    class VehicleReport {
-        <<AggregateRoot>>
-        +Guid Id
-        +Guid VehicleId
-        +Guid RequestedByUserId
-        +DateTime GeneratedAt
-        +string ReportType
-        +string SunarpData
-        +string TrafficViolationsData
-        +RequestCompleteReport() void
-        +RequestTrafficViolationsReport() void
-        +RequestSunarpReport() void
-        +GenerateReportWhenDataAvailable() void
-        +ReviewGeneratedReport() void
-    }
+![image](assets/chapter-4/class-diagram/02-subscription-management.png)
 
-    %% 5. Vehicle Monitoring Context
-    class VehicleMonitoring {
-        <<AggregateRoot>>
-        +Guid Id
-        +Guid VehicleId
-        +Guid SubscribedUserId
-        +bool IsActive
-        +DateTime LastCheckDate
-        +DateTime NextScheduledCheck
-        +RegisterVehicleForMonitoring() void
-        +SchedulePeriodicChecks() void
-        +CheckVehicleChanges() void
-        +DetectVehicleChange() bool
-        +GenerateAlert() void
-    }
+Vehicle Information Class Diagram
 
-    class MonitoringAlert {
-        <<Entity>>
-        +Guid Id
-        +Guid MonitoringId
-        +string ChangeDetail
-        +AlertStatus Status
-        +DateTime CreatedAt
-        +ReviewAlert() void
-    }
+![image](assets/chapter-4/class-diagram/03-vehicle-information.png)
 
-    %% 6. Fleet Management Context
-    class Fleet {
-        <<AggregateRoot>>
-        +Guid Id
-        +Guid ManagerUserId
-        +string FleetName
-        +DateTime RegisteredAt
-        +RegisterFleet() void
-        +AssignVehicleToFleet(vehicleId: Guid) void
-        +AssignResponsiblePerson(personId: Guid) void
-        +CheckFleetStatus() void
-        +IdentifyFleetRisk() bool
-        +NotifyResponsiblePerson() void
-    }
+Fleet Management Class Diagram
 
-    class FleetVehicleAssignment {
-        <<Entity>>
-        +Guid Id
-        +Guid FleetId
-        +Guid VehicleId
-        +Guid ResponsiblePersonId
-        +DateTime AssignedAt
-        +string CurrentRiskLevel
-    }
+![image](assets/chapter-4/class-diagram/06-fleet-management.png)
 
-    %% Relaciones entre Contextos y Agregados
-    User "1" --> "0..*" Subscription : contrata
-    User "1" --> "0..*" VehicleReport : solicita
-    User "1" --> "0..*" Fleet : administra
 
-    Subscription "1" ..> "1" VehicleReport : habilita tras pago
-    Subscription "1" ..> "1" VehicleMonitoring : activa servicio
-    Subscription "1" ..> "1" Fleet : habilita gestion
 
-    Vehicle "1" <-- "1" VehicleReport : extrae datos de
-    Vehicle "1" <-- "1" VehicleMonitoring : monitorea cambios de
-    Vehicle "1" <-- "0..*" FleetVehicleAssignment : es asignado a
 
-    VehicleMonitoring "1" *-- "0..*" MonitoringAlert : genera
-    Fleet "1" *-- "0..*" FleetVehicleAssignment : contiene
-```
 
 **Explicación, decisiones y relación con otros artefactos:**
 
