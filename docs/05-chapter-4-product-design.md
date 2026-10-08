@@ -709,7 +709,7 @@ El diagrama de contexto de FleetProof presenta una visión general del sistema y
 
 ### 4.6.3 Software Architecture Container Diagrams
 
-En esta sección se presenta la organización interna del backend de FleetProof, desarrollado con ASP.NET Core. El diagrama muestra los principales módulos del sistema, sus componentes y las conexiones con la base de datos y los servicios externos, siguiendo los principios de Domain-Driven Design (DDD).
+En esta sección se presenta el Diagrama de Contenedores (C4 Nivel 2) de FleetProof. El diagrama ilustra las aplicaciones de alto nivel y almacenes de datos que componen el sistema, delimitando las interfaces web del cliente, los servicios backend en ASP.NET Core, la base de datos PostgreSQL y las interacciones con los servicios externos e integraciones oficiales.
 
 ![image](assets/chapter-4/c4-webapp/containers.png)
 
@@ -724,7 +724,7 @@ El diagrama C4 ilustra la arquitectura interna de la API en ASP.NET Core bajo DD
 
 ### 4.6.4 Software Architecture Components Diagrams
 
-El siguiente diagrama presenta la distribución de FleetProof en una infraestructura basada en servicios en la nube. Se muestran las aplicaciones, los componentes del backend, la base de datos y los servicios externos necesarios para el funcionamiento de la plataforma.
+El siguiente diagrama de componentes (C4 Nivel 3) presenta la organización interna del backend de FleetProof desarrollado en ASP.NET Core. Se detalla la interacción entre los controladores de la capa de presentación, los servicios de aplicación y dominio, y la capa de infraestructura/persistencia con Entity Framework Core, así como su comunicación con la base de datos y proveedores externos.
 
 ![image](assets/chapter-4/c4-webapp/webAppComponents.png)
 
