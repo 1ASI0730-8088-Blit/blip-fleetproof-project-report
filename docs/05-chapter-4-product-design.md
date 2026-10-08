@@ -729,123 +729,64 @@ flowchart TB
     core -->|Consulta datos registrales y papeletas| ext3
     core -->|Despacha alertas y avisos| ext4
 ```
-**Explicación, decisiones y relación con otros artefactos:** A través del diagrama de contexto se definen las fronteras de la aplicación, mostrando cómo se conecta con tres perfiles de usuario clave y con cuatro integraciones de terceros: procesamiento de cobros, resolución de CAPTCHA, verificación en registros oficiales y despacho de notificaciones.
+**Explicación, decisiones y relación con otros artefactos:** El diagrama C2 delimita las responsabilidades de ejecución y los límites de despliegue del sistema:Frontend SPA & Landing Page: Desacopladas de la infraestructura del backend para optimizar tiempos de entrega y distribución de activos estáticos. La SPA consume la API de manera asíncrona vía JSON/HTTPS.   Separación API y Background Worker: La API de ASP.NET Core atiende las peticiones inmediatas del usuario, mientras que el Worker Service ejecuta de forma aislada las tareas pesadas de monitoreo periódico y consulta a portales externos sin degradar la experiencia de navegación.   Persistencia Gestionada: PostgreSQL centraliza la persistencia relacional a través de Entity Framework Core, garantizando aislamiento transaccional para los distintos esquemas de dominio.   
 
 ### 4.6.3 Software Architecture Container Diagrams
 
-En esta sección se presenta la organización interna del backend de FleetProof, desarrollado con ASP.NET Core. El diagrama muestra los principales módulos del sistema, sus componentes y las conexiones con la base de datos y los servicios externos, siguiendo los principios de Domain-Driven Design (DDD).
+En esta sección se presenta el Diagrama de Contenedores (C4 Nivel 2) de FleetProof. El diagrama ilustra las aplicaciones de alto nivel y almacenes de datos que componen el sistema, delimitando las interfaces web del cliente, los servicios backend en ASP.NET Core, la base de datos PostgreSQL y las interacciones con los servicios externos e integraciones oficiales.
 
 ```mermaid
 flowchart TB
-    %% Estilos
-    classDef client fill:#08427b,stroke:#073b6f,stroke-width:2px,color:#fff;
-    classDef controller fill:#438dd5,stroke:#2e6295,stroke-width:2px,color:#fff;
-    classDef appService fill:#1168bd,stroke:#0b4884,stroke-width:2px,color:#fff;
-    classDef domain fill:#0d47a1,stroke:#002171,stroke-width:2px,color:#fff;
-    classDef infra fill:#5c6bc0,stroke:#3949ab,stroke-width:2px,color:#fff;
-    classDef db fill:#2e7d32,stroke:#1b5e20,stroke-width:2px,color:#fff;
-    classDef external fill:#757575,stroke:#424242,stroke-width:2px,color:#fff;
+    classDef clientNode fill:#eceff1,stroke:#607d8b,stroke-width:2px,color:#263238;
+    classDef appNode fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px,color:#1a237e;
+    classDef dbNode fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#1b5e20;
+    classDef extNode fill:#eeeeee,stroke:#757575,stroke-width:2px,color:#212121;
+    classDef userNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100;
 
-    %% Clientes Frontend
-    spa["Frontend Web Application<br/>Vue 3 / PrimeVue"]:::client
+    user[Usuario / Operador de Flota]:::userNode
 
-    %% Sistemas Externos y BD
-    db[("Core Database<br/>PostgreSQL / MySQL")]:::db
-    ext_taypi["Taypi Payment System"]:::external
-    ext_captcha["CAPTCHA Resolution Service"]:::external
-    ext_sources["Fuentes Oficiales<br/>SUNARP / Transito"]:::external
-    ext_notif["Notification Provider<br/>Email / SMS / Push"]:::external
-
-    %% Componentes del Backend API
-    subgraph BackendAPI ["Backend RESTful API - ASP.NET Core"]
-        
-        subgraph Sub_Module ["Subscriptions Context"]
-            sub_ctrl["SubscriptionController<br/>Manejo de endpoints de planes"]:::controller
-            sub_srv["SubscriptionService<br/>Logica de activacion y cuotas"]:::appService
-            sub_agg["Aggregate: Subscription<br/>Plan, Status, Limits"]:::domain
-        end
-
-        subgraph User_Module ["User Management Context"]
-            user_ctrl["UserController / AuthController<br/>Endpoints JWT y registro"]:::controller
-            user_srv["UserService<br/>Validacion de credenciales"]:::appService
-            user_agg["Aggregate: User<br/>Identity, Profile, Roles"]:::domain
-        end
-
-        subgraph Veh_Module ["Vehicle Information Context"]
-            veh_ctrl["VehicleController<br/>Validacion y consultas"]:::controller
-            veh_srv["VehicleQueryService<br/>Orquestacion de consultas y retry"]:::appService
-            veh_agg["Aggregate: Vehicle<br/>Plate, TechnicalData, History"]:::domain
-            veh_conn["SourceConnectorAdapter<br/>Llamadas HTTP y bypass CAPTCHA"]:::infra
-        end
-
-        subgraph Rep_Module ["Report Management Context"]
-            rep_ctrl["ReportController<br/>Descarga y generacion"]:::controller
-            rep_srv["ReportGenerationService<br/>Consolidacion de antecedentes"]:::appService
-            rep_agg["Aggregate: VehicleReport<br/>Findings, RiskSummary, Status"]:::domain
-        end
-
-        subgraph Mon_Module ["Vehicle Monitoring Context"]
-            mon_wrk["MonitoringBackgroundWorker<br/>Cron/Scheduler de revisiones"]:::appService
-            mon_srv["ChangeDetectionService<br/>Comparador de snapshots"]:::appService
-            mon_agg["Aggregate: VehicleMonitoring<br/>Schedule, Alerts, Discrepancies"]:::domain
-        end
-
-        subgraph Flt_Module ["Fleet Management Context"]
-            flt_ctrl["FleetController<br/>Gestion de flotas y asignacion"]:::controller
-            flt_srv["FleetRiskService<br/>Evaluacion de riesgo y casos"]:::appService
-            flt_agg["Aggregate: Fleet<br/>Vehicles, AssignedPersons, Risks"]:::domain
-        end
-
-        infra_ef["EF Core DbContext<br/>Unit of Work y Repositorios"]:::infra
-        infra_notif["NotificationAdapter<br/>Cliente HTTP para envios"]:::infra
+    subgraph Client_Applications [Aplicaciones Cliente]
+        landing[Landing Page Web<br>HTML5 / CSS3 / JS]:::clientNode
+        spa[Frontend SPA<br>Vue 3 / PrimeVue]:::clientNode
     end
 
-    %% Peticiones desde Frontend
-    spa -->|POST /api/v1/auth| user_ctrl
-    spa -->|POST /api/v1/subscriptions| sub_ctrl
-    spa -->|GET /api/v1/vehicles| veh_ctrl
-    spa -->|GET /api/v1/reports| rep_ctrl
-    spa -->|POST /api/v1/fleets| flt_ctrl
+    subgraph Backend_Containers [Contenedores Backend]
+        api[FleetProof Web API<br>ASP.NET Core]:::appNode
+        worker[Background Monitoring Worker<br>.NET Worker Service]:::appNode
+    end
 
-    %% Flujos Internos de Aplicacion
-    user_ctrl --> user_srv
-    user_srv --> user_agg
+    subgraph Storage [Persistencia de Datos]
+        db[(Base de Datos Principal<br>PostgreSQL)]:::dbNode
+    end
 
-    sub_ctrl --> sub_srv
-    sub_srv --> sub_agg
-    sub_srv -->|Procesa cobro| ext_taypi
+    subgraph External_Services [Sistemas Externos]
+        sunarp[Portales Oficiales<br>SUNARP / SAT]:::extNode
+        captcha[2Captcha Service]:::extNode
+        media[Cloudinary Storage]:::extNode
+        notif[Resend Email Service]:::extNode
+        payment[Taypi Payment Gateway]:::extNode
+    end
 
-    veh_ctrl --> veh_srv
-    veh_srv --> veh_agg
-    veh_srv --> veh_conn
-    veh_conn -->|Resuelve token| ext_captcha
-    veh_conn -->|Extrae datos| ext_sources
+    %% Relaciones Usuario -> Clientes
+    user -->|Navega / Consulta| landing
+    user -->|Gestiona flotas / Autenticación| spa
 
-    rep_ctrl --> rep_srv
-    rep_srv --> rep_agg
-    rep_srv -->|Solicita antecedentes| veh_srv
+    %% Relaciones Cliente -> Backend
+    spa -->|JSON / HTTPS 443| api
 
-    mon_wrk --> mon_srv
-    mon_srv --> mon_agg
-    mon_srv -->|Consulta estado actual| veh_srv
-    mon_srv -->|Dispara alerta de cambio| infra_notif
+    %% Relaciones Backend -> Persistencia
+    api -->|TCP 5432 EF Core| db
+    worker -->|TCP 5432 EF Core| db
 
-    flt_ctrl --> flt_srv
-    flt_srv --> flt_agg
-    flt_srv -->|Verifica alertas| mon_srv
-    flt_srv -->|Notifica responsable| infra_notif
+    %% Relaciones Backend -> Servicios Externos
+    api -->|HTTPS 443| payment
+    api -->|HTTPS 443| notif
+    api -->|HTTPS 443| media
 
-    infra_notif -->|Despacha mensaje| ext_notif
-
-    %% Persistencia hacia la BD
-    user_agg --> infra_ef
-    sub_agg --> infra_ef
-    veh_agg --> infra_ef
-    rep_agg --> infra_ef
-    mon_agg --> infra_ef
-    flt_agg --> infra_ef
-
-    infra_ef --> db
+    worker -->|HTTPS 443| sunarp
+    worker -->|HTTPS 443| captcha
+    worker -->|HTTPS 443| media
+    worker -->|HTTPS 443| notif
 ```
 
 **Explicación, decisiones y relación con otros artefactos:**
@@ -859,58 +800,90 @@ El diagrama C3 ilustra la arquitectura interna de la API en ASP.NET Core bajo DD
 
 ### 4.6.4 Software Architecture Components Diagrams
 
-El siguiente diagrama presenta la distribución de FleetProof en una infraestructura basada en servicios en la nube. Se muestran las aplicaciones, los componentes del backend, la base de datos y los servicios externos necesarios para el funcionamiento de la plataforma.
+El siguiente diagrama de componentes (C4 Nivel 3) presenta la organización interna del backend de FleetProof desarrollado en ASP.NET Core. Se detalla la interacción entre los controladores de la capa de presentación, los servicios de aplicación y dominio, y la capa de infraestructura/persistencia con Entity Framework Core, así como su comunicación con la base de datos y proveedores externos.
 
 ```mermaid
 flowchart TB
     classDef clientNode fill:#eceff1,stroke:#607d8b,stroke-width:2px,color:#263238;
-    classDef edgeNode fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#0d47a1;
-    classDef computeNode fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px,color:#1a237e;
+    classDef ctrlNode fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#0d47a1;
+    classDef serviceNode fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px,color:#1a237e;
+    classDef repoNode fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100;
     classDef dbNode fill:#e8f5e9,stroke:#43a047,stroke-width:2px,color:#1b5e20;
     classDef extNode fill:#eeeeee,stroke:#757575,stroke-width:2px,color:#212121;
-    classDef artifact fill:#ffffff,stroke:#455a64,stroke-width:1px,color:#263238;
 
-    subgraph Client_Device [Dispositivo de Usuario Desktop / Mobile]
-        browser[Navegador Web Chrome / Firefox / Edge]:::artifact
+    subgraph Client_Tier [Capa de Presentacion Cliente]
+        spa_art[Frontend SPA Vue 3 / PrimeVue]:::clientNode
     end
 
-    subgraph Hosting_Static [Hosting Estatico Vercel / Netlify]
-        landing_art[Landing Page HTML5 / CSS3 / JS]:::artifact
-        spa_art[Frontend SPA Vue 3 / PrimeVue]:::artifact
+    subgraph API_Container [FleetProof Web API - ASP.NET Core]
+        subgraph Controllers_Layer [Controllers / Presentation Layer]
+            ctrl_iam[IAM Controller]:::ctrlNode
+            ctrl_fleet[Fleet Controller]:::ctrlNode
+            ctrl_reports[Reports Controller]:::ctrlNode
+        end
+
+        subgraph Application_Layer [Application Services & Domain Layer]
+            srv_auth[Authentication & Security Service]:::serviceNode
+            srv_fleet_app[Fleet Management Service]:::serviceNode
+            srv_scraping[Vehicle Scraping & Monitoring Service]:::serviceNode
+            srv_rep_app[Report Generation Service]:::serviceNode
+            srv_pay_app[Payment Processing Service]:::serviceNode
+        end
+
+        subgraph Persistence_Layer [Infrastructure / Persistence Layer]
+            ef_repo[Data Access Repositories / EF Core]:::repoNode
+        end
     end
 
-    subgraph Cloud_PaaS [Plataforma Cloud Render / Azure]
-        api_art[FleetProof Web API ASP.NET Core]:::artifact
-        worker_art[Background Task Runner Monitoring Worker]:::artifact
-    end
-
-    subgraph Cloud_DB [Base de Datos Gestionada]
-        db_engine[(PostgreSQL Engine Schemas IAM / Fleet / Reports)]:::artifact
+    subgraph Cloud_DB [Base de Datos Relacional]
+        db_engine[(PostgreSQL Engine Schemas IAM / Fleet / Reports)]:::dbNode
     end
 
     subgraph External_Cloud [Servicios Externos Integrados]
-        srv_pay[Taypi Payment Gateway]:::extNode
-        srv_captcha[2Captcha Service]:::extNode
         srv_gov[Portales Oficiales SUNARP / SAT]:::extNode
-        srv_notif[Notification Provider Resend / SendGrid]:::extNode
+        srv_captcha[2Captcha Service]:::extNode
         srv_media[Cloudinary Storage]:::extNode
+        srv_notif[Notification Provider Resend / SendGrid]:::extNode
+        srv_pay[Taypi Payment Gateway]:::extNode
     end
 
-    browser -->|HTTPS 443| landing_art
-    browser -->|HTTPS 443| spa_art
-    browser -->|JSON HTTPS 443| api_art
+    %% Cliente hacia Controladores
+    spa_art -->|JSON / HTTPS 443| ctrl_iam
+    spa_art -->|JSON / HTTPS 443| ctrl_fleet
+    spa_art -->|JSON / HTTPS 443| ctrl_reports
 
-    api_art -->|TCP 5432 EF Core| db_engine
-    worker_art -->|TCP 5432 EF Core| db_engine
+    %% Controladores a Servicios de Aplicación
+    ctrl_iam --> srv_auth
+    ctrl_fleet --> srv_fleet_app
+    ctrl_fleet --> srv_scraping
+    ctrl_reports --> srv_rep_app
 
-    api_art -->|HTTPS 443| srv_pay
-    api_art -->|HTTPS 443| srv_captcha
-    api_art -->|HTTPS 443| srv_gov
-    worker_art -->|HTTPS 443| srv_gov
-    worker_art -->|HTTPS 443| srv_notif
-    api_art -->|HTTPS 443| srv_media
+    %% Dependencias entre servicios internos
+    srv_fleet_app --> srv_pay_app
+
+    %% Servicios de Aplicación a Capa de Persistencia
+    srv_auth --> ef_repo
+    srv_fleet_app --> ef_repo
+    srv_scraping --> ef_repo
+    srv_rep_app --> ef_repo
+
+    %% Persistencia a Base de Datos
+    ef_repo -->|TCP 5432 EF Core| db_engine
+
+    %% Servicios de Aplicación a Integraciones Externas
+    srv_auth -->|HTTPS 443| srv_notif
+    srv_scraping -->|HTTPS 443| srv_gov
+    srv_scraping -->|HTTPS 443| srv_captcha
+    srv_scraping -->|HTTPS 443| srv_media
+    srv_pay_app -->|HTTPS 443| srv_pay
 ```
-El diagrama muestra cómo se organiza el despliegue de FleetProof, separando la interfaz web, la API y las tareas de monitoreo. La solución contempla servicios de alojamiento en la nube, una base de datos PostgreSQL y conexiones seguras con proveedores externos para consultas vehiculares, pagos, notificaciones y almacenamiento de archivos.
+El diagrama descompone la API en tres capas lógicas principales:
+
+Controllers / Presentation Layer: Expone los endpoints REST para autenticación (IAM Controller), analítica (Reports Controller) y administración vehicular (Fleet Controller), recibiendo peticiones en formato JSON vía HTTPS.
+
+Application Services & Domain Layer: Contiene la lógica de negocio coordinada por servicios especializados (autenticación, generación de reportes, scraping de fuentes oficiales, gestión de pagos y flotas).
+
+Infrastructure / Persistence Layer: Centraliza el acceso a datos mediante repositorios y Entity Framework Core sobre PostgreSQL, gestionando además las llamadas HTTP seguras hacia las APIs externas (SUNARP/SAT, 2Captcha, Cloudinary, Resend y Taypi).
 
 ## 4.7 Software Object-Oriented Design
 
