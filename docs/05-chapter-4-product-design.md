@@ -659,6 +659,8 @@ En esta sección se presenta la arquitectura de software de FleetProof, aplicand
 
 El Design-Level Event Storming de FleetProof permite representar los principales eventos, comandos y procesos del dominio vehicular. A través de diez etapas, se identifican los problemas, reglas de negocio, sistemas externos y contextos delimitados que intervienen en el funcionamiento de la plataforma.
 
+Tablero de origen: [Design-Level Event Storming en Miro](https://miro.com/app/board/uXjVEc8Kuu8=/). El análisis previo del dominio se encuentra en el [Big Picture Event Storming](https://miro.com/app/board/uXjVHntEsLk=/), documentado en la sección 2.4.
+
 Step 1: Unstructured Exploration
 
 ![image](https://hackmd.io/_uploads/r1PD-AFKzx.png)
@@ -693,11 +695,55 @@ Step 8: External Systems
 
 Step 9: Aggregates
 
-![image](https://hackmd.io/_uploads/SJ88QAFKGl.png)
+![Aggregates de FleetProof: Vehicle, Subscription, Vehicle Report, User, Vehicle Monitoring y Fleet](assets/chapter-4/event-storming/aggregates.png)
+
+Figura 4.6.1-9. Aggregates actualizados del Design-Level Event Storming. Fuente: tablero Miro del equipo. [Abrir imagen original](assets/chapter-4/event-storming/aggregates.png).
 
 Step 10: Bounded Contexts
 
-![image](https://hackmd.io/_uploads/BJYAmRYYzl.png)
+![Vista completa de los seis bounded contexts de FleetProof y sus relaciones](assets/chapter-4/event-storming/bounded-contexts-overview.png)
+
+Figura 4.6.1-10. Vista completa de los bounded contexts y sus relaciones. Fuente: tablero Miro del equipo. [Abrir imagen original](assets/chapter-4/event-storming/bounded-contexts-overview.png).
+
+Para facilitar la lectura de los comandos, eventos, aggregates, políticas y modelos de lectura, se incluye además una imagen individual de cada contexto. Las imágenes mantienen el contenido del artefacto actualizado del equipo y pueden abrirse en su resolución original.
+
+#### IAM
+
+![Detalle del bounded context IAM](assets/chapter-4/event-storming/iam.png)
+
+Figura 4.6.1-10a. IAM: creación de cuenta, inicio de sesión e información del usuario. [Abrir imagen original](assets/chapter-4/event-storming/iam.png).
+
+#### Subscription Management Context
+
+![Detalle del bounded context Subscription Management](assets/chapter-4/event-storming/subscription-management.png)
+
+Figura 4.6.1-10b. Subscription Management: selección de servicios, solicitud y confirmación de pago y activación de la suscripción. [Abrir imagen original](assets/chapter-4/event-storming/subscription-management.png).
+
+#### Fleet Management Context
+
+![Detalle del bounded context Fleet Management](assets/chapter-4/event-storming/fleet-management.png)
+
+Figura 4.6.1-10c. Fleet Management: registro de flotas, asignación de vehículos y responsables e identificación de riesgos. [Abrir imagen original](assets/chapter-4/event-storming/fleet-management.png).
+
+#### Vehicle Information Context
+
+![Detalle del bounded context Vehicle Information](assets/chapter-4/event-storming/vehicle-information.png)
+
+Figura 4.6.1-10d. Vehicle Information: ingreso y validación de placa, consulta de fuentes y obtención de información vehicular. [Abrir imagen original](assets/chapter-4/event-storming/vehicle-information.png).
+
+#### Report Management Context
+
+![Detalle del bounded context Report Management](assets/chapter-4/event-storming/report-management.png)
+
+Figura 4.6.1-10e. Report Management: generación y consulta del reporte vehicular a partir de la información disponible. [Abrir imagen original](assets/chapter-4/event-storming/report-management.png).
+
+#### Vehicle Monitoring Context
+
+![Detalle del bounded context Vehicle Monitoring](assets/chapter-4/event-storming/vehicle-monitoring.png)
+
+Figura 4.6.1-10f. Vehicle Monitoring: activación y programación de consultas, detección de cambios y generación de alertas. [Abrir imagen original](assets/chapter-4/event-storming/vehicle-monitoring.png).
+
+Fuente de las seis vistas de detalle: Design-Level Event Storming elaborado por el equipo en Miro.
 
 ### 4.6.2 Software Architecture Context Diagram
 
@@ -948,4 +994,3 @@ El diagrama representa la estructura relacional de FleetProof y muestra cómo se
 * **Identificación de registros:** Las tablas utilizan identificadores UUID como claves primarias, permitiendo identificar cada registro y establecer relaciones mediante claves foráneas.
 
 * **Gestión de flotas y monitoreo:** La tabla `FLEET_VEHICLE_ASSIGNMENTS` relaciona los vehículos con sus flotas y responsables. Por otro lado, `VEHICLE_MONITORINGS` y `MONITORING_ALERTS` permiten registrar las actividades de supervisión y las alertas generadas ante cambios en la información vehicular.
-
