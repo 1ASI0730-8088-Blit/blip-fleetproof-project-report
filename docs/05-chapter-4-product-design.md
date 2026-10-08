@@ -747,8 +747,30 @@ vehicle information components diagram
 vehicle monitoring components diagram
 ![image](assets/chapter-4/c4-webapp/vehicleMonitoringComponents.png)
 
-# Backend Components Diagrams
+### Backend Components Diagrams
 
+![image](assets/chapter-4/c4-platform/webAPI.png)
+
+fleet management components diagram
+![image](assets/chapter-4/c4-platform/fleetManagement.png)
+
+report management components diagram
+![image](assets/chapter-4/c4-platform/reportManagement.png)
+
+shared components diagram
+![image](assets/chapter-4/c4-platform/shared.png)
+
+subscription management components diagram
+![image](assets/chapter-4/c4-platform/subscriptionManagement.png)
+
+user management components diagram
+![image](assets/chapter-4/c4-platform/userManagement.png)
+
+vehicle information components diagram
+![image](assets/chapter-4/c4-platform/vehicleInformation.png)
+
+vehicle monitoring components diagram
+![image](assets/chapter-4/c4-platform/vehicleMonitoring.png)
 
 
 El diagrama muestra cómo se organiza el despliegue de FleetProof, separando la interfaz web, la API y las tareas de monitoreo. La solución contempla servicios de alojamiento en la nube, una base de datos PostgreSQL y conexiones seguras con proveedores externos para consultas vehiculares, pagos, notificaciones y almacenamiento de archivos.
